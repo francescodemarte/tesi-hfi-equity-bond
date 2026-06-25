@@ -1,0 +1,37 @@
+{
+  "title": "High-Frequency Identification of Equity-Bond Comovement: Companion Code and Derived Dataset",
+  "description": "<p>Companion code repository and derived dataset for the MS thesis <em>High-Frequency Identification (HFI) of Equity-Bond Comovement: A Present-Value Test with Operational Extension</em> (Bocconi University, 2026).</p><p><strong>Includes:</strong></p><ul><li>7 modular pre-registered packages with 462 unit tests on synthetic DGPs</li><li>Authoritative pickle of pkg 07 (run autoritativo, label v2_signflip_run_authoritative_2026-06-22_post_bug2, sha256 a9c13a7b...)</li><li>Calendario eventi NFP/CPI/FOMC/ECB con regime classifier (events_with_regime_classifier.csv)</li><li>Calendar of contaminants for control window cleaning (5151 unique centers)</li><li>Altavilla TPQE factors extracted via canonical rotation</li><li>All JSON results and manifests from the run sessions 2026-06-22 to 2026-06-25</li></ul><p><strong>Not included (license constraints):</strong> Refinitiv Tick History intraday CSVs (RICs ESc1, TYc1, FGBLc1, STXE, FFc1-3, FEIc1-4). Reproduction requires user's own WRDS or Refinitiv subscription. Expected sha256 values are documented in data_manifest.json.</p><p><strong>Four main findings:</strong></p><ol><li>NFP/neg structural channel identified (β_str = -1.40, robust to multiple bond-piece specifications)</li><li>ECB QE factor transmission monotonic along Bund 3M-30Y curve (β_QE = +1.07 at DE30Y, p≈0, 12/15 maturities BY-rejected at q=0.10)</li><li>Residual third channel (Liquidity, Volatility, Correlation) NOT identified at q=0.10 pre-registered</li><li>Event-driven concentrated strategy out-of-sample annualized Sharpe ~ +1.4 to +2.4 gross (n=24-104 events depending on filter selectivity)</li></ol>",
+  "creators": [
+    {
+      "name": "De Marte, Francesco",
+      "affiliation": "Bocconi University",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "high-frequency identification",
+    "equity-bond comovement",
+    "Rigobon-Sack",
+    "pre-registration",
+    "present value test",
+    "Altavilla EA-MPD",
+    "Jarocinski-Karadi",
+    "Campbell-Shiller",
+    "event study",
+    "Sharpe ratio"
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/francescodemarte/tesi-hfi-equity-bond",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "communities": [
+    {"identifier": "bocconi"}
+  ],
+  "notes": "Deposit prepared for thesis discussion. Intraday Refinitiv data NOT redistributable; reproduction requires user's own subscription with sha256 verification against data_manifest.json."
+}
