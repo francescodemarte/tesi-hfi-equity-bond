@@ -8,7 +8,7 @@ authors:
     affiliation: "Bocconi University"
 date-released: 2026-06-25
 license: MIT
-repository-code: "https://github.com/<TUO_HANDLE>/tesi-hfi-equity-bond"
+repository-code: "https://github.com/francescodemarte/tesi-hfi-equity-bond"
 keywords:
   - high-frequency-identification
   - equity-bond-comovement

@@ -53,7 +53,7 @@ Catena di custodia 7 pacchetti, ciascuno con suite di test pre-registrata.
 ### 1. Installa (3 minuti)
 
 ```bash
-git clone https://github.com/<TUO_HANDLE>/tesi-hfi-equity-bond.git
+git clone https://github.com/francescodemarte/tesi-hfi-equity-bond.git
 cd tesi-hfi-equity-bond
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
@@ -160,7 +160,7 @@ Vedi `CITATION.cff`. Per citare nel tuo lavoro:
   title  = {High-Frequency Identification of Equity-Bond Comovement:
             A Present-Value Test with Operational Extension (Companion Code)},
   year   = 2026,
-  url    = {https://github.com/<TUO_HANDLE>/tesi-hfi-equity-bond},
+  url    = {https://github.com/francescodemarte/tesi-hfi-equity-bond},
   note   = {Companion code per tesi di laurea magistrale, Bocconi University}
 }
 ```
