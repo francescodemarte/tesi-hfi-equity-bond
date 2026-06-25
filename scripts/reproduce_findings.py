@@ -36,7 +36,7 @@ def main() -> int:
 
     header("Step 3 — Riassunto findings da cache 09_risultati/")
     # Finding 1: 4 celle robuste del 12
-    p12 = ROOT / "09_risultati/decomp_canali/decomp_canali.report.json"
+    p12 = ROOT / "results/02_decomposition/baseline/decomp_canali.report.json"
     if p12.exists():
         d = json.loads(p12.read_text())
         print("\n  [Finding 1] Pacchetto 12 — celle robuste:")
@@ -47,7 +47,7 @@ def main() -> int:
                        f"F={row.get('F_MOP', 'n/a'):.2f}")
 
     # Finding 2: ECB curva Altavilla
-    p_step1 = ROOT / "09_risultati/extra_4steps/results.json"
+    p_step1 = ROOT / "results/05_ecb_curve_qe/results.json"
     if p_step1.exists():
         d = json.loads(p_step1.read_text())
         step1 = d.get("results", {}).get("step1_ecb_curve_symmetry", {})
@@ -58,15 +58,16 @@ def main() -> int:
             print(f"    QE alive at scadenze: {[a[0] for a in step1.get('qe_alive', [])]}")
 
     # Finding 3: terzo canale
-    p13 = ROOT / "09_risultati/terzo_canale_residuo/intraday_L/all_with_intraday_L/verdicts.json"
+    p13 = ROOT / "results/03_third_channel/intraday_L/all_with_intraday_L/verdicts.json"
     if p13.exists():
         d = json.loads(p13.read_text())
         print(f"\n  [Finding 3] Terzo canale residuo (proxy intraday onesti, q=0.10):")
         print(f"    third_channel=True: {d.get('n_third_channel_True')}/12")
         print(f"    pairs che passano: {d.get('passing_pairs', [])}")
 
-    # Finding 4: strategia event-driven
-    p14 = ROOT / "09_risultati/strategie_event_driven/concentrated/results_tests.json"
+    # Finding 4: strategia event-driven (CAVEAT: numeri esplorativi con filtri ex-post,
+    # vedere docs/04_findings.md per la lettura onesta allineata alla tesi)
+    p14 = ROOT / "results/04_event_driven/concentrated/results_tests.json"
     if p14.exists():
         d = json.loads(p14.read_text())
         ann = d.get("annualized_oos", {})
@@ -77,7 +78,7 @@ def main() -> int:
             print(f"    Sharpe per-evento OOS: {p.get('sharpe_oos_per_event', 'n/a'):+.4f}")
             print(f"    Sharpe annualizzato OOS: {p.get('sharpe_oos_annualized', 'n/a'):+.4f}")
 
-    header("Fine — Vedi docs/results_summary.md per il dettaglio completo")
+    header("Fine — Vedi docs/04_findings.md per il dettaglio completo")
     return 0
 
 

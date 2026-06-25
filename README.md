@@ -37,13 +37,13 @@ Catena di custodia 7 pacchetti, ciascuno con suite di test pre-registrata.
 
 | Pacchetto | Ruolo | Tests |
 |---|---|---:|
-| `CODICI_TESI/07_protocollo_v2_signflip/` | Protocollo v2 sign-flip (T1-T9, BY q=0.10 m=3) | 175 |
-| `CODICI_TESI/08_spillover_fed_eu/` | Spillover Fed → area euro (H1-H4) | 68 |
-| `CODICI_TESI/10_diagnostica_canale_tassi/` | Diagnostica canale tassi (term-structure + cancello doppio) | 45 |
-| `CODICI_TESI/11_pratica_eccesso_comovimento/` | Strategia eccesso di comovimento (training/test split 2010-2020/2021-2025) | 51 |
-| `CODICI_TESI/12_decomposizione_canali/` | Decomposizione canali (β_str con doppio cancello F-MOP + shrink) | 46 |
-| `CODICI_TESI/13_terzo_canale_residuo/` | Terzo canale residuo (L, V, C con BY q=0.10 m=12) | 40 |
-| `CODICI_TESI/14_strategie_event_driven/` | Strategie event-driven (CPI/NFP/FOMC + portafoglio) | 37 |
+| `src/hfi/protocol_v2/` | Protocollo v2 sign-flip (T1-T9, BY q=0.10 m=3) | 175 |
+| `src/hfi/spillover_eu/` | Spillover Fed → area euro (H1-H4) | 68 |
+| `src/hfi/rate_channel/` | Diagnostica canale tassi (term-structure + cancello doppio) | 45 |
+| `src/hfi/strategy_excess/` | Strategia eccesso di comovimento (training/test split 2010-2020/2021-2025) | 51 |
+| `src/hfi/decomposition/` | Decomposizione canali (β_str con doppio cancello F-MOP + shrink) | 46 |
+| `src/hfi/third_channel/` | Terzo canale residuo (L, V, C con BY q=0.10 m=12) | 40 |
+| `src/hfi/event_driven/` | Strategie event-driven (CPI/NFP/FOMC + portafoglio) | 37 |
 | **TOTALE** | | **462** |
 
 ---
@@ -56,7 +56,7 @@ Catena di custodia 7 pacchetti, ciascuno con suite di test pre-registrata.
 git clone https://github.com/francescodemarte/tesi-hfi-equity-bond.git
 cd tesi-hfi-equity-bond
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+pip install -e .[dev]
 ```
 
 ### 2. Verifica installazione (1 minuto)
@@ -86,8 +86,8 @@ sono ridistribuiti** per vincoli di licenza Refinitiv Tick History. Per
 riprodurre la pipeline completa serve:
 
 1. Accesso WRDS o Refinitiv Tick History via tua istituzione
-2. Estrai i RIC elencati in `docs/data_metodologia.md` §1 sul periodo 2010-01-03 → 2025-12-31
-3. Salva i CSV minuziali in `data_processed/` (formato: `Datetime_UTC,PX_LAST,Bid,Ask,Spread,Volume`)
+2. Estrai i RIC elencati in `docs/02_data_methodology.md` §1 sul periodo 2010-01-03 → 2025-12-31
+3. Salva i CSV minuziali in `data/intraday/` (formato: `Datetime_UTC,PX_LAST,Bid,Ask,Spread,Volume`)
 4. Verifica sha256: `python scripts/verify_data_integrity.py`
 
 In assenza di Refinitiv intraday: i fixture sintetici dei test (`tests/conftest.py`
@@ -100,25 +100,29 @@ pipeline, ma non producono i numeri esatti dei findings.
 python3 scripts/reproduce_findings.py
 ```
 
-Output `09_risultati/reproduction_<timestamp>/` con i 4 findings principali:
+Output in `results/reproduction_<timestamp>/` con i 4 findings principali:
 
-- Finding 1: 4 celle del 12 (NFP/neg `identified_robust` confermato)
+- Finding 1: 4 celle del pacchetto `decomposition` (NFP/neg `identified_robust`)
 - Finding 2: curva ECB DE3M→DE30Y vs T/P/QE (Bonferroni-Yekutieli)
 - Finding 3: terzo canale residuo (0/12 a q=0.10)
-- Finding 4: strategia event-driven OOS Sharpe (bootstrap B=10 000)
+- Finding 4: strategia event-driven OOS — risultato negativo onesto (vedi
+  `docs/04_findings.md`)
 
-Tutti gli output si confrontano via sha256 con `09_risultati/<package>/results.json`
-del run autoritativo del 2026-06-22 → 2026-06-25 (manifest documentato).
+Tutti gli output si confrontano via sha256 con `results/0X_*/results.json`
+dei run autoritativi (manifest documentato).
 
 ---
 
 ## Documentazione
 
-- `docs/data_metodologia.md` — Dati, serie, sorgenti, costruzione finestre,
+- `docs/01_overview.md` — Sintesi della pipeline e del progetto.
+- `docs/02_data_methodology.md` — Dati, serie, sorgenti, costruzione finestre,
   componente di tasso, celle. **Capitolo "Dati e Metodologia" della tesi.**
-- `docs/architecture.md` — Architettura della catena di custodia 7 pacchetti.
-- `docs/results_summary.md` — Sintesi dei 4 findings con numeri.
-- `docs/reproducibility.md` — Come riprodurre dato per dato.
+- `docs/03_architecture.md` — Architettura della catena di custodia 7 pacchetti.
+- `docs/04_findings.md` — Sintesi dei 4 findings (allineata alla tesi).
+- `docs/05_reproducibility.md` — Come riprodurre dato per dato.
+- `docs/06_known_limitations.md` — Limiti dichiarati onesti.
+- `docs/07_zenodo_deposit_guide.md` — Guida deposit Zenodo con DOI.
 
 ---
 

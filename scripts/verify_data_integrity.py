@@ -46,10 +46,10 @@ def main() -> int:
             print(f"  [OK] {rel_path}  ({actual[:16]}...)")
 
     # External public data
-    print("\n[2/3] External public data (data_external/):")
+    print("\n[2/3] External public data (data/external_public/):")
     for fname, spec in manifest.get("data_external_public", {}).items():
         clean = fname.replace("fred_", "")
-        p = ROOT / "data_external" / clean
+        p = ROOT / "data" / "external_public" / clean
         if not p.exists():
             print(f"  [NOT-DOWNLOADED] {clean}  (run bash scripts/setup_data.sh)")
             continue
@@ -64,10 +64,10 @@ def main() -> int:
             print(f"  [PRESENT, no expected hash] {clean}  ({actual[:16]}...)")
 
     # Refinitiv proprietary
-    print("\n[3/3] Refinitiv intraday data (data_processed/) — proprietary, NOT in repo:")
+    print("\n[3/3] Refinitiv intraday data (data/intraday/) — proprietary, NOT in repo:")
     for fname, spec in manifest.get("data_processed_refinitiv_proprietary", {}).items():
         if fname.startswith("_"): continue
-        p = ROOT / "data_processed" / fname
+        p = ROOT / "data" / "intraday" / fname
         if not p.exists():
             print(f"  [ABSENT] {fname}  (expected via own Refinitiv/WRDS subscription)")
             continue

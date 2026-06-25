@@ -63,14 +63,29 @@ def test_config_hash_64hex_and_includes_betas():
 
 
 def test_beta_str_provenance_dichiarata():
-    """REVIEW #1 BLOCKER: BETA_STR_PROVENANCE deve esistere e marcare status."""
+    """BETA_STR_PROVENANCE deve esistere e tracciare run autoritativo del 12.
+
+    Refresh 2026-06-25: i valori di BETA_STR coincidono con beta_str_central
+    del run autoritativo del pacchetto 12 (2026-06-23T22:21:46Z). Lo status
+    riflette questo allineamento.
+    """
     prov = config.BETA_STR_PROVENANCE
-    assert prov["status"] == "illustrative_pending_07_estimation"
-    # Disclaimer cita 'condizionali' o equivalente
-    assert "condizional" in prov["disclaimer"].lower()
+    assert prov["status"] == "from_authoritative_12_run"
+    # Provenance traccia il file autoritativo del 12
+    assert "decomp_canali.report.json" in prov["source_authoritative"]
+    # Timestamp e seed_name del run autoritativo del 12
+    assert prov["source_run_timestamp"] == "2026-06-23T22:21:46Z"
+    assert prov["source_seed_name"] == "decomp_canali_2026-06-23"
+    # Distinzione esplicita beta_str (12) vs beta_H (07) deve esserci
+    assert "beta_H" in prov["distinction_from_beta_H"]
     # Snapshot include provenance ⇒ config_hash cambia se cambia
     snap = config.config_snapshot()
     assert "beta_str_provenance" in snap
+    # Sanity: i valori del config coincidono coi values_exact_4dec entro 2 dec
+    vals = prov["values_exact_4dec"]
+    assert round(vals["NFP/neg"], 2) == round(config.BETA_STR["NFP"], 2)
+    assert round(vals["CPI/neg"], 2) == round(config.BETA_STR["CPI"], 2)
+    assert round(vals["FOMC/neg"], 2) == round(config.BETA_STR["FOMC"], 2)
 
 
 def test_manifest_replicability_dichiarata_provenance_beta():

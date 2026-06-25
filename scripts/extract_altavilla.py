@@ -9,9 +9,9 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "DATASET_TESI" / "01_eventi_hfi" / "EA-MPD_ECB_Altavilla2019.xlsx"
-OUT = ROOT / "data_external"
-OUT.mkdir(exist_ok=True)
+SRC = ROOT / "data" / "events" / "EA-MPD_ECB_Altavilla2019.xlsx"
+OUT = ROOT / "data" / "external_public"
+OUT.mkdir(parents=True, exist_ok=True)
 
 
 def main():
