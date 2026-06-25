@@ -1,6 +1,6 @@
 # High-Frequency Identification of Equity-Bond Comovement
 
-> Tesi di laurea magistrale, Bocconi University. Autore: Francesco De Marte.
+> Tesi di laurea triennale (BSc), Bocconi University. Autore: Francesco De Marte.
 >
 > Companion code repository per:
 > *High-Frequency Identification (HFI) of Equity-Bond Comovement:
@@ -27,7 +27,7 @@ identificazione (canale tasso) e cancelli di forza pre-registrati.
 | 1 | **NFP/neg — canale strutturale identificato** | POSITIVO robusto | 12 | β_str = −1.40, robusto in 4/6 specifiche del bond piece + finestra ±30 min |
 | 2 | **ECB curva Bund 3M→30Y: QE→long-end vivo** | POSITIVO robusto | step 1 (Altavilla) | 12/15 scadenze BY-rejected (q=0.10); β_QE = +1.07 a DE30Y, p≈0 |
 | 3 | **Terzo canale residuo (L, V, C) — NON identificato** | NEGATIVO robusto | 13 | 0/12 a q=0.10 pre-registrato, sotto sign rule rivista "antisymmetric" |
-| 4 | **Strategia event-driven OOS Sharpe ≈ +1.4 annualizzato lordo** | POSITIVO replicabile | 14+15 | portafoglio NFP/neg + ECB QE→SHORT DE30Y, inverse-vol weighting, p_boot < 0.001 |
+| 4 | **Identificazione ≠ predicibilità OOS** | NEGATIVO onesto | 14 | NFP OOS Sharpe +0.21 (p_boot=0.155 non significativo); CPI inverte segno fra training e OOS; la via del rendimento non regge senza selezione ex-post di filtri su pochi eventi. |
 
 ---
 
@@ -161,7 +161,7 @@ Vedi `CITATION.cff`. Per citare nel tuo lavoro:
             A Present-Value Test with Operational Extension (Companion Code)},
   year   = 2026,
   url    = {https://github.com/francescodemarte/tesi-hfi-equity-bond},
-  note   = {Companion code per tesi di laurea magistrale, Bocconi University}
+  note   = {Companion code per tesi di laurea triennale (BSc), Bocconi University}
 }
 ```
 

@@ -18,15 +18,17 @@ keywords:
   - Jarocinski-Karadi
   - Altavilla-EA-MPD
 abstract: |
-  Companion code repository for a master thesis on high-frequency
+  Companion code repository for a Bachelor (BSc) thesis on high-frequency
   identification of equity-bond comovement. Pre-registered pipeline with
   7 modular packages, 462 unit tests, two-stage gate methodology, and
-  bootstrap inference. Findings: NFP/neg structural channel identified
-  robust to multiple bond-piece specifications; ECB QE factor transmission
-  monotonic along Bund 3M-30Y curve with significance at 30Y; residual
-  third-channel (L, V, C) not identified under pre-registered q=0.10;
-  event-driven concentrated strategy with out-of-sample annualized Sharpe
-  approximately 1.4 gross.
+  bootstrap inference. Findings: (i) NFP/neg structural channel identified
+  robust to multiple bond-piece specifications; (ii) ECB QE factor
+  transmission monotonic along Bund 3M-30Y curve with significance at 30Y;
+  (iii) residual third channel (L, V, C) not identified under pre-registered
+  q=0.10; (iv) identification does not imply out-of-sample predictability:
+  the event-driven strategy built on identified findings does not survive
+  out-of-sample without ex-post filter selection on small samples,
+  reported as honest negative result.
 references:
   - type: article
     authors:

@@ -73,50 +73,60 @@ con proxy intraday Δbid-ask dissolve il singolo segnale borderline pre-test
 
 ---
 
-## Finding 4 — Strategia event-driven OOS Sharpe ≈ +1.4 annualizzato lordo
+## Finding 4 — Identificazione non implica predicibilità OOS
 
-Strategia concentrata pre-registrata (`09_risultati/strategie_event_driven/concentrated/`):
+Il finding strutturale del 12 (NFP/neg) e quello sulla curva ECB (Finding 2)
+sono robusti a livello identificativo. La domanda derivata — **se questi
+findings si traducano in profittabilità out-of-sample** — è stata testata
+nel pacchetto 14 (strategie event-driven) con disciplina pre-registrata
+(seed, config_hash, split temporale, regola di posizione fissa a priori).
 
-### Disegno (a priori)
+### Risultati pre-registrati senza filtri ex-post
 
-| Trade | Trigger | Filtro pre-registrato | Position |
-|---|---|---|---|
-| **NFP/neg event_window** | annuncio NFP, regime neg corr equity-bond | `|m_e|≥p75_train` + `VIX≤p75_train_VIX` | sign(equity), sign(bond), size=|β_str(NFP)| da `strategy_rule.position` |
-| **ECB QE→SHORT DE30Y** | annuncio ECB, no filtro regime | `|QE|≥p75_train_|QE|` | sign(QE) × SHORT Bund 30Y (deriva da β_QE=+1.07 di Finding 2) |
+| strategia | n_train | Sharpe train | n_OOS | **Sharpe OOS** | p_boot OOS |
+|---|---:|---:|---:|---:|---:|
+| CPI/neg (sign rule pre-reg) | 96 | +0.03 | 53 | **−0.22** | 0.086 |
+| NFP/neg (sign rule pre-reg) | 87 | +0.23 | 49 | **+0.21** | **0.155 — NON significativo** |
+| FOMC/neg (sign rule pre-reg) | — | — | — | sotto-campione JK ≤ 2024-01 | — |
+| **Portafoglio equal CPI+NFP+FOMC** | — | +0.06 | 416 | **−0.02** | — |
 
-Pesi portafoglio: inverse-vol calibrato su training (2010-2018), applicato OOS (2019-2025).
+**Lettura onesta**: il portafoglio pre-registrato non rende OOS, e NFP da sola
+ha Sharpe +0.21 con p_boot = 0.155 (non rigetta H0: Sharpe = 0). CPI **inverte
+segno** fra training (+0.03) e OOS (−0.22): la regola di posizione fissa è
+incompatibile con la dinamica state-dependent della risposta equity-bond ai
+CPI prints (vedi Cieslak-Schrimpf 2019, Boyd-Hu-Jagannathan 2005).
 
-### Risultati out-of-sample
+### Esplorazione con filtri (non pubblicata come finding)
 
-| serie | n_OOS | Sharpe per-evento OOS | Bootstrap p-value | Sharpe annualizzato |
-|---|---:|---:|---:|---:|
-| NFP filtered | 10 | +1.28 | 0.0028 | +1.54 |
-| ECB QE filtered | 14 | +1.31 | 0.0003 | +1.86 |
-| **Portafoglio (w=0.90/0.10)** | **24** | **+1.28** | **<0.0001** | **+2.38** |
+Filtri sulla magnitudine della sorpresa (`|surprise| ≥ p75_training`) + VIX
+(`VIX ≤ p75_training_VIX`) producono Sharpe OOS più alti su 10–14 eventi per
+strategia (Sharpe per-evento +1.28, p_boot < 0.01). Questi numeri **non sono
+riportati come finding** della tesi perché:
 
-**Robustezza sensibilità soglie**:
+- La scelta del filtro (`p75`) è soggetta a sensitivity p70/p75/p80 con
+  Sharpe che oscilla +0.63/+1.28/+1.26 → instabile a soglia più larga.
+- n_OOS = 24 per il portafoglio: sample troppo piccolo per inferenza robusta
+  sul Sharpe (CI 95% [+0.96, +1.82], errore standard ~0.22).
+- Il filtro `|surprise| ≥ p75` seleziona ex-ante eventi "informativi", ma è
+  comunque una scelta tecnica che riduce drasticamente n.
+- Sostituire un proxy intraday onesto per L (Δbid-ask spread) dissolve il
+  singolo segnale borderline di terzo canale (Finding 3): coerente con il
+  pattern generale che i filtri stretti **trasformano rumore in finto segnale**
+  quando applicati a sample piccoli.
 
-| q | Sharpe OOS portafoglio |
-|---|---:|
-| p70 | +0.63 |
-| **p75 (baseline)** | **+1.28** |
-| p80 | +1.26 |
+### Conclusione (allineata alla tesi)
 
-Stabile a p75 e p80; cala a p70 (filtri più larghi includono eventi rumorosi).
-
-### Caveat onesti
-- Sharpe **LORDO**: zero costi di transazione, slippage, leva, vincoli custodia.
-- Sample piccolo OOS: n=10–14 per strategia → CI 95% ampi.
-- Annualizzazione i.i.d. (ragionevole per eventi mensili).
-- 2 mercati distinti: futures US (ES, TY) + Bund (FGBL/FGBX).
-- Senza filtro sorpresa: Sharpe per-evento OOS scende a +0.42 (VIX-only) o +0.34
-  (no filter), n triplica a 80–104, Sharpe annualizzato OOS ≈ +1.3 to +1.4
-  (p_boot < 0.001). Range realistico: [+1.3, +2.4] annualizzato a seconda
-  della selettività.
+**Identificazione strutturale non implica predicibilità out-of-sample.**
+Il portafoglio event-driven pre-registrato non genera Sharpe OOS significativo,
+e i Sharpe più alti ottenuti con filtri post-2010 sono fragili sotto
+sensitivity e sample size. Il finding è **negativo onesto** e separa
+chiaramente la dimensione *identificativa* (in cui la pipeline produce
+robusto NFP/neg + ECB QE) da quella *predittiva* (in cui non si registra
+alpha sistematico replicabile).
 
 ### Vedi
-- `09_risultati/strategie_event_driven/concentrated/results.json`
-- `09_risultati/strategie_event_driven/concentrated/results_tests.json`
+- `09_risultati/strategie_event_driven/manifest.json` — run pre-registrato
+- `09_risultati/strategie_event_driven/concentrated/results_tests.json` — esplorazione filtri (caveat)
 
 ---
 
