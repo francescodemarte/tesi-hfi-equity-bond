@@ -4,8 +4,16 @@ Output: figure/fig_identificazione.pdf
 
 Livello 1: scatter dei rendimenti a livello di singolo evento per NFP/neg,
 sovrapposto alle finestre di controllo, con le due rette di regressione e le
-ellissi di covarianza al 95%. La differenza di pendenza tra evento e controllo
-È l'identificazione di Rigobon–Sack.
+ellissi di covarianza al 95%. La differenza di dispersione tra evento e
+controllo (firma di Rigobon-Sack) si vede dal salto della varianza r_hat.
+
+NOTA — momenti 2x2: i numeri delle matrici di covarianza (var_b, var_e,
+cov_be per evento e controllo) sono depositati nel file
+  results/01_protocol_v2/full_moments_2x2/nfp_neg_moments_2x2.json
+con validazione a tol=1e-9 contro beta_H_robust_cells_w15.json. Questo
+script ricalcola i punti scatter dai cluster intraday (richiede Refinitiv),
+ma i momenti aggregati che servono per le ellissi e le rette OLS sono
+disponibili anche solo dal file di deposito (vedi nfp_neg_moments_2x2.json).
 
 Dati intraday Refinitiv (proprietary, fuori dalla repo pubblica):
   /home/francesco/TESI/Dati/data_processed/ESc1_1min.csv (equity)

@@ -1,0 +1,87 @@
+{
+  "_note": "Matrice 2x2 (bond, equity) per la cella NFP/neg, fonte autoritativa delle ellissi di covarianza 95% disegnate nella Figura 3 del capitolo Risultati. Rendimenti in scala rendimento (log-return); per le bps moltiplicare per 1e4 prima delle ellissi (la pipeline figure lo fa).",
+  "cell": "NFP/neg",
+  "control_moments_raw_returns": {
+    "angle_deg_pc1": 105.32464009609974,
+    "cov_be": -2.286723177994136e-07,
+    "eigenvalues_desc": [
+      1.3266461205473787e-06,
+      4.2950766402511604e-07
+    ],
+    "eigenvector_pc1": [
+      -0.2642878342459854,
+      0.9644438504493491
+    ],
+    "ellipse_95": {
+      "angle_deg": 105.32464009609974,
+      "chi2_2_quantile": 5.991,
+      "semi_axis_major": 0.002819208560606921,
+      "semi_axis_minor": 0.0016041135917304829
+    },
+    "ols_slope_equity_on_bond": -0.46461960838814415,
+    "var_b": 4.921710441638966e-07,
+    "var_e": 1.263982740408598e-06
+  },
+  "event_moments_raw_returns": {
+    "angle_deg_pc1": 117.78472541041145,
+    "cov_be": -5.949401764075393e-06,
+    "eigenvalues_desc": [
+      1.886535899003147e-05,
+      4.439282056804327e-06
+    ],
+    "eigenvector_pc1": [
+      -0.46615080166396705,
+      0.8847052786708355
+    ],
+    "ellipse_95": {
+      "angle_deg": 117.78472541041145,
+      "chi2_2_quantile": 5.991,
+      "semi_axis_major": 0.010631197755158096,
+      "semi_axis_minor": 0.0051571056613486915
+    },
+    "ols_slope_equity_on_bond": -0.785501289643818,
+    "var_b": 7.5740190913921e-06,
+    "var_e": 1.57306219554437e-05
+  },
+  "n_c": 574,
+  "n_e": 145,
+  "r_hat_signature": 15.388997750281904,
+  "validation_vs_beta_H_file": {
+    "b_OLS": {
+      "abs_diff": 1.1102230246251565e-16,
+      "computed": -0.785501289643818,
+      "ok": true,
+      "reference": -0.7855012896438182
+    },
+    "cov_be_control": {
+      "abs_diff": 0.0,
+      "computed": -2.286723177994136e-07,
+      "ok": true,
+      "reference": -2.286723177994136e-07
+    },
+    "cov_be_event": {
+      "abs_diff": 0.0,
+      "computed": -5.949401764075393e-06,
+      "ok": true,
+      "reference": -5.949401764075393e-06
+    },
+    "r_hat": {
+      "abs_diff": 3.552713678800501e-15,
+      "computed": 15.388997750281904,
+      "ok": true,
+      "reference": 15.3889977502819
+    },
+    "var_b_control": {
+      "abs_diff": 0.0,
+      "computed": 4.921710441638966e-07,
+      "ok": true,
+      "reference": 4.921710441638966e-07
+    },
+    "var_b_event": {
+      "abs_diff": 1.6940658945086007e-21,
+      "computed": 7.5740190913921e-06,
+      "ok": true,
+      "reference": 7.574019091392098e-06
+    }
+  }
+}

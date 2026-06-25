@@ -1,0 +1,345 @@
+{
+  "format_note": "Per ciascuna delle 4 celle robuste del run autoritativo del 12, matrice di covarianza 2x2 in base (bond=x, equity=y) per evento e controllo, in scala rendimento. Eigendecomposizione e semi-assi al 95% (chi^2_2(0.95)=5.991) inclusi. La validazione confronta var_b, cov_b_e e b_OLS coi valori gia' presenti in results/01_protocol_v2/beta_H_robust_cells_w15.json: l'esecutore ha sollevato se non combaciavano entro tol=1e-9.",
+  "robust_cells": {
+    "CPI/neg": {
+      "control_moments_raw_returns": {
+        "angle_deg_pc1": 103.30169919002952,
+        "cov_be": -2.1342899435228873e-07,
+        "eigenvalues_desc": [
+          1.385603024162853e-06,
+          4.3239526630919203e-07
+        ],
+        "eigenvector_pc1": [
+          -0.23007859812786385,
+          0.9731720498881568
+        ],
+        "ellipse_95": {
+          "angle_deg": 103.30169919002952,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.0028811712406171994,
+          "semi_axis_minor": 0.0016094968283467878
+        },
+        "ols_slope_equity_on_bond": -0.4420151973002533,
+        "var_b": 4.828544259470566e-07,
+        "var_e": 1.3351438645249885e-06
+      },
+      "event_moments_raw_returns": {
+        "angle_deg_pc1": 65.22872479506468,
+        "cov_be": 2.248963588673523e-06,
+        "eigenvalues_desc": [
+          7.474268284476011e-06,
+          1.562850581985043e-06
+        ],
+        "eigenvector_pc1": [
+          0.4189969225475011,
+          0.9079876534929997
+        ],
+        "ellipse_95": {
+          "angle_deg": 65.22872479506468,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.0066916620724821255,
+          "semi_axis_minor": 0.0030599081418683782
+        },
+        "ols_slope_equity_on_bond": 0.8647698895410922,
+        "var_b": 2.6006497403222276e-06,
+        "var_e": 6.436469126138826e-06
+      },
+      "n_c": 562,
+      "n_e": 150,
+      "r_hat_signature": 5.385991306223173,
+      "validation_vs_beta_H_file": {
+        "b_OLS": {
+          "abs_diff": 1.1102230246251565e-16,
+          "computed": 0.8647698895410922,
+          "ok": true,
+          "reference": 0.8647698895410924
+        },
+        "cov_be_control": {
+          "abs_diff": 0.0,
+          "computed": -2.1342899435228873e-07,
+          "ok": true,
+          "reference": -2.1342899435228873e-07
+        },
+        "cov_be_event": {
+          "abs_diff": 0.0,
+          "computed": 2.248963588673523e-06,
+          "ok": true,
+          "reference": 2.248963588673523e-06
+        },
+        "r_hat": {
+          "abs_diff": 1.7763568394002505e-15,
+          "computed": 5.385991306223173,
+          "ok": true,
+          "reference": 5.385991306223171
+        },
+        "var_b_control": {
+          "abs_diff": 1.0587911840678754e-22,
+          "computed": 4.828544259470566e-07,
+          "ok": true,
+          "reference": 4.828544259470567e-07
+        },
+        "var_b_event": {
+          "abs_diff": 4.235164736271502e-22,
+          "computed": 2.6006497403222276e-06,
+          "ok": true,
+          "reference": 2.600649740322227e-06
+        }
+      }
+    },
+    "CPI/pos": {
+      "control_moments_raw_returns": {
+        "angle_deg_pc1": 67.39001891781452,
+        "cov_be": 3.306372064831743e-07,
+        "eigenvalues_desc": [
+          1.3956408261453776e-06,
+          4.640272330538259e-07
+        ],
+        "eigenvector_pc1": [
+          0.3844561425838875,
+          0.9231432578042899
+        ],
+        "ellipse_95": {
+          "angle_deg": 67.39001891781452,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.002891588523534591,
+          "semi_axis_minor": 0.0016673293475571857
+        },
+        "ols_slope_equity_on_bond": 0.5494815174973474,
+        "var_b": 6.017258014229213e-07,
+        "var_e": 1.2579422577762821e-06
+      },
+      "event_moments_raw_returns": {
+        "angle_deg_pc1": 66.06775892399315,
+        "cov_be": 4.9740791906168944e-05,
+        "eigenvalues_desc": [
+          0.00013870042884825927,
+          4.5486804112736945e-06
+        ],
+        "eigenvector_pc1": [
+          0.4056559851320729,
+          0.9140258320892947
+        ],
+        "ellipse_95": {
+          "angle_deg": 66.06775892399315,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.028826277408467455,
+          "semi_axis_minor": 0.005220262861575143
+        },
+        "ols_slope_equity_on_bond": 1.8682506867726896,
+        "var_b": 2.662425993381739e-05,
+        "var_e": 0.00011662484932571558
+      },
+      "n_c": 139,
+      "n_e": 37,
+      "r_hat_signature": 44.24649877212861,
+      "validation_vs_beta_H_file": {
+        "b_OLS": {
+          "abs_diff": 2.220446049250313e-16,
+          "computed": 1.8682506867726896,
+          "ok": true,
+          "reference": 1.8682506867726898
+        },
+        "cov_be_control": {
+          "abs_diff": 0.0,
+          "computed": 3.306372064831743e-07,
+          "ok": true,
+          "reference": 3.306372064831743e-07
+        },
+        "cov_be_event": {
+          "abs_diff": 0.0,
+          "computed": 4.9740791906168944e-05,
+          "ok": true,
+          "reference": 4.9740791906168944e-05
+        },
+        "r_hat": {
+          "abs_diff": 0.0,
+          "computed": 44.24649877212861,
+          "ok": true,
+          "reference": 44.24649877212861
+        },
+        "var_b_control": {
+          "abs_diff": 1.0587911840678754e-22,
+          "computed": 6.017258014229213e-07,
+          "ok": true,
+          "reference": 6.017258014229212e-07
+        },
+        "var_b_event": {
+          "abs_diff": 3.3881317890172014e-21,
+          "computed": 2.662425993381739e-05,
+          "ok": true,
+          "reference": 2.6624259933817388e-05
+        }
+      }
+    },
+    "FOMC/neg": {
+      "control_moments_raw_returns": {
+        "angle_deg_pc1": 95.17542091967091,
+        "cov_be": -1.4538488659703997e-07,
+        "eigenvalues_desc": [
+          1.7431509104780443e-06,
+          1.2484315648445526e-07
+        ],
+        "eigenvector_pc1": [
+          -0.09020535152739938,
+          0.9959231870761008
+        ],
+        "ellipse_95": {
+          "angle_deg": 95.17542091967091,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.003231596680384785,
+          "semi_axis_minor": 0.0008648325563358328
+        },
+        "ols_slope_equity_on_bond": -1.0534271411971212,
+        "var_b": 1.3801133548906256e-07,
+        "var_e": 1.729982731473437e-06
+      },
+      "event_moments_raw_returns": {
+        "angle_deg_pc1": 74.6408336922982,
+        "cov_be": 1.9600889517494695e-06,
+        "eigenvalues_desc": [
+          9.548525527487539e-06,
+          1.8742113955373642e-06
+        ],
+        "eigenvector_pc1": [
+          0.2648689563011354,
+          0.9642844165431416
+        ],
+        "ellipse_95": {
+          "angle_deg": 74.6408336922982,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.007563413014980595,
+          "semi_axis_minor": 0.0033508805515363193
+        },
+        "ols_slope_equity_on_bond": 0.8124359928367691,
+        "var_b": 2.412607231869996e-06,
+        "var_e": 9.010129691154907e-06
+      },
+      "n_c": 688,
+      "n_e": 142,
+      "r_hat_signature": 17.48122517125556,
+      "validation_vs_beta_H_file": {
+        "b_OLS": {
+          "abs_diff": 0.0,
+          "computed": 0.8124359928367691,
+          "ok": true,
+          "reference": 0.8124359928367691
+        },
+        "cov_be_control": {
+          "abs_diff": 0.0,
+          "computed": -1.4538488659703997e-07,
+          "ok": true,
+          "reference": -1.4538488659703997e-07
+        },
+        "cov_be_event": {
+          "abs_diff": 0.0,
+          "computed": 1.9600889517494695e-06,
+          "ok": true,
+          "reference": 1.9600889517494695e-06
+        },
+        "r_hat": {
+          "abs_diff": 1.4210854715202004e-14,
+          "computed": 17.48122517125556,
+          "ok": true,
+          "reference": 17.481225171255574
+        },
+        "var_b_control": {
+          "abs_diff": 1.0587911840678754e-22,
+          "computed": 1.3801133548906256e-07,
+          "ok": true,
+          "reference": 1.3801133548906245e-07
+        },
+        "var_b_event": {
+          "abs_diff": 0.0,
+          "computed": 2.412607231869996e-06,
+          "ok": true,
+          "reference": 2.412607231869996e-06
+        }
+      }
+    },
+    "NFP/neg": {
+      "control_moments_raw_returns": {
+        "angle_deg_pc1": 105.32464009609974,
+        "cov_be": -2.286723177994136e-07,
+        "eigenvalues_desc": [
+          1.3266461205473787e-06,
+          4.2950766402511604e-07
+        ],
+        "eigenvector_pc1": [
+          -0.2642878342459854,
+          0.9644438504493491
+        ],
+        "ellipse_95": {
+          "angle_deg": 105.32464009609974,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.002819208560606921,
+          "semi_axis_minor": 0.0016041135917304829
+        },
+        "ols_slope_equity_on_bond": -0.46461960838814415,
+        "var_b": 4.921710441638966e-07,
+        "var_e": 1.263982740408598e-06
+      },
+      "event_moments_raw_returns": {
+        "angle_deg_pc1": 117.78472541041145,
+        "cov_be": -5.949401764075393e-06,
+        "eigenvalues_desc": [
+          1.886535899003147e-05,
+          4.439282056804327e-06
+        ],
+        "eigenvector_pc1": [
+          -0.46615080166396705,
+          0.8847052786708355
+        ],
+        "ellipse_95": {
+          "angle_deg": 117.78472541041145,
+          "chi2_2_quantile": 5.991,
+          "semi_axis_major": 0.010631197755158096,
+          "semi_axis_minor": 0.0051571056613486915
+        },
+        "ols_slope_equity_on_bond": -0.785501289643818,
+        "var_b": 7.5740190913921e-06,
+        "var_e": 1.57306219554437e-05
+      },
+      "n_c": 574,
+      "n_e": 145,
+      "r_hat_signature": 15.388997750281904,
+      "validation_vs_beta_H_file": {
+        "b_OLS": {
+          "abs_diff": 1.1102230246251565e-16,
+          "computed": -0.785501289643818,
+          "ok": true,
+          "reference": -0.7855012896438182
+        },
+        "cov_be_control": {
+          "abs_diff": 0.0,
+          "computed": -2.286723177994136e-07,
+          "ok": true,
+          "reference": -2.286723177994136e-07
+        },
+        "cov_be_event": {
+          "abs_diff": 0.0,
+          "computed": -5.949401764075393e-06,
+          "ok": true,
+          "reference": -5.949401764075393e-06
+        },
+        "r_hat": {
+          "abs_diff": 3.552713678800501e-15,
+          "computed": 15.388997750281904,
+          "ok": true,
+          "reference": 15.3889977502819
+        },
+        "var_b_control": {
+          "abs_diff": 0.0,
+          "computed": 4.921710441638966e-07,
+          "ok": true,
+          "reference": 4.921710441638966e-07
+        },
+        "var_b_event": {
+          "abs_diff": 1.6940658945086007e-21,
+          "computed": 7.5740190913921e-06,
+          "ok": true,
+          "reference": 7.574019091392098e-06
+        }
+      }
+    }
+  }
+}

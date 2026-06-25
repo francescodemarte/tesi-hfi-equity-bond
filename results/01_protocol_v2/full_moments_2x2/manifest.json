@@ -1,0 +1,45 @@
+{
+  "code_modules_used": {
+    "config.py": "c969f6a22ecdacbaed8f14e7d4704c159ef76042dbf62c8cb409ff252bc10c4c",
+    "data.py": "5ffe9bcf71e4a2f9dca299b04770ac4ea4da0a3babaeb95190f90207b50bc270",
+    "run.py": "09678ee4af8803cf3765abd9cabb3ee3f860a979ed2537ff146aaa723f67f3c1",
+    "windows.py": "fb3914c41462e65d8d049c8afef40b5aa3a17bb62edf030fae6edefcf11f24d6"
+  },
+  "executor": {
+    "script_path": "/home/francesco/TESI/repo-github-tesi/results/01_protocol_v2/full_moments_2x2/extract_full_moments.py",
+    "script_sha256": "e44deb9c430b2f10d3d2751a31952eb9aa3612dd7fd390cc6fa23432eb59dd74"
+  },
+  "inputs": {
+    "beta_H_reference": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/01_protocol_v2/beta_H_robust_cells_w15.json",
+      "sha256": "3f12ffc749c95dc4e65a728cc6477e39f60f85c8795f77a467c92ba62b928889"
+    },
+    "contaminants_csv": {
+      "path": "/home/francesco/TESI/Dati/calendari/contaminants_build_2026-06-22/contaminants_v2_2026-06-22.csv",
+      "sha256": "0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e"
+    },
+    "events_csv": {
+      "path": "/home/francesco/TESI/repo-github-tesi/data/events/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af"
+    },
+    "intraday_dir": "/home/francesco/TESI/Dati/data_processed",
+    "intraday_files_status": "PROPRIETARY (Refinitiv), not redistributed"
+  },
+  "master_seed": 20260621,
+  "outputs": {
+    "all_robust_cells_moments_2x2.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/01_protocol_v2/full_moments_2x2/all_robust_cells_moments_2x2.json",
+      "sha256": "332544fe50a580a7c523ce97d052d8876c516d421501ec9eb24c446ac2cba3a5"
+    },
+    "nfp_neg_moments_2x2.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/01_protocol_v2/full_moments_2x2/nfp_neg_moments_2x2.json",
+      "sha256": "ceed4a90128a9c0ccf410d0032972056aad7e91bc67cb896a09b8d556d54f3ec"
+    }
+  },
+  "seed_int_for_consistency": 3993785275,
+  "seed_name": "execute_v2_signflip_2026-06-22",
+  "task": "deposit_full_2x2_moments_for_robust_cells",
+  "task_timestamp": "2026-06-25T11:12:52Z",
+  "use_case": "I dati di output sono la fonte autoritativa delle matrici di covarianza 2x2 per le ellissi disegnate nella Figura 3 del capitolo Risultati. Sostituiscono il calcolo on-the-fly fatto originalmente in sessione (figure/scripts/genera_fig_identificazione.py).",
+  "validation": "Ogni campo del file beta_H_robust_cells_w15.json (b_OLS, var_e, var_c, cov_e, cov_c, r_hat) e' stato ricalcolato dai cluster riassemblati e confrontato con il valore di riferimento entro tol=1e-9. Tutti i 24 confronti (4 celle x 6 campi) sono passati."
+}

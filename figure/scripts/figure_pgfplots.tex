@@ -327,20 +327,29 @@
 % =================================================================
 %
 % PROVENIENZA DATI:
-%   - Momenti per cella NFP/neg ricavati riassemblando i cluster del pacchetto
-%     `protocol_v2` con stesso seed `execute_v2_signflip_2026-06-22`
-%     (master_seed = 20260621, B_BOOT = 10000) sui dati Refinitiv intraday
-%     (proprietary, fuori dalla repo pubblica).
-%   - Compatibili con results/01_protocol_v2/beta_H_robust_cells_w15.json:
-%     b_OLS = -0.7855, var_b_e = 757.4 bps^2, var_b_c = 49.2 bps^2,
-%     r_hat = var_b_e / var_b_c = 15.39, cov_b_e = -5.95e-6 (= -594.9 bps^2),
-%     cov_b_c = -2.29e-7 (= -22.87 bps^2), beta_H = ΔCov/ΔVar = -0.808
-%     (SE_boot = 0.162, F_eff = 53.13). n_e = 145, n_c = 574.
-%   - La varianza dell'equity non e' nel file di output del pacchetto 07; e'
-%     stata estratta dalla matrice di covarianza 2x2 riassemblata in sessione,
-%     conforme allo stesso protocollo:
-%       var_e_event   = 1573.06 bps^2
-%       var_e_control = 126.40  bps^2
+%   - Sorgente autoritativa delle matrici 2x2 (bond, equity) per evento e
+%     controllo nella cella NFP/neg:
+%       results/01_protocol_v2/full_moments_2x2/nfp_neg_moments_2x2.json
+%     Deposito generato dallo script
+%       results/01_protocol_v2/full_moments_2x2/extract_full_moments.py
+%     riassemblando i cluster del pacchetto `protocol_v2` con stesso seed
+%     `execute_v2_signflip_2026-06-22` (master_seed = 20260621) sui dati
+%     Refinitiv intraday (proprietary, fuori dalla repo pubblica).
+%   - Validazione del deposito: i campi b_OLS, var_b (event/control),
+%     cov(b,e) (event/control) e r_hat sono stati confrontati a tol=1e-9 con
+%     results/01_protocol_v2/beta_H_robust_cells_w15.json (24/24 confronti
+%     passati; vedi full_moments_2x2/manifest.json).
+%   - Quantita' (in scala log-return, le bps si ottengono *1e4):
+%     b_OLS_event = -0.7855, var_b_event = 7.5740e-6 (= 757.4 bps^2)
+%     var_b_control = 4.9217e-7 (= 49.2 bps^2)
+%     cov_b_e_event = -5.9494e-6 (= -594.94 bps^2)
+%     cov_b_e_control = -2.2867e-7 (= -22.87 bps^2)
+%     r_hat = var_b_event/var_b_control = 15.3890
+%     beta_H = Delta Cov / Delta Var = -0.8078 (SE_boot = 0.1617,
+%             F_eff = 53.13) -- dal file beta_H_robust_cells_w15.json.
+%     var_e_event = 1.5731e-5 (= 1573.06 bps^2)
+%     var_e_control = 1.2640e-6 (= 126.40 bps^2)
+%     n_e = 145, n_c = 574.
 %
 %   Matrici di covarianza 2x2 in bps^2, base (bond=x, equity=y):
 %     EVENTO    : [[757.40, -594.94], [-594.94, 1573.06]]
