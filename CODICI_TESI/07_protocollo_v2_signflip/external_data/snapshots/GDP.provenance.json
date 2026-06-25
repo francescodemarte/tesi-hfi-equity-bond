@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-01-01",
+  "date_min": "1947-01-01",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 317,
+  "name": "GDP",
+  "sha256": "64c1f114aebd312c71e21657966c432421f741333342e90dd6636b63e385ce85",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDP"
+}

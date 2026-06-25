@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-05-01",
+  "date_min": "1948-01-01",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 941,
+  "name": "CPI_YoY",
+  "sha256": "17972af29fc6fb7bc93184b1535732e3a5bb0a6f032526fa971eebc0e1d81f7e",
+  "source_url": "derived://CPIAUCSL.pct_change(12)"
+}

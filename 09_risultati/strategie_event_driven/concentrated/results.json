@@ -1,0 +1,95 @@
+{
+  "caveats": [
+    "Sharpe LORDO (no costi, no slippage, no leva). NON Sharpe eseguibile.",
+    "Soglie p75 calibrate SOLO sui dati training 2010-2018 (anti-look-ahead).",
+    "Filtri applicati identicamente a training e OOS.",
+    "ECB QE: 129/315 eventi totali hanno QE non-NaN (OIS_10Y_pc disponibile post-2007).",
+    "Portafoglio combina serie di date diverse (NFP mensili + ECB ~8/anno)."
+  ],
+  "design": "Strategia concentrata pre-registrata: NFP/neg event_window filtered + ECB QE short DE30Y filtered, inverse-vol weighting on training.",
+  "oos_period": "2019-01-01..2025-12-31",
+  "per_strategy_metrics": {
+    "ECB_QE_short_DE30Y_filtered": {
+      "oos": {
+        "mean": 0.03157142053660393,
+        "n": 14,
+        "sharpe": 1.3145614264476633,
+        "vol": 0.02401669477090874
+      },
+      "training": {
+        "mean": 0.03491052887565208,
+        "n": 19,
+        "sharpe": 0.6935990590988788,
+        "vol": 0.050332434015997234
+      }
+    },
+    "ECB_QE_short_DE30Y_unfiltered": {
+      "oos": {
+        "mean": 0.012655466437465398,
+        "n": 55,
+        "sharpe": 0.4253219233604391,
+        "vol": 0.029755029643135797
+      },
+      "training": {
+        "mean": 0.01748581252226955,
+        "n": 74,
+        "sharpe": 0.5369413232859584,
+        "vol": 0.032565592857074895
+      }
+    },
+    "NFP_event_window_filtered": {
+      "oos": {
+        "mean": 0.0045977624622282375,
+        "n": 10,
+        "sharpe": 1.2843918200539393,
+        "vol": 0.0035797195142796456
+      },
+      "training": {
+        "mean": 0.002523566903247491,
+        "n": 16,
+        "sharpe": 0.47247598870322977,
+        "vol": 0.005341153759313231
+      }
+    },
+    "NFP_event_window_unfiltered": {
+      "oos": {
+        "mean": 0.0011257782302158247,
+        "n": 49,
+        "sharpe": 0.213383342239181,
+        "vol": 0.005275848706849581
+      },
+      "training": {
+        "mean": 0.0021064720163194695,
+        "n": 87,
+        "sharpe": 0.23225535105288284,
+        "vol": 0.009069638252768786
+      }
+    }
+  },
+  "portfolio_inverse_vol": {
+    "oos": {
+      "mean": 0.0034987828947302692,
+      "n": 24,
+      "sharpe": 1.2843058691009894,
+      "vol": 0.0027242598347537008
+    },
+    "training": {
+      "mean": 0.002861097030229042,
+      "n": 35,
+      "sharpe": 0.5975916725107383,
+      "vol": 0.004787712349150297
+    },
+    "weights": {
+      "ECB_QE_DE30Y_filtered": 0.09593694196374156,
+      "NFP_filtered": 0.9040630580362584
+    }
+  },
+  "seed_name": "concentrated_strategy_2026-06-24",
+  "task_timestamp": "2026-06-24T17:52:28Z",
+  "thresholds_pre_registered_from_training": {
+    "ECB_p75_abs_QE": 2.2047537816322635,
+    "NFP_p75_VIX": 18.729999999999997,
+    "NFP_p75_abs_m_e": 0.33561891508094843
+  },
+  "training_period": "2010-01-01..2018-12-31"
+}

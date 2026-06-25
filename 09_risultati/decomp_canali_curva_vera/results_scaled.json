@@ -1,0 +1,240 @@
+{
+  "beta_estimation": {
+    "R2_global": 0.05704016019492708,
+    "beta_by_leg": {
+      "CPI": {
+        "R2": 0.09966327318544599,
+        "beta": 0.8861044287915097,
+        "n": 189
+      },
+      "ECB": {
+        "R2": 0.006639001499229247,
+        "beta": 0.16770646587789606,
+        "n": 181
+      },
+      "FOMC": {
+        "R2": 0.005394897807275978,
+        "beta": 0.3872267160445925,
+        "n": 189
+      },
+      "NFP": {
+        "R2": 0.19904123166159682,
+        "beta": 1.6104498565585983,
+        "n": 185
+      }
+    },
+    "beta_global": 0.7060343386800586,
+    "joint_match_n": 744,
+    "method": "regression \u0394DGS10_daily ~ \u03b2 \u00b7 delta_rate_3_intraday (no const)"
+  },
+  "config_hash_12": "907eb0ffa9e573b4243442042aa57235f02fe4bb5b6a9faacba2517bfe125e27",
+  "external_constants": {
+    "D_bond_future": 8.970865529245179,
+    "N_horizon": 100,
+    "dp_bar": -3.85
+  },
+  "inputs_sha256": {
+    "events_csv": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+    "fred_parquet": "53969abf30b2c5f5fcef563349a1cc8cdc48967286e6417d56875dbbf48ecd8a"
+  },
+  "results_per_variant": {
+    "D_scaled_global": {
+      "CPI/neg": {
+        "F_MOP": 39.98108529954362,
+        "beta_str_central": 0.9708623336352904,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 0.42869834228849624,
+        "gate_a": "PASS",
+        "n_events": 134,
+        "precheck_status": "PASS",
+        "shrink": 0.6517400046710131,
+        "verdict": "identified_fragile"
+      },
+      "CPI/pos": {
+        "F_MOP": 23.34031180901404,
+        "beta_str_central": 2.0682849631768,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 2.300893693171294,
+        "gate_a": "PASS",
+        "n_events": 33,
+        "precheck_status": "PASS",
+        "shrink": 0.4411641493397941,
+        "verdict": "identified_fragile"
+      },
+      "ECB/neg": {
+        "F_MOP": 10.210122269508442,
+        "beta_str_central": -0.007238075019891861,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 3.3112417174971207,
+        "gate_a": "FAIL",
+        "n_events": 120,
+        "precheck_status": "PASS",
+        "shrink": 1.5430349168470956,
+        "verdict": "channel_not_identified"
+      },
+      "ECB/pos": {
+        "F_MOP": 6.206108614347708,
+        "beta_str_central": 0.7327006735162819,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 1.659013346240617,
+        "gate_a": "FAIL",
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 0.8134236346622494,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 23.602514708465268,
+        "beta_str_central": 0.5359191949501001,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 1.3179962795391125,
+        "gate_a": "PASS",
+        "n_events": 129,
+        "precheck_status": "PASS",
+        "shrink": 0.8919822858765165,
+        "verdict": "identified_fragile"
+      },
+      "FOMC/pos": {
+        "F_MOP": 7.802847049267357,
+        "beta_str_central": 1.3217664122541612,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 0.14339227345376981,
+        "gate_a": "FAIL",
+        "n_events": 43,
+        "precheck_status": "PASS",
+        "shrink": 0.7110421443475473,
+        "verdict": "channel_not_identified"
+      },
+      "NFP/neg": {
+        "F_MOP": 48.17631109520795,
+        "beta_str_central": -0.9371461426506545,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 0.43127170333097087,
+        "gate_a": "PASS",
+        "n_events": 141,
+        "precheck_status": "PASS",
+        "shrink": 0.7652482584212588,
+        "verdict": "identified_fragile"
+      },
+      "NFP/pos": {
+        "F_MOP": 14.8087192081364,
+        "beta_str_central": 0.8397101159231292,
+        "beta_used_for_delta_y": 0.7060343386800586,
+        "construction_band_width": 2.254607381340094,
+        "gate_a": "FAIL",
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 0.45992368792440147,
+        "verdict": "channel_not_identified"
+      }
+    },
+    "E_scaled_by_leg": {
+      "CPI/neg": {
+        "F_MOP": 39.54691939514399,
+        "beta_str_central": 0.8606360827916516,
+        "beta_used_for_delta_y": 0.8861044287915097,
+        "construction_band_width": 0.35536080215189414,
+        "gate_a": "PASS",
+        "n_events": 134,
+        "precheck_status": "PASS",
+        "shrink": 0.6500599104014487,
+        "verdict": "identified_fragile"
+      },
+      "CPI/pos": {
+        "F_MOP": 25.203683282700723,
+        "beta_str_central": 1.7652674276820937,
+        "beta_used_for_delta_y": 0.8861044287915097,
+        "construction_band_width": 1.2467987888020036,
+        "gate_a": "PASS",
+        "n_events": 33,
+        "precheck_status": "PASS",
+        "shrink": 0.3891120976487446,
+        "verdict": "identified_fragile"
+      },
+      "ECB/neg": {
+        "F_MOP": 13.765530262453213,
+        "beta_str_central": 0.02381482607297824,
+        "beta_used_for_delta_y": 0.16770646587789606,
+        "construction_band_width": 0.37109620872455507,
+        "gate_a": "FAIL",
+        "n_events": 120,
+        "precheck_status": "PASS",
+        "shrink": 0.97560218646901,
+        "verdict": "channel_not_identified"
+      },
+      "ECB/pos": {
+        "F_MOP": 7.874347675472645,
+        "beta_str_central": 0.6826270035863503,
+        "beta_used_for_delta_y": 0.16770646587789606,
+        "construction_band_width": 2.050466624694473,
+        "gate_a": "FAIL",
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 0.8554053933800179,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 37.93475996049265,
+        "beta_str_central": 0.6718264020419191,
+        "beta_used_for_delta_y": 0.3872267160445925,
+        "construction_band_width": 0.2928942237179017,
+        "gate_a": "PASS",
+        "n_events": 129,
+        "precheck_status": "PASS",
+        "shrink": 0.8348109983557824,
+        "verdict": "identified_robust"
+      },
+      "FOMC/pos": {
+        "F_MOP": 8.839165761500965,
+        "beta_str_central": 1.502199866519545,
+        "beta_used_for_delta_y": 0.3872267160445925,
+        "construction_band_width": 1.247404208818859,
+        "gate_a": "FAIL",
+        "n_events": 43,
+        "precheck_status": "PASS",
+        "shrink": 0.7768263901826639,
+        "verdict": "channel_not_identified"
+      },
+      "NFP/neg": {
+        "F_MOP": 52.154884805602876,
+        "beta_str_central": -0.636761998733162,
+        "beta_used_for_delta_y": 1.6104498565585983,
+        "construction_band_width": 1.1654149479869234,
+        "gate_a": "PASS",
+        "n_events": 141,
+        "precheck_status": "PASS",
+        "shrink": 0.8880846667595649,
+        "verdict": "identified_fragile"
+      },
+      "NFP/pos": {
+        "F_MOP": 15.969475267535826,
+        "beta_str_central": 0.25440466393911004,
+        "beta_used_for_delta_y": 1.6104498565585983,
+        "construction_band_width": 2.6676873649741943,
+        "gate_a": "FAIL",
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 0.5217688644980639,
+        "verdict": "channel_not_identified"
+      }
+    }
+  },
+  "seed_name": "decomp_12_scaled_intraday_2026-06-24",
+  "sintesi": {
+    "D_scaled_global": {
+      "n_fragile": 4,
+      "n_not_identified": 4,
+      "n_robust": 0,
+      "robust_cells": []
+    },
+    "E_scaled_by_leg": {
+      "n_fragile": 3,
+      "n_not_identified": 4,
+      "n_robust": 1,
+      "robust_cells": [
+        "FOMC/neg"
+      ]
+    }
+  },
+  "task_timestamp": "2026-06-24T15:03:20Z"
+}

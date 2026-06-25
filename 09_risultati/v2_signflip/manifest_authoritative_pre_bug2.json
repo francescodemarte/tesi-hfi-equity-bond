@@ -1,0 +1,81 @@
+{
+  "config_hash": "55ccb29aacfe298200a6bd69f7069842cf8b54080f195a7de1fca8b2cfdd03e1",
+  "config_version": "v2-signflip-2026-06-21",
+  "diagnostics": {
+    "dedup_shared": {
+      "CPI": 0,
+      "ECB": 0,
+      "FOMC": 0,
+      "NFP": 0
+    },
+    "shared_control_post_dedup": {
+      "CPI": {
+        "n_neg": 562,
+        "n_pos": 139,
+        "n_shared": 0,
+        "shared": []
+      },
+      "ECB": {
+        "n_neg": 994,
+        "n_pos": 256,
+        "n_shared": 0,
+        "shared": []
+      },
+      "FOMC": {
+        "n_neg": 688,
+        "n_pos": 223,
+        "n_shared": 0,
+        "shared": []
+      },
+      "NFP": {
+        "n_neg": 574,
+        "n_pos": 153,
+        "n_shared": 0,
+        "shared": []
+      }
+    }
+  },
+  "entries": [
+    {
+      "config_hash": "55ccb29aacfe298200a6bd69f7069842cf8b54080f195a7de1fca8b2cfdd03e1",
+      "config_version": "v2-signflip-2026-06-21",
+      "figure": "execute.py",
+      "inputs": [
+        {
+          "path": "/home/francesco/TESI/tesi-hfi-equity-bond/DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv",
+          "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af"
+        },
+        {
+          "path": "/home/francesco/TESI/Dati/calendari/contaminants_build_2026-06-22/contaminants_v2_2026-06-22.csv",
+          "sha256": "0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e"
+        },
+        {
+          "path": "/home/francesco/TESI/tesi-hfi-equity-bond/bridge/data/req08_cpi_surprise.csv",
+          "sha256": "8021823f4d23eebd6759217b6f397a54a1ee43a99f26bd220fb988e87b16b9f1"
+        },
+        {
+          "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/07_protocollo_v2_signflip/external_data/snapshots/T10Y2Y.csv",
+          "sha256": "d641a96a06ff0fa4bc574bca2bde25d2b6611ab82b6f5ff5fa353f8860ed2004"
+        },
+        {
+          "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/07_protocollo_v2_signflip/external_data/snapshots/VIXCLS.csv",
+          "sha256": "7c18cea3e0ee37f693585248ea3189586bd7bd5a7649b2f2367a724e3476271e"
+        },
+        {
+          "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/07_protocollo_v2_signflip/external_data/snapshots/CPI_YoY.csv",
+          "sha256": "17972af29fc6fb7bc93184b1535732e3a5bb0a6f032526fa971eebc0e1d81f7e"
+        }
+      ],
+      "script": {
+        "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/execute.py",
+        "sha256": "11658faf8a5994c8abdb68569604d905a04ec946e63dc2a3d83175eead97a794"
+      },
+      "seed": {
+        "name": "execute_v2_signflip_2026-06-22",
+        "value": 3993785275
+      },
+      "timestamp": "2026-06-22T12:00:00Z"
+    }
+  ],
+  "generated": "2026-06-22T12:00:00Z"
+}

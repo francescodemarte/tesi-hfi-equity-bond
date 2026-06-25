@@ -1,0 +1,31 @@
+{
+  "build_timestamp": "2026-06-23T14:12:44Z",
+  "calendar_n": 4972,
+  "calendar_span": [
+    "2010-01-04",
+    "2025-12-31"
+  ],
+  "definitions": {
+    "epsilon": "(c - a) / sigma2_pre with three_windows disjoint",
+    "regime": "sign(corr(r_eq, r_bo)) on 63 sessions ending at t-4"
+  },
+  "events_emitted": 374,
+  "events_input": 379,
+  "events_off_calendar_dropped": 0,
+  "events_warmup_skipped": 5,
+  "events_zero_variance_skipped": 0,
+  "inputs": {
+    "es_intraday": {
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+    },
+    "events_csv": {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af"
+    },
+    "ty_intraday": {
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+    }
+  }
+}

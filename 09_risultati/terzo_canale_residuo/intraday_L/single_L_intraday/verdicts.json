@@ -1,0 +1,142 @@
+{
+  "active_proxies": {
+    "C": false,
+    "L": true,
+    "V": false
+  },
+  "by_c_m": 3.103210678210678,
+  "by_crit": null,
+  "by_family_size": 12,
+  "diagnostics_per_cell": {
+    "CPI/neg": {
+      "n_after": 134,
+      "n_before": 134
+    },
+    "CPI/pos": {
+      "n_after": 33,
+      "n_before": 33
+    },
+    "FOMC/neg": {
+      "n_after": 113,
+      "n_before": 129
+    },
+    "NFP/neg": {
+      "n_after": 141,
+      "n_before": 141
+    }
+  },
+  "n_third_channel_True": 0,
+  "passing_pairs": [],
+  "q": 0.1,
+  "variant": "single_L_intraday",
+  "verdicts": {
+    "CPI/neg|C": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/neg|L": {
+      "commonality": false,
+      "lambda_b": 0.0005819865100592387,
+      "lambda_e": -0.0005534330537860388,
+      "p_commonality": 0.4038885097861993,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/neg|V": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos|C": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos|L": {
+      "commonality": false,
+      "lambda_b": -0.000581144017149436,
+      "lambda_e": 0.0013020065816581714,
+      "p_commonality": 0.7768847210019592,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos|V": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg|C": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg|L": {
+      "commonality": false,
+      "lambda_b": -4.791239449642386e-06,
+      "lambda_e": 4.191467197152595e-06,
+      "p_commonality": 0.9106372084002246,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg|V": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg|C": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg|L": {
+      "commonality": false,
+      "lambda_b": 0.0019085296412383872,
+      "lambda_e": 0.0026788907936854357,
+      "p_commonality": 0.15799892235410384,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg|V": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    }
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "config_hash": "907eb0ffa9e573b4243442042aa57235f02fe4bb5b6a9faacba2517bfe125e27",
+  "config_version": "decomp-canali-doppio-cancello-v1-2026-06-22",
+  "diagnostics_per_cell": {
+    "CPI/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 3,
+        "no_curve_event": 21
+      },
+      "n_clusters": 150,
+      "n_dropped_total": 24,
+      "n_events_emitted": 126
+    },
+    "CPI/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 0,
+        "no_curve_event": 4
+      },
+      "n_clusters": 37,
+      "n_dropped_total": 4,
+      "n_events_emitted": 33
+    },
+    "ECB_decision/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 9,
+        "no_curve_event": 34
+      },
+      "n_clusters": 113,
+      "n_dropped_total": 43,
+      "n_events_emitted": 70
+    },
+    "ECB_decision/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 0,
+        "no_curve_event": 4
+      },
+      "n_clusters": 27,
+      "n_dropped_total": 4,
+      "n_events_emitted": 23
+    },
+    "ECB_press/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 13,
+        "no_curve_event": 32
+      },
+      "n_clusters": 108,
+      "n_dropped_total": 45,
+      "n_events_emitted": 63
+    },
+    "ECB_press/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 4,
+        "no_curve_event": 3
+      },
+      "n_clusters": 27,
+      "n_dropped_total": 7,
+      "n_events_emitted": 20
+    },
+    "FOMC/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 7,
+        "no_curve_event": 18
+      },
+      "n_clusters": 142,
+      "n_dropped_total": 25,
+      "n_events_emitted": 117
+    },
+    "FOMC/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 2,
+        "no_curve_event": 3
+      },
+      "n_clusters": 45,
+      "n_dropped_total": 5,
+      "n_events_emitted": 40
+    },
+    "NFP/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 4,
+        "no_curve_event": 15
+      },
+      "n_clusters": 145,
+      "n_dropped_total": 19,
+      "n_events_emitted": 126
+    },
+    "NFP/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 1,
+        "no_curve_event": 3
+      },
+      "n_clusters": 42,
+      "n_dropped_total": 4,
+      "n_events_emitted": 38
+    }
+  },
+  "external_constants": {
+    "D_bond": 8.970865529245179,
+    "N_horizon": 100,
+    "bond_control_treatment": "Bug 1 fix lato bond (2026-06-23): netting simmetrico tramite stessa formula curve-based applicata a delta_f_curve_control (\u0394rate FFc1/2/3 intraday sui control window). L'asimmetria storica (\u0394P^B_b=0 sui controlli) \u00e8 eliminata.",
+    "bond_method": "curve (2026-06-23 fix v2): \u0394P^B_b ricostruito dalla curva osservata (\u0394f_1,2,3 dei FFc1/2/3) come rivalutazione CTD lungo la curva, senza \u03c1-discount perch\u00e9 bond a maturit\u00e0 finita. Formula: \u0394P^B_b = -\u03a3_{n=1..N_b} \u0394f_n con tail extrapolation 'TC' (\u0394f_n=\u0394f_3 oltre il bordo osservato). N_b = round(D_BOND\u00b74) = round(35.88) = 36 trimestri. Sostituisce la formula precedente \u0394P^B_b = -D\u00b7\u0394y_daily (Bug 2 v1 abbandonato perch\u00e9 il proxy daily gonfiava la varianza \u21d2 shrink > 1).",
+    "bond_tail_extrapolation": "TC (constant): \u0394f_n = \u0394f_m per n > m=3, dove m \u00e8 la lunghezza dei \u0394f osservati (3 punti). Hp implicita: oltre il bordo osservato della curva front, la term structure si \u00e8 spostata uniformemente al livello del bordo. Alternative T0 (\u0394f=0 dopo m, pi\u00f9 defensivo) e TD_\u03bb (decadimento) non scelte: T0 sottostima il segnale rate, TD non calibrabile senza pi\u00f9 punti curva.",
+    "delta_f_curve_control_source": "FFc1/2/3 intraday 2026-06-23 (Bug 1 fix lato equity, netting simmetrico): \u0394rate_decimal = -(median_post - median_pre)/100 sulla finestra \u00b115 min con bordi median 5 min \u2014 convenzione coerente con extract_window del 07. Aggregato come media dei control window del cluster. Sostituisce l'assunzione storica \u0394P^B_e=0 sui controlli.",
+    "delta_f_curve_units": "decimale (BPS\u00f710000) sui front 1/2/3 della term-structure money-market",
+    "dp_bar": -3.85,
+    "dp_bar_provenance": "canonico esterno, log(D/P) S&P 500 \u2248 -3.85 (D/P \u2248 2.1% media 2010-2025), pre-registrato",
+    "surprise_per_event": "m_e (PC1 money-market PCA) dal CSV eventi v2"
+  },
+  "labeling": "verdetto per cella \u2208 {channel_not_identified, identified_fragile, identified_robust}, NON una singola cifra 'il canale spiega X%'. Le tre etichette sono pre-registrate.",
+  "package": "12_decomposizione_canali",
+  "replicability_assumption_5_points": "Assunti dichiarati della decomposizione in canali (chained):\n1) Log-linearizzazione di Campbell\u2013Shiller per il prezzo dell'equity\n   (\u0394P^B_e = \u2212\u03a3 \u03c1^(n\u22121)\u00b7\u0394f_n) \u2014 non esatta, approssima il valore attuale dei dividendi attesi.\n2) \u03c1_a calibrato esternamente come 1/(1+exp(dp_bar)), con dp_bar = media\n   di log(D/P) dell'indice azionario sul campione; banda di \u03c1 (3 valori)\n   per propagare l'incertezza di stima del d/p medio.\n3) Coda della curva discreta dalla griglia {T0, TC, TD(\u03bb=0.5), TD(\u03bb=0.8)}\n   per scadenze n > m osservate. La banda di costruzione cattura la\n   sensibilit\u00e0 a questa scelta.\n4) Bond: \u0394P^B_b = \u2212D\u00b7\u0394y (cash-flow finiti, niente coda) \u2014 letto direttamente\n   dalla curva, asimmetrico vs l'equity per costruzione.\n5) Controlli con \u0394P^B = 0 by construction (non hanno l'annuncio):\n   l'asimmetria \u00e8 voluta \u2014 il bond NETTO di controllo resta col rumore\n   di tasso non legato all'annuncio, mentre l'evento \u00e8 'depurato'.",
+  "seed_name": "decomp_canali_2026-06-23",
+  "table_section_6_per_cell": [
+    {
+      "F_MOP": 33.229684125706235,
+      "beta_str_central": 0.9509379413789273,
+      "cell": "CPI/neg/neg",
+      "constr_band_max": 0.9509379413789273,
+      "constr_band_min": 0.9509379413789273,
+      "constr_band_width": 0.0,
+      "gate_a": "PASS",
+      "n": 126,
+      "precheck_method": "regression",
+      "precheck_p": 0.6647798918569041,
+      "precheck_slope": -2.3935110027611253e-05,
+      "precheck_status": "PASS",
+      "sampling_band_high": 1.4021423456676305,
+      "sampling_band_low": 0.513689470200993,
+      "shrink": 0.5949142565772331,
+      "total_band_high": 1.4021423456676305,
+      "total_band_low": 0.513689470200993,
+      "verdict": "identified_robust"
+    },
+    {
+      "F_MOP": 23.544963357926097,
+      "beta_str_central": 2.2404198326683864,
+      "cell": "CPI/pos/pos",
+      "constr_band_max": 2.2404198326683864,
+      "constr_band_min": 2.2404198326683864,
+      "constr_band_width": 0.0,
+      "gate_a": "PASS",
+      "n": 33,
+      "precheck_method": "regression",
+      "precheck_p": 0.2665417027541168,
+      "precheck_slope": 7.063291547800141e-05,
+      "precheck_status": "PASS",
+      "sampling_band_high": 2.855996816413792,
+      "sampling_band_low": 1.602186957905559,
+      "shrink": 0.49092558966563116,
+      "total_band_high": 2.855996816413792,
+      "total_band_low": 1.602186957905559,
+      "verdict": "identified_robust"
+    },
+    {
+      "F_MOP": 10.110267771015321,
+      "beta_str_central": 0.4933061724993769,
+      "cell": "ECB_decision/neg/neg",
+      "constr_band_max": 0.4933061724993769,
+      "constr_band_min": 0.4933061724993769,
+      "constr_band_width": 0.0,
+      "gate_a": "FAIL",
+      "n": 70,
+      "precheck_method": "regression",
+      "precheck_p": 0.16054866311991622,
+      "precheck_slope": 2.790682213805174e-05,
+      "precheck_status": "PASS",
+      "sampling_band_high": 1.165949199928557,
+      "sampling_band_low": -0.15498908540989978,
+      "shrink": 0.972016918212706,
+      "total_band_high": 1.165949199928557,
+      "total_band_low": -0.15498908540989978,
+      "verdict": "channel_not_identified"
+    },
+    {
+      "F_MOP": 5.646693621201906,
+      "beta_str_central": 0.4909193056333851,
+      "cell": "ECB_decision/pos/pos",
+      "constr_band_max": 0.4909193056333851,
+      "constr_band_min": 0.4909193056333851,
+      "constr_band_width": 0.0,
+      "gate_a": "FAIL",
+      "n": 23,
+      "precheck_method": "regression",
+      "precheck_p": 0.7954177008522334,
+      "precheck_slope": -1.0841666124061067e-05,
+      "precheck_status": "PASS",
+      "sampling_band_high": 0.8478772810781041,
+      "sampling_band_low": 0.017054818472012317,
+      "shrink": 0.5685714179762777,
+      "total_band_high": 0.8478772810781041,
+      "total_band_low": 0.017054818472012317,
+      "verdict": "channel_not_identified"
+    },
+    {
+      "F_MOP": 10.73991745458281,
+      "beta_str_central": -1.678572988933467,
+      "cell": "ECB_press/neg/neg",
+      "constr_band_max": -1.678572988933467,
+      "constr_band_min": -1.678572988933467,
+      "constr_band_width": 0.0,
+      "gate_a": "FAIL",
+      "n": 63,
+      "precheck_method": "regression",
+      "precheck_p": 0.0019388577481325164,
+      "precheck_slope": 0.00015389591673340433,
+      "precheck_status": "WARN",
+      "sampling_band_high": 1.016955368796244,
+      "sampling_band_low": -3.9191978314637224,
+      "shrink": 0.5009316168310972,
+      "total_band_high": 1.016955368796244,
+      "total_band_low": -3.9191978314637224,
+      "verdict": "channel_not_identified"
+    },
+    {
+      "F_MOP": 3.227321585406148,
+      "beta_str_central": 1.0900079953957074,
+      "cell": "ECB_press/pos/pos",
+      "constr_band_max": 1.0900079953957074,
+      "constr_band_min": 1.0900079953957074,
+      "constr_band_width": 0.0,
+      "gate_a": "FAIL",
+      "n": 20,
+      "precheck_method": "regression",
+      "precheck_p": 0.07472323251820545,
+      "precheck_slope": 0.00031346117111165714,
+      "precheck_status": "PASS",
+      "sampling_band_high": 1.6367600395798656,
+      "sampling_band_low": 0.7755079308869903,
+      "shrink": 0.5485141909673297,
+      "total_band_high": 1.6367600395798656,
+      "total_band_low": 0.7755079308869903,
+      "verdict": "channel_not_identified"
+    },
+    {
+      "F_MOP": 39.18322502809664,
+      "beta_str_central": 0.874818977679241,
+      "cell": "FOMC/neg/neg",
+      "constr_band_max": 0.874818977679241,
+      "constr_band_min": 0.874818977679241,
+      "constr_band_width": 0.0,
+      "gate_a": "PASS",
+      "n": 117,
+      "precheck_method": "regression",
+      "precheck_p": 0.36308196028025197,
+      "precheck_slope": -3.245516120921975e-05,
+      "precheck_status": "PASS",
+      "sampling_band_high": 1.4248842957526384,
+      "sampling_band_low": 0.3365507458239148,
+      "shrink": 0.6478976261048947,
+      "total_band_high": 1.4248842957526384,
+      "total_band_low": 0.3365507458239148,
+      "verdict": "identified_robust"
+    },
+    {
+      "F_MOP": 11.49885256755015,
+      "beta_str_central": 1.776728399503844,
+      "cell": "FOMC/pos/pos",
+      "constr_band_max": 1.776728399503844,
+      "constr_band_min": 1.776728399503844,
+      "constr_band_width": 0.0,
+      "gate_a": "FAIL",
+      "n": 40,
+      "precheck_method": "regression",
+      "precheck_p": 0.9957164817875643,
+      "precheck_slope": -5.399775365173855e-07,
+      "precheck_status": "PASS",
+      "sampling_band_high": 2.595782167930762,
+      "sampling_band_low": 1.3140200591437385,
+      "shrink": 0.5505514695188517,
+      "total_band_high": 2.595782167930762,
+      "total_band_low": 1.3140200591437385,
+      "verdict": "channel_not_identified"
+    },
+    {
+      "F_MOP": 39.03958222863438,
+      "beta_str_central": -1.403641177900273,
+      "cell": "NFP/neg/neg",
+      "constr_band_max": -1.403641177900273,
+      "constr_band_min": -1.403641177900273,
+      "constr_band_width": 0.0,
+      "gate_a": "PASS",
+      "n": 126,
+      "precheck_method": "regression",
+      "precheck_p": 0.17403016651048153,
+      "precheck_slope": 7.051988659745395e-05,
+      "precheck_status": "PASS",
+      "sampling_band_high": -0.8878867489177955,
+      "sampling_band_low": -1.8928509750968934,
+      "shrink": 0.5346120013592266,
+      "total_band_high": -0.8878867489177955,
+      "total_band_low": -1.8928509750968934,
+      "verdict": "identified_robust"
+    },
+    {
+      "F_MOP": 19.640646813086583,
+      "beta_str_central": 0.609496719412671,
+      "cell": "NFP/pos/pos",
+      "constr_band_max": 0.609496719412671,
+      "constr_band_min": 0.609496719412671,
+      "constr_band_width": 0.0,
+      "gate_a": "FAIL",
+      "n": 38,
+      "precheck_method": "regression",
+      "precheck_p": 7.787359814503958e-05,
+      "precheck_slope": 0.00030103757393686406,
+      "precheck_status": "WARN",
+      "sampling_band_high": 1.26244508891615,
+      "sampling_band_low": -0.08408709534059707,
+      "shrink": 0.4706149473686124,
+      "total_band_high": 1.26244508891615,
+      "total_band_low": -0.08408709534059707,
+      "verdict": "channel_not_identified"
+    }
+  ],
+  "task_timestamp": "2026-06-23T22:21:46Z"
+}

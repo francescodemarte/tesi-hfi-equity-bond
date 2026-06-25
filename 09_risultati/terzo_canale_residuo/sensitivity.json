@@ -1,0 +1,14 @@
+{
+  "CPI/neg": {
+    "status": "F_MOP_missing_from_12_report"
+  },
+  "CPI/pos": {
+    "status": "F_MOP_missing_from_12_report"
+  },
+  "FOMC/neg": {
+    "status": "F_MOP_missing_from_12_report"
+  },
+  "NFP/neg": {
+    "status": "F_MOP_missing_from_12_report"
+  }
+}

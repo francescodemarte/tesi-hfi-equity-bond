@@ -1,0 +1,175 @@
+{
+  "config_hash": "6ee07068d8b8d06efa631e005834f904c360043ec81dbe5981505a546c81af87",
+  "external_constants": {
+    "D_bond": 8.970865529245179,
+    "N_horizon": 100,
+    "dp_bar": -3.85,
+    "rho_central": 0.9791636554813196
+  },
+  "input_sha256": {
+    "contaminants_csv": "0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e",
+    "es_intraday": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10",
+    "events_csv": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+    "jk_fomc": "9d8a6440eae1eed043d616662ff50576b0345d7887aea820803931520fe40de5",
+    "pickle_07_authoritative": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+    "req08_cpi_surprise": "8021823f4d23eebd6759217b6f397a54a1ee43a99f26bd220fb988e87b16b9f1",
+    "ty_intraday": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f",
+    "vix_daily_snapshot": "7c18cea3e0ee37f693585248ea3189586bd7bd5a7649b2f2367a724e3476271e"
+  },
+  "note": "Run con SORPRESE SPECIFICHE per cella: CPI usa surprise_yoy actual-vs-consensus (coerente col T2 Lewbel del run autoritativo 07); FOMC usa MP1 JK (114/189 eventi post-2010 disponibili). NFP usa m_e come fallback DICHIARATO (consensus NFP non presente nel filesystem).",
+  "proxy_provenance": {
+    "C": "corr ES~TY 5-min realizzata sul giorno trading precedente l'evento",
+    "L": "\u0394(bid-ask spread bps) post-pre, media ES+TY intraday",
+    "V": "\u0394VIXCLS daily (intraday non disponibile)"
+  },
+  "q": 0.1,
+  "results_summary": {
+    "diagnostics_per_cell": {
+      "CPI/neg": {
+        "n_after_proxy_mask": 133,
+        "n_clusters": 150,
+        "n_skip_no_surprise": 1,
+        "n_with_surprise": 133
+      },
+      "CPI/pos": {
+        "n_after_proxy_mask": 33,
+        "n_clusters": 37,
+        "n_skip_no_surprise": 0,
+        "n_with_surprise": 33
+      },
+      "FOMC/neg": {
+        "n_after_proxy_mask": 113,
+        "n_clusters": 142,
+        "n_skip_no_surprise": 16,
+        "n_with_surprise": 113
+      },
+      "NFP/neg": {
+        "n_after_proxy_mask": 136,
+        "n_clusters": 145,
+        "n_skip_no_surprise": 0,
+        "n_with_surprise": 141
+      }
+    },
+    "n_third_channel_True": 0,
+    "passing_pairs": [],
+    "verdicts": {
+      "CPI/neg|C": {
+        "commonality": false,
+        "lambda_b": -0.0012891327721900857,
+        "lambda_e": 0.00122588526455055,
+        "p_commonality": 0.15223247100932036,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "CPI/neg|L": {
+        "commonality": false,
+        "lambda_b": 0.0008840277139551436,
+        "lambda_e": -0.0008406554944304238,
+        "p_commonality": 0.08573666158349336,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "CPI/neg|V": {
+        "commonality": false,
+        "lambda_b": 0.00012937011008569646,
+        "lambda_e": -0.00012302294616085743,
+        "p_commonality": 0.4659336559982732,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "CPI/pos|C": {
+        "commonality": false,
+        "lambda_b": 0.0011040094206936591,
+        "lambda_e": -0.0024734446015748104,
+        "p_commonality": 0.6571066093052278,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "CPI/pos|L": {
+        "commonality": false,
+        "lambda_b": -0.0013669937736871499,
+        "lambda_e": 0.00306263996170289,
+        "p_commonality": 0.4839091028548488,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "CPI/pos|V": {
+        "commonality": false,
+        "lambda_b": 0.0009279842503344064,
+        "lambda_e": -0.0020790743188531086,
+        "p_commonality": 0.18615069326293954,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "FOMC/neg|C": {
+        "commonality": false,
+        "lambda_b": -0.0018911092758775127,
+        "lambda_e": 0.0016543782834028962,
+        "p_commonality": 0.22565933916608016,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "FOMC/neg|L": {
+        "commonality": false,
+        "lambda_b": -4.791239449642386e-06,
+        "lambda_e": 4.191467197152595e-06,
+        "p_commonality": 0.9106372084002246,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "FOMC/neg|V": {
+        "commonality": false,
+        "lambda_b": 9.921806612115271e-05,
+        "lambda_e": -8.679784717141813e-05,
+        "p_commonality": 0.4815615276490406,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "NFP/neg|C": {
+        "commonality": false,
+        "lambda_b": -0.0002329458961575208,
+        "lambda_e": -0.00032697245206957744,
+        "p_commonality": 0.8039525818566142,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "NFP/neg|L": {
+        "commonality": false,
+        "lambda_b": 0.0019148611537426747,
+        "lambda_e": 0.0026877779653548435,
+        "p_commonality": 0.1583611200443953,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      },
+      "NFP/neg|V": {
+        "commonality": false,
+        "lambda_b": -5.3446169741768936e-05,
+        "lambda_e": -7.501924465059448e-05,
+        "p_commonality": 0.7822362965434428,
+        "passed_by": false,
+        "sign_ok": null,
+        "third_channel": false
+      }
+    }
+  },
+  "script_sha256": "1157a4dac72dbfd74b75589740c6e12d3bb831ccff325a3b827f8c7ff40ef4e3",
+  "seed_name": "terzo_canale_proper_surprises_2026-06-24",
+  "surprise_provenance_per_leg": {
+    "CPI": "surprise_yoy = cpi_yoy_actual - cpi_yoy_consensus, da bridge/data/req08_cpi_surprise.csv. Stesso source del T2 Lewbel autoritativo (07).",
+    "FOMC": "MP1 Jaroci\u0144ski-Karadi \u2014 span 1988-02 to 2024-01; 114/189 eventi post-2010 hanno match. Eventi FOMC 2024-09\u21922025-12 scartati (fuori arco JK).",
+    "NFP": "m_e PC1 money-market dal CSV eventi v2 (fallback DICHIARATO \u2014 actual-vs-consensus NFP NON disponibile)."
+  },
+  "task": "terzo_canale_residuo_proper_surprises_q010_pre_registered",
+  "task_timestamp": "2026-06-24T14:12:09Z"
+}

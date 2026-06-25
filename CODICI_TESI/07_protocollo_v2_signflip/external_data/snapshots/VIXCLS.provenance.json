@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-06-17",
+  "date_min": "1990-01-02",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 9512,
+  "name": "VIXCLS",
+  "sha256": "7c18cea3e0ee37f693585248ea3189586bd7bd5a7649b2f2367a724e3476271e",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
+}

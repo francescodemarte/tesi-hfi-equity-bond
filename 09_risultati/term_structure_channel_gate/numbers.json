@@ -1,0 +1,179 @@
+{
+  "factor_PC1": {
+    "cell_counts": {
+      "negativo|high": 52,
+      "negativo|low": 70,
+      "positivo|high": 51,
+      "positivo|low": 32
+    },
+    "cells_below_min": [],
+    "criterion_d": {
+      "delta_rate_neg": [
+        9.425661192379482e-06,
+        7.94928094570859e-06,
+        4.958472571854365e-06
+      ],
+      "delta_rate_pos": [
+        8.516338331675832e-05,
+        2.4306536007824653e-05,
+        3.931241016234336e-05
+      ],
+      "delta_regime_hi": [
+        8.27344996340853e-05,
+        1.7854446526593575e-05,
+        3.767818807244116e-05
+      ],
+      "delta_regime_lo": [
+        6.996777509706464e-06,
+        1.4971914644775133e-06,
+        3.3242504819521645e-06
+      ],
+      "distinctness_at_regime_neg": {
+        "angle_deg": 25.883930530074156,
+        "cosine": 0.8996802512567876,
+        "rank_numerical": 2
+      },
+      "distinctness_at_regime_pos": {
+        "angle_deg": 3.4284134842811826,
+        "cosine": 0.9982102946229378,
+        "rank_numerical": 2
+      },
+      "non_collinear_neg": true,
+      "non_collinear_pos": false,
+      "passes_d_in_both_regimes": false,
+      "status": "ok"
+    },
+    "intensity_partition": {
+      "fraction_near_zero": {
+        "fraction_below_or_eq": 0.06341463414634146,
+        "threshold_q05": 0.0008337877000335701
+      },
+      "median_abs_score": 0.00466158358770876,
+      "mode": "median",
+      "n_high": 103,
+      "n_low": 102
+    }
+  },
+  "factor_PC2": {
+    "cell_counts": {
+      "negativo|high": 50,
+      "negativo|low": 72,
+      "positivo|high": 55,
+      "positivo|low": 28
+    },
+    "cells_below_min": [
+      [
+        "positivo",
+        "low"
+      ]
+    ],
+    "criterion_d": {
+      "delta_rate_neg": [
+        7.503217947482556e-06,
+        4.196838309080944e-06,
+        1.7350499495052536e-07
+      ],
+      "delta_rate_pos": [
+        5.233371876895442e-05,
+        1.5524982834205638e-05,
+        2.4716384466217206e-05
+      ],
+      "delta_regime_hi": [
+        6.848753201321951e-05,
+        1.5886832157062053e-05,
+        3.3569521350736545e-05
+      ],
+      "delta_regime_lo": [
+        2.3657031191747648e-05,
+        4.558687631937358e-06,
+        9.026641879469867e-06
+      ],
+      "distinctness_at_regime_neg": {
+        "angle_deg": 26.37524489930355,
+        "cosine": 0.8959037848227229,
+        "rank_numerical": 2
+      },
+      "distinctness_at_regime_pos": {
+        "angle_deg": 3.348793911070071,
+        "cosine": 0.9982924322432672,
+        "rank_numerical": 2
+      },
+      "non_collinear_neg": true,
+      "non_collinear_pos": false,
+      "passes_d_in_both_regimes": false,
+      "status": "ok"
+    },
+    "intensity_partition": {
+      "fraction_near_zero": {
+        "fraction_below_or_eq": 0.22439024390243903,
+        "threshold_q05": 4.011607625730614e-05
+      },
+      "median_abs_score": 0.0013769912570659843,
+      "mode": "median",
+      "n_high": 105,
+      "n_low": 100
+    }
+  },
+  "gate_1": {
+    "check_i_pc2_var_explained": {
+      "passed": false,
+      "threshold": 0.1,
+      "value": 0.033867432415372004
+    },
+    "check_ii_long_contract_movement": {
+      "fractions": {
+        "FEIc3": 0.6146341463414634,
+        "FEIc4": 0.6634146341463415
+      },
+      "n_valid_events": 205,
+      "passed": true,
+      "threshold": 0.3
+    },
+    "check_iii_pc2_partition_non_degenerate": {
+      "median_abs_pc2": 0.0013769912570659843,
+      "n_high": 105,
+      "n_low": 100,
+      "passed": true
+    },
+    "passed": false
+  },
+  "pca": {
+    "contracts": [
+      "FEIc1",
+      "FEIc2",
+      "FEIc3",
+      "FEIc4"
+    ],
+    "loadings_pc1": {
+      "FEIc1": 0.2056359941346432,
+      "FEIc2": 0.3916231135488061,
+      "FEIc3": 0.5512332117236535,
+      "FEIc4": 0.7074511439975356
+    },
+    "loadings_pc2": {
+      "FEIc1": -0.499558665405883,
+      "FEIc2": -0.650283219356558,
+      "FEIc3": -0.07913256835966101,
+      "FEIc4": 0.5668429333298317
+    },
+    "mean_deltas": {
+      "FEIc1": 7.926829268285473e-05,
+      "FEIc2": 0.0007073170731710589,
+      "FEIc3": 0.00039634146341468963,
+      "FEIc4": 0.000865853658536699
+    },
+    "n_events_used": 205,
+    "var_explained": [
+      0.9425853216781751,
+      0.033867432415372004,
+      0.014108049220991657,
+      0.009439196685461327
+    ]
+  },
+  "thresholds": {
+    "cosine_high_threshold": 0.95,
+    "long_contract_movement_min_frac": 0.3,
+    "min_cell_events": 30,
+    "pc2_var_explained_min": 0.1
+  }
+}

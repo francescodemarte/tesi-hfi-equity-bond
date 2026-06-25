@@ -1,0 +1,7 @@
+# data_external/ — Public datasets fetched by setup script
+
+Esegui `bash scripts/setup_data.sh` per popolare automaticamente questa
+cartella con: FRED snapshots (TEDRATE, DGS2/5/10/30, VIXCLS), Altavilla
+EA-MPD 2019, Jarocinski-Karadi MP surprises.
+
+I file scaricati saranno verificati via sha256 contro `data_manifest.json`.

@@ -1,0 +1,233 @@
+{
+  "task": "estrazione_momenti_cella_CPI_due_regimi_nativi",
+  "task_timestamp": "2026-06-22T17:03:38Z",
+  "namespace": "09_risultati/v2_signflip/cpi_moments/",
+  "pickle_letto": {
+    "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+    "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+    "run_label": "v2_signflip_run_authoritative_2026-06-22_post_bug2",
+    "run_timestamp": "2026-06-22T15:00:00Z"
+  },
+  "codice_congelato": {
+    "package_path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/07_protocollo_v2_signflip",
+    "config_version": "v2-signflip-2026-06-21",
+    "config_hash": "55ccb29aacfe298200a6bd69f7069842cf8b54080f195a7de1fca8b2cfdd03e1",
+    "modules_used": [
+      "config",
+      "data",
+      "run",
+      "tests_protocol",
+      "windows",
+      "weakiv",
+      "provenance"
+    ],
+    "module_sha256": {
+      "config.py": "29f9c513205b8508bd310fc55cc12ff988c34298390b04a76b55c6284f38cfc1",
+      "data.py": "5ffe9bcf71e4a2f9dca299b04770ac4ea4da0a3babaeb95190f90207b50bc270",
+      "decomposition.py": "1d1d5d712b75917fe2f527c3740b8b32fc216336b6f44aeabdfc4ff7f33d5aa1",
+      "estimators.py": "25e21aa2c42fe380e63e12a1b8259328a1c1a34fd0cf02bc508b59ff6ea202dd",
+      "fred_fetch.py": "46d8d757bfbff498682cd3cc759553a51162bff01d0e973280f5a7d2f3ef5e5d",
+      "inference.py": "204183da7a544f320432d998190b91ffb37ec23ceb563d271610bcf4668d2d91",
+      "loaders.py": "90176ff25b6eef4d9633dc093f430496ea9a895f8fafb9df24683479c0ca22b4",
+      "mechanism.py": "405615f9c4454ad793bda67b4d7339fadd05966ccc1e0df0183972b973fa9770",
+      "provenance.py": "b9490cb83a3e015ccd0bef8ee8e38f597afb6d935cf6ae43732a92a6577c8884",
+      "regimes.py": "c55b135e9ad86519595e0f9cab0b32c029a174473f718b0887dbf2adf338b6c5",
+      "run.py": "09678ee4af8803cf3765abd9cabb3ee3f860a979ed2537ff146aaa723f67f3c1",
+      "surprises.py": "2cb97c6414b5dd1bb3137714600697fe62b0e10caf1c7a3cd51643cd0252f30b",
+      "synthetic.py": "2d082ec28b3623a9a7d52dccbf56593e0f9e984c20f94d7ffd67a12973cb2886",
+      "tests_protocol.py": "6897b299f5f01b32cd49c8f34eff372ca92c358242159a830e42364511613e3d",
+      "weakiv.py": "d7b90c8fe017b2df03af9f9fe7aa6bc82d1af899bb36f358254efa127c38dbcc",
+      "windows.py": "fb3914c41462e65d8d049c8afef40b5aa3a17bb62edf030fae6edefcf11f24d6"
+    }
+  },
+  "extractor_script": {
+    "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/cpi_moments/extract_cpi_moments.py",
+    "sha256": "da278c0911f69ac1eac7f4f950dfb02ae3873414b02bfa7ac04a6507d8391f35"
+  },
+  "seed": {
+    "master_seed": 20260621,
+    "seed_name": "execute_v2_signflip_2026-06-22",
+    "seed_value": 3993785275,
+    "B_boot": 10000,
+    "rng_consumption_order_replicated": [
+      "FOMC.pos",
+      "FOMC.neg",
+      "CPI.pos",
+      "CPI.neg"
+    ],
+    "note": "lo stesso seed e ordine del run autoritativo; NFP/ECB non eseguiti (post-CPI nel pickle, irrilevanti per CPI)"
+  },
+  "input_provenance": {
+    "events_csv": {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af"
+    },
+    "contaminants_csv": {
+      "path": "/home/francesco/TESI/Dati/calendari/contaminants_build_2026-06-22/contaminants_v2_2026-06-22.csv",
+      "sha256": "0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e"
+    },
+    "intraday_dir": "/home/francesco/TESI/Dati/data_processed",
+    "intraday_files": {
+      "ES": {
+        "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+        "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+      },
+      "TY": {
+        "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+        "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+      },
+      "FGBL": {
+        "path": "/home/francesco/TESI/Dati/data_processed/FGBLc1_1min.csv",
+        "sha256": "37b9a86f25349d4d7daf7dd7e4c8b175e37f4fc3ca7c5585a3ad34cc1358a3d8"
+      },
+      "STXE": {
+        "path": "/home/francesco/TESI/Dati/data_processed/STXE_continuous_1min.csv",
+        "sha256": "49de2232ee7d2537bc49e54c4fb7426500976fd3e474e76ebd583fa105bdd48e"
+      }
+    }
+  },
+  "fields": {
+    "read_from_pickle": [
+      "cv_mop",
+      "dvar_sig.pos",
+      "dvar_sig.neg",
+      "dvar_lb.pos",
+      "dvar_lb.neg",
+      "f_eff.pos",
+      "f_eff.neg",
+      "route.pos",
+      "route.neg",
+      "delta_p",
+      "opposite_sides",
+      "testable",
+      "n_e.pos (n_per_type_pos_neg.CPI.pos)",
+      "n_e.neg (n_per_type_pos_neg.CPI.neg)",
+      "n_c.pos (shared_control.CPI.n_pos)",
+      "n_c.neg (shared_control.CPI.n_neg)",
+      "dedup_shared.CPI",
+      "t9.CPI (full)",
+      "t3.diff (= b_OLS - b_H, e CI bootstrap)"
+    ],
+    "recalculated_deterministically": [
+      "b_H.pos",
+      "b_H.neg",
+      "b_OLS.pos",
+      "b_OLS.neg",
+      "se_bH.pos",
+      "se_bH.neg",
+      "dCov.pos",
+      "dCov.neg",
+      "dVar.pos",
+      "dVar.neg",
+      "var_e.pos",
+      "var_e.neg",
+      "var_c.pos",
+      "var_c.neg",
+      "r_hat.pos",
+      "r_hat.neg",
+      "cov_e.pos",
+      "cov_e.neg",
+      "cov_c.pos",
+      "cov_c.neg",
+      "var_dVar.pos",
+      "var_dVar.neg"
+    ],
+    "non_disponibile": []
+  },
+  "validation_pickle_vs_recalc": {
+    "pos": {
+      "dvar_lb": {
+        "pickle": 1.5742093599040847e-05,
+        "recalc": 1.5742093599040847e-05,
+        "abs_diff": 0.0
+      },
+      "f_eff": {
+        "pickle": 18.863484860621487,
+        "recalc": 18.863484860621487,
+        "abs_diff": 0.0
+      },
+      "diff_b_ols_minus_b_h": {
+        "pickle": -0.030494241307813308,
+        "recalc": -0.030494241307813308,
+        "abs_diff": 0.0
+      },
+      "route": {
+        "pickle": "ar_only",
+        "recalc": "ar_only",
+        "match": true
+      },
+      "dvar_sig": {
+        "pickle": true,
+        "recalc": true,
+        "match": true
+      }
+    },
+    "neg": {
+      "dvar_lb": {
+        "pickle": 1.4982486658486245e-06,
+        "recalc": 1.4982486658486245e-06,
+        "abs_diff": 0.0
+      },
+      "f_eff": {
+        "pickle": 29.718066145412656,
+        "recalc": 29.718066145412656,
+        "abs_diff": 0.0
+      },
+      "diff_b_ols_minus_b_h": {
+        "pickle": -0.2979452068195353,
+        "recalc": -0.2979452068195353,
+        "abs_diff": 0.0
+      },
+      "route": {
+        "pickle": "pointwise",
+        "recalc": "pointwise",
+        "match": true
+      },
+      "dvar_sig": {
+        "pickle": true,
+        "recalc": true,
+        "match": true
+      }
+    },
+    "delta_p": {
+      "pickle": 0.02180170045744778,
+      "recalc": 0.02180170045744778,
+      "abs_diff": 0.0
+    },
+    "opposite_sides": {
+      "pickle": false,
+      "recalc": false,
+      "match": true
+    },
+    "n_e": {
+      "pos": {
+        "pickle": 37,
+        "recalc": 37,
+        "match": true
+      },
+      "neg": {
+        "pickle": 150,
+        "recalc": 150,
+        "match": true
+      }
+    },
+    "n_c": {
+      "pos": {
+        "pickle": 139,
+        "recalc": 139,
+        "match": true
+      },
+      "neg": {
+        "pickle": 562,
+        "recalc": 562,
+        "match": true
+      }
+    }
+  },
+  "output_files": {
+    "cpi_cell_moments.json": {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/cpi_moments/cpi_cell_moments.json",
+      "sha256": "3e6195d6b8be688b58bd9a4ffea47d268ba5f9a59e5727f018817631b4cfc0cb"
+    }
+  }
+}

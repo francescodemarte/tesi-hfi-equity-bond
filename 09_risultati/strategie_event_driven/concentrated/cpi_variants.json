@@ -1,0 +1,26 @@
+{
+  "V1: CPI/neg, surprise_yoy": {
+    "filtered_oos_n": 7,
+    "filtered_oos_p_boot": 0.6618,
+    "filtered_oos_sharpe": -0.176001664781513,
+    "unfiltered_oos_sharpe": -0.22107652319667273
+  },
+  "V2: CPI/pos, surprise_yoy": {
+    "filtered_oos_n": 2,
+    "filtered_oos_p_boot": NaN,
+    "filtered_oos_sharpe": -0.4813151627932517,
+    "unfiltered_oos_sharpe": -0.06233300615540661
+  },
+  "V3: CPI/neg, surprise_mom": {
+    "filtered_oos_n": 9,
+    "filtered_oos_p_boot": 0.2146,
+    "filtered_oos_sharpe": -0.39753944793826856,
+    "unfiltered_oos_sharpe": 0.10784093424619726
+  },
+  "V4: CPI/pos, surprise_mom": {
+    "filtered_oos_n": 3,
+    "filtered_oos_p_boot": NaN,
+    "filtered_oos_sharpe": -0.4548112947394048,
+    "unfiltered_oos_sharpe": 0.1155544224029064
+  }
+}

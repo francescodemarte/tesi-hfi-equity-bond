@@ -1,0 +1,15 @@
+{
+  "factor_PC1_partial": true,
+  "factor_PC1_success": false,
+  "factor_PC2_partial": false,
+  "factor_PC2_success": false,
+  "gate_1_passed": false,
+  "gate_1_subchecks": {
+    "i_pc2_var_explained": false,
+    "ii_long_contract_movement": true,
+    "iii_pc2_partition_non_degenerate": true
+  },
+  "n_events_fed_total": 561,
+  "n_events_with_all_deltas_valid": 205,
+  "outcome": "FAIL_GATE_1"
+}

@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-04-01",
+  "date_min": "1959-01-01",
+  "fetched_at": "2026-06-22T21:00:00Z",
+  "n_rows": 808,
+  "name": "PCEPILFE",
+  "sha256": "a8a445114afe30678d14ff41a489a095e1d0f72e4f475918c0d0e9ebe82d3f04",
+  "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=PCEPILFE"
+}

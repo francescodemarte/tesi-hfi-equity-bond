@@ -1,0 +1,225 @@
+{
+  "B_bootstrap": 10000,
+  "annualized_oos": {
+    "ECB_filtered": {
+      "n_per_year_oos": 2.000586854460094,
+      "sharpe_oos_annualized": 1.8593433288175971,
+      "sharpe_oos_per_event": 1.3145614264476633
+    },
+    "NFP_filtered": {
+      "n_per_year_oos": 1.4289906103286385,
+      "sharpe_oos_annualized": 1.5353670586143178,
+      "sharpe_oos_per_event": 1.2843918200539393
+    },
+    "Portfolio": {
+      "n_per_year_oos": 3.4295774647887325,
+      "sharpe_oos_annualized": 2.3784212457440224,
+      "sharpe_oos_per_event": 1.2843058691009894
+    }
+  },
+  "bootstrap_baseline_q75": {
+    "ECB_filtered": {
+      "oos": {
+        "ci_high": 2.249745887803592,
+        "ci_low": 0.9373724413873361,
+        "n": 14,
+        "p_value_2sided": 0.0002806367880230365,
+        "se_boot": 0.33893704115718165,
+        "sharpe": 1.3145614264476633,
+        "t_stat_mean": 4.9186384716359886
+      },
+      "train": {
+        "ci_high": 1.1679432193827124,
+        "ci_low": 0.3592219182998937,
+        "n": 19,
+        "p_value_2sided": 0.007304989527492811,
+        "se_boot": 0.20748666005346508,
+        "sharpe": 0.6935990590988788,
+        "t_stat_mean": 3.023328205946908
+      }
+    },
+    "NFP_filtered": {
+      "oos": {
+        "ci_high": 2.707689186692997,
+        "ci_low": 0.7646245316572967,
+        "n": 10,
+        "p_value_2sided": 0.002835118389758362,
+        "se_boot": 0.6230397550655805,
+        "sharpe": 1.2843918200539393,
+        "t_stat_mean": 4.061603559459577
+      },
+      "train": {
+        "ci_high": 1.0631969967120058,
+        "ci_low": 0.0036638321155731345,
+        "n": 16,
+        "p_value_2sided": 0.07825400893268819,
+        "se_boot": 0.2682548814479088,
+        "sharpe": 0.47247598870322977,
+        "t_stat_mean": 1.889903954812919
+      }
+    },
+    "Portfolio": {
+      "oos": {
+        "ci_high": 1.817230888132462,
+        "ci_low": 0.9599573210419098,
+        "n": 24,
+        "p_value_2sided": 2.0255990804685098e-06,
+        "se_boot": 0.21818915066279512,
+        "sharpe": 1.2843058691009894,
+        "t_stat_mean": 6.291788105918216
+      },
+      "train": {
+        "ci_high": 0.9417424895561949,
+        "ci_low": 0.31185631637813127,
+        "n": 35,
+        "p_value_2sided": 0.0011981875382514051,
+        "se_boot": 0.1600260206417656,
+        "sharpe": 0.5975916725107383,
+        "t_stat_mean": 3.5354000122894655
+      }
+    }
+  },
+  "caveats": [
+    "Sharpe LORDO (no costi, slippage, leva, vincoli custodia).",
+    "Sample piccolo (n=10-14 OOS per strategia, n=24 portafoglio OOS).",
+    "Sharpe annualizzato = per-event \u00d7 \u221a(n/anno) \u2014 valido sotto i.i.d.",
+    "Strategia richiede esecuzione su 2 mercati distinti (US futures + Bund futures).",
+    "Soglia p75 \u00e8 scelta a priori dalla letteratura (no ottimizzazione)."
+  ],
+  "data_sources": {
+    "ECB QE": "altavilla_TPQE_factors.csv (estratto in questa sessione)",
+    "NFP cluster": "pickle autoritativo 07 (per_type[NFP][neg])",
+    "VIX": "FRED VIXCLS daily (snapshot 07)",
+    "m_e": "CSV eventi v2 (colonna m_e PC1 money-market)",
+    "\u0394DE30Y": "altavilla_eampd_monetary_event_window.csv"
+  },
+  "oos_years": 6.997946611909651,
+  "seed": 20260624,
+  "sensitivity_thresholds": {
+    "q70": {
+      "ECB_filt_n": {
+        "oos": 22,
+        "train": 22
+      },
+      "ECB_sharpe": {
+        "oos": 0.42223923999929275,
+        "train": 0.7588897724968088
+      },
+      "NFP_filt_n": {
+        "oos": 13,
+        "train": 19
+      },
+      "NFP_sharpe": {
+        "oos": 1.0372554519957455,
+        "train": 0.3489479780433484
+      },
+      "portfolio_sharpe": {
+        "oos": 0.6344542649062607,
+        "train": 0.5639108990293766
+      },
+      "thresholds": {
+        "p_abs_me": 0.26243581097303303,
+        "p_abs_qe": 1.677331723567508,
+        "p_vix": 17.822
+      },
+      "weights": {
+        "ECB": 0.09897226282058975,
+        "NFP": 0.9010277371794103
+      }
+    },
+    "q75": {
+      "ECB_filt_n": {
+        "oos": 14,
+        "train": 19
+      },
+      "ECB_sharpe": {
+        "oos": 1.3145614264476633,
+        "train": 0.6935990590988788
+      },
+      "NFP_filt_n": {
+        "oos": 10,
+        "train": 16
+      },
+      "NFP_sharpe": {
+        "oos": 1.2843918200539393,
+        "train": 0.47247598870322977
+      },
+      "portfolio_sharpe": {
+        "oos": 1.2843058691009894,
+        "train": 0.5975916725107383
+      },
+      "thresholds": {
+        "p_abs_me": 0.33561891508094843,
+        "p_abs_qe": 2.2047537816322635,
+        "p_vix": 18.729999999999997
+      },
+      "weights": {
+        "ECB": 0.09593694196374156,
+        "NFP": 0.9040630580362584
+      }
+    },
+    "q80": {
+      "ECB_filt_n": {
+        "oos": 9,
+        "train": 15
+      },
+      "ECB_sharpe": {
+        "oos": 1.6402857929469856,
+        "train": 0.6014770044476245
+      },
+      "NFP_filt_n": {
+        "oos": 11,
+        "train": 13
+      },
+      "NFP_sharpe": {
+        "oos": 1.2125288570419133,
+        "train": 0.5970410480972638
+      },
+      "portfolio_sharpe": {
+        "oos": 1.261407711146032,
+        "train": 0.6108343448027542
+      },
+      "thresholds": {
+        "p_abs_me": 0.444712349024882,
+        "p_abs_qe": 2.681949711670376,
+        "p_vix": 20.421999999999997
+      },
+      "weights": {
+        "ECB": 0.08077888147531584,
+        "NFP": 0.9192211185246841
+      }
+    }
+  },
+  "strategy_specification": {
+    "portfolio": {
+      "rebalance": "static (pesi calibrati su training, applicati identicamente OOS)",
+      "split": "training 2010-01-01..2018-12-31; OOS 2019-01-01..2025-12-31",
+      "weights": "inverse-volatility on TRAINING (anti-look-ahead)"
+    },
+    "trade_1_NFP_neg_event_window": {
+      "entry": "all'orario rilascio NFP (12:30 UTC primo venerd\u00ec del mese)",
+      "exit": "T+15 min (event_window)",
+      "filters_pre_registered": [
+        "|m_e| \u2265 p75(training m_e abs)",
+        "VIX_event \u2264 p75(training VIX)"
+      ],
+      "instruments": "ES (S&P 500 future) long/short, TY (UST 10Y future) long/short",
+      "position": "size = |\u03b2_str(NFP)|, sign_equity e sign_bond da strategy_rule.position(NFP, m_e)",
+      "surprise": "m_e PC1 money-market dal CSV eventi (fallback)",
+      "trigger": "Annuncio NFP, regime negativo (corr equity-bond < 0 su 63gg lag t-1)"
+    },
+    "trade_2_ECB_QE_short_DE30Y": {
+      "entry": "monetary event window Altavilla (combined PR+PC)",
+      "exit": "close of event window (Altavilla MEW close)",
+      "filters_pre_registered": [
+        "|QE| \u2265 p75(training |QE|)"
+      ],
+      "instruments": "Bund 30Y future (Buxl FGBXc1) \u2014 proxy via \u0394DE30Y daily",
+      "position": "sign(QE) \u00d7 short Bund 30Y future (payoff = +sign(QE)\u00b7\u0394DE30Y/100)",
+      "surprise": "QE factor Altavilla (PC-rotation of \u0394OIS_10Y press conference orth Target+Path)",
+      "trigger": "Annuncio ECB (decision o press), tutti i regimi (no filtro regime)"
+    }
+  },
+  "task_timestamp": "2026-06-24T18:00:11Z",
+  "training_years": 8.996577686516085
+}

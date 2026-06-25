@@ -1,0 +1,406 @@
+{
+  "config_hash_12": "907eb0ffa9e573b4243442042aa57235f02fe4bb5b6a9faacba2517bfe125e27",
+  "external_constants": {
+    "D_bond_future": 8.970865529245179,
+    "N_horizon": 100,
+    "dp_bar": -3.85,
+    "durations_cash": {
+      "DGS10": 8.5,
+      "DGS2": 1.92,
+      "DGS30": 18.0,
+      "DGS5": 4.65
+    }
+  },
+  "inputs_sha256": {
+    "DGS2": "263196e5fd10814977353c8851084be0e96499aff8ccbd7b581c70fd5c3ec7e7",
+    "DGS30": "98fac6c8115f1e6babd78b51332620c449d06a81d8b0a8cff40c01b4643a3402",
+    "DGS5": "9c9fd16d5d1a7009d38deee6d5ba882df344746b6d3a8fff70c1529452102a1a",
+    "events_csv": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+    "fred_parquet": "53969abf30b2c5f5fcef563349a1cc8cdc48967286e6417d56875dbbf48ecd8a"
+  },
+  "results_per_variant": {
+    "A_DGS10": {
+      "CPI/neg": {
+        "F_MOP": 67.44293399234604,
+        "beta_str_central": -0.05541540508875551,
+        "construction_band_max": -0.05536120208045582,
+        "construction_band_min": -0.20313801201887813,
+        "construction_band_width": 0.1477768099384223,
+        "gate_a": "PASS",
+        "n_clusters": 150,
+        "n_dropped_no_yield": 0,
+        "n_events": 134,
+        "precheck_status": "PASS",
+        "shrink": 7.231714674225209,
+        "verdict": "identified_robust"
+      },
+      "CPI/pos": {
+        "F_MOP": 22.62311133744004,
+        "beta_str_central": -0.05019168818185441,
+        "construction_band_max": -0.050178035446194966,
+        "construction_band_min": -0.06093235513694149,
+        "construction_band_width": 0.010754319690746528,
+        "gate_a": "FAIL",
+        "n_clusters": 37,
+        "n_dropped_no_yield": 0,
+        "n_events": 33,
+        "precheck_status": "PASS",
+        "shrink": 1.4799519138433501,
+        "verdict": "channel_not_identified"
+      },
+      "ECB/neg": {
+        "F_MOP": 37.094829670022925,
+        "beta_str_central": -0.04386901220193374,
+        "construction_band_max": 0.2944250949359318,
+        "construction_band_min": -0.04398484011631039,
+        "construction_band_width": 0.33840993505224215,
+        "gate_a": "PASS",
+        "n_clusters": 227,
+        "n_dropped_no_yield": 1,
+        "n_events": 119,
+        "precheck_status": "PASS",
+        "shrink": 8.37768262237047,
+        "verdict": "identified_fragile"
+      },
+      "ECB/pos": {
+        "F_MOP": 16.973029410663802,
+        "beta_str_central": 0.10776651919035496,
+        "construction_band_max": 0.10800652978187282,
+        "construction_band_min": -0.6319848855007263,
+        "construction_band_width": 0.7399914152825992,
+        "gate_a": "FAIL",
+        "n_clusters": 54,
+        "n_dropped_no_yield": 0,
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 5.110112642073192,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 40.29584929396506,
+        "beta_str_central": -0.008061114202425376,
+        "construction_band_max": -0.008015633296418882,
+        "construction_band_min": -0.14510925570582972,
+        "construction_band_width": 0.13709362240941084,
+        "gate_a": "PASS",
+        "n_clusters": 142,
+        "n_dropped_no_yield": 0,
+        "n_events": 129,
+        "precheck_status": "PASS",
+        "shrink": 10.020345752696922,
+        "verdict": "identified_robust"
+      },
+      "FOMC/pos": {
+        "F_MOP": 34.24636064775051,
+        "beta_str_central": 0.0312545456111816,
+        "construction_band_max": 0.031297613661132144,
+        "construction_band_min": -0.08152278417429756,
+        "construction_band_width": 0.11282039783542971,
+        "gate_a": "PASS",
+        "n_clusters": 45,
+        "n_dropped_no_yield": 0,
+        "n_events": 43,
+        "precheck_status": "PASS",
+        "shrink": 5.792137778286433,
+        "verdict": "identified_robust"
+      },
+      "NFP/neg": {
+        "F_MOP": 44.83489207312833,
+        "beta_str_central": 0.2163093065659988,
+        "construction_band_max": 0.3411917054033091,
+        "construction_band_min": 0.21626956880810863,
+        "construction_band_width": 0.12492213659520049,
+        "gate_a": "PASS",
+        "n_clusters": 145,
+        "n_dropped_no_yield": 2,
+        "n_events": 139,
+        "precheck_status": "PASS",
+        "shrink": 2.8326829905265316,
+        "verdict": "identified_robust"
+      },
+      "NFP/pos": {
+        "F_MOP": 32.23827580548858,
+        "beta_str_central": -0.08619182717812718,
+        "construction_band_max": 0.9067277911299289,
+        "construction_band_min": -0.08649760895678008,
+        "construction_band_width": 0.9932254000867089,
+        "gate_a": "PASS",
+        "n_clusters": 42,
+        "n_dropped_no_yield": 0,
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 2.498197045811705,
+        "verdict": "identified_fragile"
+      }
+    },
+    "B_multi": {
+      "CPI/neg": {
+        "F_MOP": 55.215228173522675,
+        "beta_str_central": -0.08955501459530496,
+        "construction_band_max": -0.02407879136950493,
+        "construction_band_min": -0.08956940728700373,
+        "construction_band_width": 0.0654906159174988,
+        "gate_a": "PASS",
+        "n_clusters": 150,
+        "n_dropped_no_yield": 0,
+        "n_events": 134,
+        "precheck_status": "PASS",
+        "shrink": 18.87749134308774,
+        "verdict": "identified_robust"
+      },
+      "CPI/pos": {
+        "F_MOP": 14.136133158557753,
+        "beta_str_central": -0.391830481243272,
+        "construction_band_max": 0.2514989617023766,
+        "construction_band_min": -0.3920170219989897,
+        "construction_band_width": 0.6435159837013663,
+        "gate_a": "FAIL",
+        "n_clusters": 37,
+        "n_dropped_no_yield": 0,
+        "n_events": 33,
+        "precheck_status": "PASS",
+        "shrink": 5.156638346703355,
+        "verdict": "channel_not_identified"
+      },
+      "ECB/neg": {
+        "F_MOP": 31.86165676605348,
+        "beta_str_central": 0.005645392377339535,
+        "construction_band_max": 0.34886018408240754,
+        "construction_band_min": 0.005529297810677072,
+        "construction_band_width": 0.3433308862717305,
+        "gate_a": "PASS",
+        "n_clusters": 227,
+        "n_dropped_no_yield": 1,
+        "n_events": 119,
+        "precheck_status": "PASS",
+        "shrink": 19.430250755123915,
+        "verdict": "identified_fragile"
+      },
+      "ECB/pos": {
+        "F_MOP": 14.605200038186744,
+        "beta_str_central": 0.034698592593534854,
+        "construction_band_max": 0.034821614865802285,
+        "construction_band_min": -0.3302081642726057,
+        "construction_band_width": 0.36502977913840795,
+        "gate_a": "FAIL",
+        "n_clusters": 54,
+        "n_dropped_no_yield": 0,
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 11.700159702486985,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 50.240671255626744,
+        "beta_str_central": -0.04286749087496411,
+        "construction_band_max": -0.009775810503742063,
+        "construction_band_min": -0.042873840449024425,
+        "construction_band_width": 0.03309802994528236,
+        "gate_a": "PASS",
+        "n_clusters": 142,
+        "n_dropped_no_yield": 0,
+        "n_events": 129,
+        "precheck_status": "PASS",
+        "shrink": 27.973942247500617,
+        "verdict": "identified_robust"
+      },
+      "FOMC/pos": {
+        "F_MOP": 32.25861421715518,
+        "beta_str_central": -0.05725683929218571,
+        "construction_band_max": -0.004162668317975587,
+        "construction_band_min": -0.057265578265576315,
+        "construction_band_width": 0.05310290994760073,
+        "gate_a": "PASS",
+        "n_clusters": 45,
+        "n_dropped_no_yield": 0,
+        "n_events": 43,
+        "precheck_status": "PASS",
+        "shrink": 21.066534573731452,
+        "verdict": "identified_robust"
+      },
+      "NFP/neg": {
+        "F_MOP": 61.99895089606837,
+        "beta_str_central": 0.17731264125764662,
+        "construction_band_max": 0.4665789111418278,
+        "construction_band_min": 0.1772222122559927,
+        "construction_band_width": 0.28935669888583515,
+        "gate_a": "PASS",
+        "n_clusters": 145,
+        "n_dropped_no_yield": 2,
+        "n_events": 139,
+        "precheck_status": "PASS",
+        "shrink": 7.7723336642903345,
+        "verdict": "identified_robust"
+      },
+      "NFP/pos": {
+        "F_MOP": 32.74272858054396,
+        "beta_str_central": -0.10178406335126836,
+        "construction_band_max": 0.6617775219012657,
+        "construction_band_min": -0.10201486489910364,
+        "construction_band_width": 0.7637923868003693,
+        "gate_a": "PASS",
+        "n_clusters": 42,
+        "n_dropped_no_yield": 0,
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 9.74834306367839,
+        "verdict": "identified_fragile"
+      }
+    },
+    "C_baseline": {
+      "CPI/neg": {
+        "F_MOP": 36.83509943077673,
+        "beta_str_central": 0.7689574019945917,
+        "construction_band_max": 1.5986835974973348,
+        "construction_band_min": 0.7686890242237945,
+        "construction_band_width": 0.8299945732735403,
+        "gate_a": "PASS",
+        "n_clusters": 150,
+        "n_dropped_no_yield": 0,
+        "n_events": 134,
+        "precheck_status": "PASS",
+        "shrink": 0.6672825682946867,
+        "verdict": "identified_fragile"
+      },
+      "CPI/pos": {
+        "F_MOP": 23.1261775965377,
+        "beta_str_central": 1.4505669697633845,
+        "construction_band_max": 1.4506591939944606,
+        "construction_band_min": 1.0509462496220054,
+        "construction_band_width": 0.3997129443724552,
+        "gate_a": "PASS",
+        "n_clusters": 37,
+        "n_dropped_no_yield": 0,
+        "n_events": 33,
+        "precheck_status": "PASS",
+        "shrink": 0.3751737826123679,
+        "verdict": "identified_fragile"
+      },
+      "ECB/neg": {
+        "F_MOP": 9.384017686659956,
+        "beta_str_central": -0.01320420900546631,
+        "construction_band_max": 3.3805224776343477,
+        "construction_band_min": -0.01444024995363261,
+        "construction_band_width": 3.39496272758798,
+        "gate_a": "FAIL",
+        "n_clusters": 227,
+        "n_dropped_no_yield": 0,
+        "n_events": 120,
+        "precheck_status": "PASS",
+        "shrink": 2.268578281757723,
+        "verdict": "channel_not_identified"
+      },
+      "ECB/pos": {
+        "F_MOP": 8.723283706561412,
+        "beta_str_central": 0.5672746083647685,
+        "construction_band_max": 3.432029397651756,
+        "construction_band_min": 0.5662390394097181,
+        "construction_band_width": 2.865790358242038,
+        "gate_a": "FAIL",
+        "n_clusters": 54,
+        "n_dropped_no_yield": 0,
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 1.0622525374479042,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 11.942942010234912,
+        "beta_str_central": 0.3653864048637048,
+        "construction_band_max": 2.6251307632214145,
+        "construction_band_min": 0.36453639444226515,
+        "construction_band_width": 2.260594368779149,
+        "gate_a": "FAIL",
+        "n_clusters": 142,
+        "n_dropped_no_yield": 0,
+        "n_events": 129,
+        "precheck_status": "PASS",
+        "shrink": 1.0992912034445543,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/pos": {
+        "F_MOP": 8.377086459612006,
+        "beta_str_central": 0.980705315627271,
+        "construction_band_max": 1.9170436257525485,
+        "construction_band_min": 0.980477253199391,
+        "construction_band_width": 0.9365663725531574,
+        "gate_a": "FAIL",
+        "n_clusters": 45,
+        "n_dropped_no_yield": 0,
+        "n_events": 43,
+        "precheck_status": "PASS",
+        "shrink": 0.7447823720827048,
+        "verdict": "channel_not_identified"
+      },
+      "NFP/neg": {
+        "F_MOP": 51.0817254903122,
+        "beta_str_central": -0.886940420185648,
+        "construction_band_max": -0.7360740638207957,
+        "construction_band_min": -0.8870013670382235,
+        "construction_band_width": 0.15092730321742787,
+        "gate_a": "PASS",
+        "n_clusters": 145,
+        "n_dropped_no_yield": 0,
+        "n_events": 141,
+        "precheck_status": "PASS",
+        "shrink": 0.7529905801910682,
+        "verdict": "identified_robust"
+      },
+      "NFP/pos": {
+        "F_MOP": 12.705726749110216,
+        "beta_str_central": 0.784719480242729,
+        "construction_band_max": 0.7848610718596223,
+        "construction_band_min": 0.14564493335726808,
+        "construction_band_width": 0.6392161385023543,
+        "gate_a": "FAIL",
+        "n_clusters": 42,
+        "n_dropped_no_yield": 0,
+        "n_events": 39,
+        "precheck_status": "PASS",
+        "shrink": 0.3871686692451196,
+        "verdict": "channel_not_identified"
+      }
+    }
+  },
+  "seed_name": "decomp_12_true_curve_2026-06-24",
+  "sintesi": {
+    "by_variant": {
+      "A_DGS10": {
+        "n_fragile": 2,
+        "n_not_identified": 2,
+        "n_robust": 4,
+        "robust_cells": [
+          "FOMC/pos",
+          "FOMC/neg",
+          "CPI/neg",
+          "NFP/neg"
+        ]
+      },
+      "B_multi": {
+        "n_fragile": 2,
+        "n_not_identified": 2,
+        "n_robust": 4,
+        "robust_cells": [
+          "FOMC/pos",
+          "FOMC/neg",
+          "CPI/neg",
+          "NFP/neg"
+        ]
+      },
+      "C_baseline": {
+        "n_fragile": 2,
+        "n_not_identified": 5,
+        "n_robust": 1,
+        "robust_cells": [
+          "NFP/neg"
+        ]
+      }
+    }
+  },
+  "task_timestamp": "2026-06-24T14:53:21Z",
+  "variants_definition": {
+    "A_DGS10": "delta_y_bond = \u0394DGS10 daily in decimale; D_bond=8.97 (cash 10Y vero)",
+    "B_multi": "delta_y_bond = (D_2\u00b7\u0394DGS2 + D_5\u00b7\u0394DGS5 + D_10\u00b7\u0394DGS10) / D_bond_future in decimale; multi-curva",
+    "C_baseline": "delta_y_bond = delta_rate_3 (front money-market FFc3) in decimale; D_bond=8.97 (originale 12)"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-01-01",
+  "date_min": "1947-01-01",
+  "fetched_at": "2026-06-22T21:00:00Z",
+  "n_rows": 317,
+  "name": "GDPC1",
+  "sha256": "2ea9504366f75476b5a331022181655a1f0a4973a254643d62f96b63db6c7165",
+  "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=GDPC1"
+}

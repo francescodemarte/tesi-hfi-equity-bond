@@ -1,0 +1,132 @@
+{
+  "additive_identity_max_abs_err": {
+    "bond_r_b - sum_channels": 0.0,
+    "equity_r_e - sum_channels": 0.0
+  },
+  "data_inputs": {
+    "es_intraday": {
+      "n_daily_closes": 4976,
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+    },
+    "fred_yields": {
+      "path": "/home/francesco/TESI/Dati/external_data/fred_yields_snapshot.parquet",
+      "series_used": [
+        "DFII5"
+      ],
+      "sha256": "53969abf30b2c5f5fcef563349a1cc8cdc48967286e6417d56875dbbf48ecd8a"
+    },
+    "pickle_auth": {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "run_label": "v2_signflip_run_authoritative_2026-06-22_post_bug2",
+      "run_timestamp": "2026-06-22T15:00:00Z",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+    },
+    "t10yie": {
+      "path": "/home/francesco/TESI/Dati/external_data/tips_breakeven_10y.csv",
+      "sha256": "fbdced18bdbbdb868bc20263d382a79ab22f13c0ce9d3511c9dfcfd8ea5825c7"
+    },
+    "ty_intraday": {
+      "n_daily_closes": 4979,
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+    }
+  },
+  "duration_constants": {
+    "D_bond": 8.970865529245179,
+    "D_eq_partial_A": 5.0
+  },
+  "n_events_total": 842,
+  "n_events_with_bond_channels_valid": 836,
+  "n_events_with_equity_channels_valid": 836,
+  "seed_name": "decomposition_daily_2026-06-23",
+  "task_timestamp": "2026-06-22T22:37:11Z",
+  "twin_cov_by_cell_regime_x_leg": {
+    "CPI|negativo": {
+      "corr_twin": 0.09334854806255348,
+      "n": 150,
+      "twin_cov": 2.8439090514570047e-06,
+      "var_c_b_res": 8.810809865712846e-06,
+      "var_c_e_res": 0.00010534172914718708
+    },
+    "CPI|positivo": {
+      "corr_twin": -0.3312919185459277,
+      "n": 37,
+      "twin_cov": -1.796268466194434e-05,
+      "var_c_b_res": 1.5917833685966016e-05,
+      "var_c_e_res": 0.0001846872203919432
+    },
+    "ECB|negativo": {
+      "corr_twin": 0.3256663489299003,
+      "n": 225,
+      "twin_cov": 1.8055810635973612e-05,
+      "var_c_b_res": 1.2248492435798192e-05,
+      "var_c_e_res": 0.0002509606172146029
+    },
+    "ECB|positivo": {
+      "corr_twin": 0.09749374476795038,
+      "n": 54,
+      "twin_cov": 3.2360803894453027e-06,
+      "var_c_b_res": 1.0612497036099459e-05,
+      "var_c_e_res": 0.0001038167710406935
+    },
+    "FOMC|negativo": {
+      "corr_twin": 0.0035594872213600575,
+      "n": 142,
+      "twin_cov": 1.7089374053933545e-07,
+      "var_c_b_res": 1.610067595006879e-05,
+      "var_c_e_res": 0.00014316383579783085
+    },
+    "FOMC|positivo": {
+      "corr_twin": 0.09518252435843656,
+      "n": 45,
+      "twin_cov": 3.5683876217869295e-06,
+      "var_c_b_res": 1.4317548567196563e-05,
+      "var_c_e_res": 9.81659663440829e-05
+    },
+    "NFP|negativo": {
+      "corr_twin": 0.34397902110472856,
+      "n": 141,
+      "twin_cov": 1.4009841168758279e-05,
+      "var_c_b_res": 1.1196808406603739e-05,
+      "var_c_e_res": 0.0001481522542425305
+    },
+    "NFP|positivo": {
+      "corr_twin": 0.18431776546131579,
+      "n": 42,
+      "twin_cov": 9.055668942887232e-06,
+      "var_c_b_res": 2.2796212807247223e-05,
+      "var_c_e_res": 0.00010588732535799932
+    }
+  },
+  "twin_cov_summary_us_vs_ecb": {
+    "ECB|negativo": {
+      "corr_twin": 0.3256663489299003,
+      "n": 225,
+      "twin_cov": 1.8055810635973612e-05,
+      "var_c_b_res": 1.2248492435798192e-05,
+      "var_c_e_res": 0.0002509606172146029
+    },
+    "ECB|positivo": {
+      "corr_twin": 0.09749374476795038,
+      "n": 54,
+      "twin_cov": 3.2360803894453027e-06,
+      "var_c_b_res": 1.0612497036099459e-05,
+      "var_c_e_res": 0.0001038167710406935
+    },
+    "US_only|negativo": {
+      "corr_twin": 0.13606507440681287,
+      "n": 433,
+      "twin_cov": 5.436470464722328e-06,
+      "var_c_b_res": 1.213200494575271e-05,
+      "var_c_e_res": 0.00013158553792224514
+    },
+    "US_only|positivo": {
+      "corr_twin": -0.030956367263857993,
+      "n": 124,
+      "twin_cov": -1.479160686683922e-06,
+      "var_c_b_res": 1.8180316163717062e-05,
+      "var_c_e_res": 0.00012558255040248637
+    }
+  }
+}

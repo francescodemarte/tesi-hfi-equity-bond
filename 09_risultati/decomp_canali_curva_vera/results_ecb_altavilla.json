@@ -1,0 +1,240 @@
+{
+  "config_hash_12": "907eb0ffa9e573b4243442042aa57235f02fe4bb5b6a9faacba2517bfe125e27",
+  "design": "US (FOMC, CPI, NFP) usa baseline C delta_rate_3; ECB usa Altavilla EA-MPD Monetary Event Window con 3 sub-varianti (DE10Y, multi 2/5/10 duration-weighted, DE30Y come stress coda lunga).",
+  "inputs_sha256": {
+    "altavilla_MEW": "14bce9ec1cc5fde0e237fedb53a880d116b709c8fc31cc1a32eb325fb5d37080",
+    "events_csv": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af"
+  },
+  "results_per_variant": {
+    "ECB_DE10Y": {
+      "CPI/neg": {
+        "F_MOP": 37.16270046241545,
+        "beta_str_central": 0.7689574019945917,
+        "construction_band_width": 0.8299945732735403,
+        "gate_a": "PASS",
+        "n_events": 134,
+        "shrink": 0.6672825682946867,
+        "verdict": "identified_fragile"
+      },
+      "CPI/pos": {
+        "F_MOP": 23.23200501000594,
+        "beta_str_central": 1.4505669697633845,
+        "construction_band_width": 0.3997129443724552,
+        "gate_a": "PASS",
+        "n_events": 33,
+        "shrink": 0.3751737826123679,
+        "verdict": "identified_fragile"
+      },
+      "ECB/neg": {
+        "F_MOP": 76.82055083014222,
+        "beta_str_central": 0.0005416105519576853,
+        "construction_band_width": 0.007709648776848578,
+        "gate_a": "PASS",
+        "n_events": 114,
+        "n_no_altavilla_match": 6,
+        "shrink": 22622.087878467337,
+        "verdict": "identified_robust"
+      },
+      "ECB/pos": {
+        "F_MOP": 13.028002704396155,
+        "beta_str_central": -0.0024861214514013295,
+        "construction_band_width": 0.012615690073518452,
+        "gate_a": "FAIL",
+        "n_events": 33,
+        "n_no_altavilla_match": 6,
+        "shrink": 37254.544443536695,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 11.54704672034729,
+        "beta_str_central": 0.3653864048637048,
+        "construction_band_width": 2.260594368779149,
+        "gate_a": "FAIL",
+        "n_events": 129,
+        "shrink": 1.0992912034445543,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/pos": {
+        "F_MOP": 8.408782917880215,
+        "beta_str_central": 0.980705315627271,
+        "construction_band_width": 0.9365663725531574,
+        "gate_a": "FAIL",
+        "n_events": 43,
+        "shrink": 0.7447823720827048,
+        "verdict": "channel_not_identified"
+      },
+      "NFP/neg": {
+        "F_MOP": 48.67177195913021,
+        "beta_str_central": -0.886940420185648,
+        "construction_band_width": 0.15092730321742787,
+        "gate_a": "PASS",
+        "n_events": 141,
+        "shrink": 0.7529905801910682,
+        "verdict": "identified_robust"
+      },
+      "NFP/pos": {
+        "F_MOP": 12.821225391583878,
+        "beta_str_central": 0.784719480242729,
+        "construction_band_width": 0.6392161385023543,
+        "gate_a": "FAIL",
+        "n_events": 39,
+        "shrink": 0.3871686692451196,
+        "verdict": "channel_not_identified"
+      }
+    },
+    "ECB_DE30Y": {
+      "CPI/neg": {
+        "F_MOP": 36.595240210989495,
+        "beta_str_central": 0.7689574019945917,
+        "construction_band_width": 0.8299945732735403,
+        "gate_a": "PASS",
+        "n_events": 134,
+        "shrink": 0.6672825682946867,
+        "verdict": "identified_fragile"
+      },
+      "CPI/pos": {
+        "F_MOP": 22.890902845068826,
+        "beta_str_central": 1.4505669697633845,
+        "construction_band_width": 0.3997129443724552,
+        "gate_a": "FAIL",
+        "n_events": 33,
+        "shrink": 0.3751737826123679,
+        "verdict": "channel_not_identified"
+      },
+      "ECB/neg": {
+        "F_MOP": 47.03736204602957,
+        "beta_str_central": 0.0012092193363265147,
+        "construction_band_width": 0.0014244190539759512,
+        "gate_a": "PASS",
+        "n_events": 114,
+        "n_no_altavilla_match": 6,
+        "shrink": 94965.8880091604,
+        "verdict": "identified_robust"
+      },
+      "ECB/pos": {
+        "F_MOP": 16.000402445911476,
+        "beta_str_central": -0.0015080460941392707,
+        "construction_band_width": 0.007613145044552029,
+        "gate_a": "FAIL",
+        "n_events": 33,
+        "n_no_altavilla_match": 6,
+        "shrink": 91506.7499077025,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 11.670700506947094,
+        "beta_str_central": 0.3653864048637048,
+        "construction_band_width": 2.260594368779149,
+        "gate_a": "FAIL",
+        "n_events": 129,
+        "shrink": 1.0992912034445543,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/pos": {
+        "F_MOP": 8.768385999362273,
+        "beta_str_central": 0.980705315627271,
+        "construction_band_width": 0.9365663725531574,
+        "gate_a": "FAIL",
+        "n_events": 43,
+        "shrink": 0.7447823720827048,
+        "verdict": "channel_not_identified"
+      },
+      "NFP/neg": {
+        "F_MOP": 49.31568947349654,
+        "beta_str_central": -0.886940420185648,
+        "construction_band_width": 0.15092730321742787,
+        "gate_a": "PASS",
+        "n_events": 141,
+        "shrink": 0.7529905801910682,
+        "verdict": "identified_robust"
+      },
+      "NFP/pos": {
+        "F_MOP": 12.934768289137645,
+        "beta_str_central": 0.784719480242729,
+        "construction_band_width": 0.6392161385023543,
+        "gate_a": "FAIL",
+        "n_events": 39,
+        "shrink": 0.3871686692451196,
+        "verdict": "channel_not_identified"
+      }
+    },
+    "ECB_multi_2_5_10": {
+      "CPI/neg": {
+        "F_MOP": 37.402498538359254,
+        "beta_str_central": 0.7689574019945917,
+        "construction_band_width": 0.8299945732735403,
+        "gate_a": "PASS",
+        "n_events": 134,
+        "shrink": 0.6672825682946867,
+        "verdict": "identified_fragile"
+      },
+      "CPI/pos": {
+        "F_MOP": 23.538548908688327,
+        "beta_str_central": 1.4505669697633845,
+        "construction_band_width": 0.3997129443724552,
+        "gate_a": "PASS",
+        "n_events": 33,
+        "shrink": 0.3751737826123679,
+        "verdict": "identified_fragile"
+      },
+      "ECB/neg": {
+        "F_MOP": 51.8539290917416,
+        "beta_str_central": 0.0002026780338536811,
+        "construction_band_width": 0.006947193202857616,
+        "gate_a": "PASS",
+        "n_events": 114,
+        "n_no_altavilla_match": 6,
+        "shrink": 89397.2277257324,
+        "verdict": "identified_robust"
+      },
+      "ECB/pos": {
+        "F_MOP": 10.784169191913344,
+        "beta_str_central": -0.0012239949398473668,
+        "construction_band_width": 0.006646285363152389,
+        "gate_a": "FAIL",
+        "n_events": 33,
+        "n_no_altavilla_match": 6,
+        "shrink": 148278.82274337392,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/neg": {
+        "F_MOP": 11.57284622472813,
+        "beta_str_central": 0.3653864048637048,
+        "construction_band_width": 2.260594368779149,
+        "gate_a": "FAIL",
+        "n_events": 129,
+        "shrink": 1.0992912034445543,
+        "verdict": "channel_not_identified"
+      },
+      "FOMC/pos": {
+        "F_MOP": 8.549637384975146,
+        "beta_str_central": 0.980705315627271,
+        "construction_band_width": 0.9365663725531574,
+        "gate_a": "FAIL",
+        "n_events": 43,
+        "shrink": 0.7447823720827048,
+        "verdict": "channel_not_identified"
+      },
+      "NFP/neg": {
+        "F_MOP": 49.69765134052606,
+        "beta_str_central": -0.886940420185648,
+        "construction_band_width": 0.15092730321742787,
+        "gate_a": "PASS",
+        "n_events": 141,
+        "shrink": 0.7529905801910682,
+        "verdict": "identified_robust"
+      },
+      "NFP/pos": {
+        "F_MOP": 12.413300614966651,
+        "beta_str_central": 0.784719480242729,
+        "construction_band_width": 0.6392161385023543,
+        "gate_a": "FAIL",
+        "n_events": 39,
+        "shrink": 0.3871686692451196,
+        "verdict": "channel_not_identified"
+      }
+    }
+  },
+  "seed_name": "decomp_12_ecb_altavilla_2026-06-24",
+  "task_timestamp": "2026-06-24T15:39:57Z"
+}

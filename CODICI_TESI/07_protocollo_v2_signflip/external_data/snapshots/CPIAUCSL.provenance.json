@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-05-01",
+  "date_min": "1947-01-01",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 953,
+  "name": "CPIAUCSL",
+  "sha256": "2cec89464e259f5d1c28655c0e93e8ea0cff471bb63978faefcad037054db220",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
+}

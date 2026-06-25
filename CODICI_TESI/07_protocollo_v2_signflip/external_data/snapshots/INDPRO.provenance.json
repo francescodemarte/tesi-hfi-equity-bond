@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-05-01",
+  "date_min": "1919-01-01",
+  "fetched_at": "2026-06-22T21:00:00Z",
+  "n_rows": 1289,
+  "name": "INDPRO",
+  "sha256": "99fb48b5ac927863f3ef430bd7d0ee38fc607d3206af5e5146ede241b7add85f",
+  "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=INDPRO"
+}

@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-05-01",
+  "date_min": "1957-01-01",
+  "fetched_at": "2026-06-22T21:00:00Z",
+  "n_rows": 832,
+  "name": "CPILFESL",
+  "sha256": "9236349f7b8be4c4b36e4aefb417201151ea355e34c0985375ff1c5b872eac67",
+  "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPILFESL"
+}

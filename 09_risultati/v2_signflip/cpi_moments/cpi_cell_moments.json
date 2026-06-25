@@ -1,0 +1,177 @@
+{
+  "cell": "CPI",
+  "regimes": [
+    "positivo",
+    "negativo"
+  ],
+  "delta_p": {
+    "value": 0.02180170045744778,
+    "source": "read_from_pickle (t4.CPI.delta_p == t5.per_type.CPI.delta_p)"
+  },
+  "opposite_sides": {
+    "value": false,
+    "source": "read_from_pickle (t5.per_type.CPI.opposite_sides)"
+  },
+  "testable": {
+    "value": true,
+    "source": "read_from_pickle (t5.per_type.CPI.testable)"
+  },
+  "cv_MOP": {
+    "value": 23.108511211606643,
+    "source": "read_from_pickle (cv_mop, globale)"
+  },
+  "dedup_shared_CPI": {
+    "value": 0,
+    "source": "read_from_pickle (dedup_shared.CPI)"
+  },
+  "positivo": {
+    "n_e": {
+      "value": 37,
+      "source": "read_from_pickle (n_per_type_pos_neg.CPI.pos) \u2014 cross-check con ricalcolo: match"
+    },
+    "n_c": {
+      "value": 139,
+      "source": "read_from_pickle (shared_control.CPI.n_pos) \u2014 cross-check con ricalcolo: match"
+    },
+    "b_H": {
+      "value": 1.898744928080503,
+      "source": "recalculated"
+    },
+    "b_OLS": {
+      "value": 1.8682506867726898,
+      "source": "recalculated"
+    },
+    "se_bH": {
+      "value": 0.2268086844935883,
+      "source": "recalculated (bootstrap clusterizzato B=10000)"
+    },
+    "dCov": {
+      "value": 4.941015469968577e-05,
+      "source": "recalculated"
+    },
+    "dVar": {
+      "value": 2.602253413239447e-05,
+      "source": "recalculated"
+    },
+    "dvar_lb_oneside_5pct": {
+      "value": 1.5742093599040847e-05,
+      "source": "read_from_pickle (routing.CPI.pos.dvar_lb) \u2014 cross-check con ricalcolo"
+    },
+    "dvar_sig": {
+      "value": true,
+      "source": "read_from_pickle (routing.CPI.pos.dvar_sig)"
+    },
+    "var_e": {
+      "value": 2.6624259933817388e-05,
+      "source": "recalculated"
+    },
+    "var_c": {
+      "value": 6.017258014229212e-07,
+      "source": "recalculated"
+    },
+    "r_hat": {
+      "value": 44.24649877212861,
+      "source": "recalculated (var_e/var_c)"
+    },
+    "cov_e": {
+      "value": 4.9740791906168944e-05,
+      "source": "recalculated"
+    },
+    "cov_c": {
+      "value": 3.306372064831743e-07,
+      "source": "recalculated"
+    },
+    "F_eff": {
+      "value": 18.863484860621487,
+      "source": "read_from_pickle (routing.CPI.pos.f_eff) \u2014 cross-check con ricalcolo"
+    },
+    "route": {
+      "value": "ar_only",
+      "source": "read_from_pickle (routing.CPI.pos.route)"
+    }
+  },
+  "negativo": {
+    "n_e": {
+      "value": 150,
+      "source": "read_from_pickle (n_per_type_pos_neg.CPI.neg) \u2014 cross-check con ricalcolo: match"
+    },
+    "n_c": {
+      "value": 562,
+      "source": "read_from_pickle (shared_control.CPI.n_neg) \u2014 cross-check con ricalcolo: match"
+    },
+    "b_H": {
+      "value": 1.1627150963606276,
+      "source": "recalculated"
+    },
+    "b_OLS": {
+      "value": 0.8647698895410924,
+      "source": "recalculated"
+    },
+    "se_bH": {
+      "value": 0.20265977034731184,
+      "source": "recalculated (bootstrap clusterizzato B=10000)"
+    },
+    "dCov": {
+      "value": 2.462392583025812e-06,
+      "source": "recalculated"
+    },
+    "dVar": {
+      "value": 2.1177953143751704e-06,
+      "source": "recalculated"
+    },
+    "dvar_lb_oneside_5pct": {
+      "value": 1.4982486658486245e-06,
+      "source": "read_from_pickle (routing.CPI.neg.dvar_lb) \u2014 cross-check con ricalcolo"
+    },
+    "dvar_sig": {
+      "value": true,
+      "source": "read_from_pickle (routing.CPI.neg.dvar_sig)"
+    },
+    "var_e": {
+      "value": 2.600649740322227e-06,
+      "source": "recalculated"
+    },
+    "var_c": {
+      "value": 4.828544259470567e-07,
+      "source": "recalculated"
+    },
+    "r_hat": {
+      "value": 5.385991306223171,
+      "source": "recalculated (var_e/var_c)"
+    },
+    "cov_e": {
+      "value": 2.248963588673523e-06,
+      "source": "recalculated"
+    },
+    "cov_c": {
+      "value": -2.1342899435228873e-07,
+      "source": "recalculated"
+    },
+    "F_eff": {
+      "value": 29.718066145412656,
+      "source": "read_from_pickle (routing.CPI.neg.f_eff) \u2014 cross-check con ricalcolo"
+    },
+    "route": {
+      "value": "pointwise",
+      "source": "read_from_pickle (routing.CPI.neg.route)"
+    }
+  },
+  "t9_CPI_decomposition_two_legs": {
+    "positivo": {
+      "slope_eq": -0.002007658012870205,
+      "slope_bond": -4.452202151588828e-05,
+      "beta_impl": 45.093595135920445,
+      "n": 37
+    },
+    "negativo": {
+      "slope_eq": -0.00014648115874731982,
+      "slope_bond": 0.00015872744961282584,
+      "beta_impl": -0.9228470507440418,
+      "n": 149
+    },
+    "equity_leg_inverts": false,
+    "bond_leg_inverts": true,
+    "open": false,
+    "source": "read_from_pickle (t9.CPI) \u2014 disponibile, NON gated"
+  }
+}

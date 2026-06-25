@@ -1,0 +1,33 @@
+{
+  "config_hash": "fd558d698d8212f5673acba1dadc2af14ddb2ca3081a806b1e867872ce4cc0a8",
+  "groups": [
+    {
+      "n_high": 138,
+      "n_low": 121,
+      "name": "ECB_FEIc1",
+      "out_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/rate_channel_gate_movement/ECB_FEIc1",
+      "verdicts": {
+        "a": true,
+        "b": true,
+        "c": false,
+        "d": false
+      }
+    },
+    {
+      "n_high": 220,
+      "n_low": 337,
+      "name": "Fed_FFc2",
+      "out_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/rate_channel_gate_movement/Fed_FFc2",
+      "verdicts": {
+        "a": true,
+        "b": true,
+        "c": true,
+        "d": false
+      }
+    }
+  ],
+  "partition_mode": "movement",
+  "pickle_auth_sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+  "seed_name": "gate_run_movement_2026-06-23",
+  "timestamp": "2026-06-22T22:06:48Z"
+}

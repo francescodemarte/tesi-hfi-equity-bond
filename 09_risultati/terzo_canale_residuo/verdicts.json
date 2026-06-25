@@ -1,0 +1,183 @@
+{
+  "by": {
+    "c_m": 3.103210678210678,
+    "crit": null,
+    "family_size": 12
+  },
+  "config_hash": "6ee07068d8b8d06efa631e005834f904c360043ec81dbe5981505a546c81af87",
+  "diagnostics_per_cell": {
+    "CPI/neg": {
+      "beta_str_central_from_12": 0.9509379413789273,
+      "n_after_mask": 134,
+      "n_before_mask": 134,
+      "n_clusters_in_pickle": 150,
+      "n_final": 134,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 16,
+        "no_dates": 0,
+        "no_vix": 0
+      }
+    },
+    "CPI/pos": {
+      "beta_str_central_from_12": 2.2404198326683864,
+      "n_after_mask": 33,
+      "n_before_mask": 33,
+      "n_clusters_in_pickle": 37,
+      "n_final": 33,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 4,
+        "no_dates": 0,
+        "no_vix": 0
+      }
+    },
+    "FOMC/neg": {
+      "beta_str_central_from_12": 0.874818977679241,
+      "n_after_mask": 113,
+      "n_before_mask": 129,
+      "n_clusters_in_pickle": 142,
+      "n_final": 113,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 13,
+        "no_dates": 0,
+        "no_vix": 0
+      }
+    },
+    "NFP/neg": {
+      "beta_str_central_from_12": -1.403641177900273,
+      "n_after_mask": 136,
+      "n_before_mask": 141,
+      "n_clusters_in_pickle": 145,
+      "n_final": 136,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 4,
+        "no_dates": 0,
+        "no_vix": 5
+      }
+    }
+  },
+  "n_third_channel_True": 0,
+  "surprise_provenance": {
+    "CPI/neg": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato)",
+    "CPI/pos": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato)",
+    "FOMC/neg": "MP1 Jaroci\u0144ski\u2013Karadi (jk_surprises_fomc.csv)",
+    "NFP/neg": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato)"
+  },
+  "verdicts": {
+    "CPI/neg|C": {
+      "commonality": false,
+      "lambda_b": -0.0008554701672776312,
+      "lambda_e": 0.0008134990397820773,
+      "p_commonality": 0.3413804264501721,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/neg|L": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/neg|V": {
+      "commonality": false,
+      "lambda_b": 0.00019284514750025162,
+      "lambda_e": -0.0001833837675688049,
+      "p_commonality": 0.26549493421658465,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos|C": {
+      "commonality": false,
+      "lambda_b": 0.002486082232968049,
+      "lambda_e": -0.005569867940386126,
+      "p_commonality": 0.38875390275852606,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos|L": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos|V": {
+      "commonality": false,
+      "lambda_b": -0.0001038936176405589,
+      "lambda_e": 0.00023276532144957427,
+      "p_commonality": 0.8307247201008692,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg|C": {
+      "commonality": false,
+      "lambda_b": -0.0018911092758775127,
+      "lambda_e": 0.0016543782834028962,
+      "p_commonality": 0.22565933916608016,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg|L": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg|V": {
+      "commonality": false,
+      "lambda_b": 9.921806612115271e-05,
+      "lambda_e": -8.679784717141813e-05,
+      "p_commonality": 0.4815615276490406,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg|C": {
+      "commonality": false,
+      "lambda_b": -0.0002329458961575208,
+      "lambda_e": -0.00032697245206957744,
+      "p_commonality": 0.8039525818566142,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg|L": {
+      "commonality": false,
+      "lambda_b": null,
+      "lambda_e": null,
+      "p_commonality": null,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg|V": {
+      "commonality": false,
+      "lambda_b": -5.3446169741768936e-05,
+      "lambda_e": -7.501924465059448e-05,
+      "p_commonality": 0.7822362965434428,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    }
+  }
+}

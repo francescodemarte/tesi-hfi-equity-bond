@@ -1,0 +1,60 @@
+=== Log di custodia — pacchetto 11 (pratica eccesso di comovimento) ===
+task_timestamp:       2026-06-23T14:12:44Z
+seed_name:            pratica_baseline_2026-06-23
+seed_value:           1364631491
+config_version:       pratica-eccesso-comov-v1-2026-06-22
+config_hash:          2d40dd27b063cfbca27d49c10502886bd71aa8ae956c8e963025dfc572cd6b9a
+split_date:           2021-01-01
+n_total:              374
+n_train:              255
+n_test:               119
+intra_event_check:    validated
+
+Calibrazione (train-only):
+  e_gk[CPI/neg] = +9.023137e-02  (n_train_cell = NA)
+  e_gk[CPI/pos] = +1.204504e+00  (n_train_cell = NA)
+  e_gk[NFP/neg] = -1.724667e-01  (n_train_cell = NA)
+  e_gk[NFP/pos] = -4.392802e-01  (n_train_cell = NA)
+  n_train_total = 255
+
+Inputs (sha256):
+  events_df.csv                 sha256=f5e28eaad57b8263f4b62aa94fc6e3982410bf53e708bdb5009fce98147b9fdc
+  events_df.csv.provenance.json sha256=27c5d82908adbbfae7077e3eaa669835092c8aed2e0159f6af39d595b5303825
+  events_with_regime_classifier sha256=92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af
+  ESc1_1min.csv                 sha256=7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10
+  TYc1_1min.csv                 sha256=13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f
+
+Code modules (sha256):
+  run.py                         sha256=a231de36de2035593d640d1a29f95ee44125a284811e1bb08fe1ab5840ea56a5
+  calibration.py                 sha256=2cd008f004153b5654232dd83a9f431f95d3dbdd4b01ec2fafbfe3197e3846cb
+  weighting.py                   sha256=917552bf5de76fa6ed5a12acff537194e3dc6795903c1688e20a6ba053f44e8b
+  windows.py                     sha256=d90709f1295675536c68387d1de321d8ac99134eca42b431dcfa24963a0d1316
+  excess.py                      sha256=31b61079ff8b1b812c1627f66c0ac06d6d642945cdd259c39facbbd52a7224dc
+  payoff.py                      sha256=db83de286d08bbc0775eda0c7f34ec8cd43ba84500397f09d0c9e3aede483b01
+  metrics.py                     sha256=12fd820ec1d07d427b0946a9af241232e86e1c2851c18af89186ac5f04dd15a4
+  manifest.py                    sha256=cd3fd98f77f8fb87f81bbb035947b71046033a080e50693aa0dae23ee49f1bf4
+  config.py                      sha256=4423b246490a11f40cf2aa6ad4f12950cdd527db941172aaea2fa4e9881abd6a
+
+Cell counts × period (n):
+  train NFP       pos n=   9  <MIN_CELL_N=20 → inconclusive
+  train NFP       neg n= 119  
+  train CPI       pos n=   9  <MIN_CELL_N=20 → inconclusive
+  train CPI       neg n= 118  
+  train COMBINED  pos n=  18  <MIN_CELL_N=20 → inconclusive
+  train COMBINED  neg n= 197  
+  test_ NFP       pos n=  31  
+  test_ NFP       neg n=  28  
+  test_ CPI       pos n=  29  
+  test_ CPI       neg n=  31  
+  test_ COMBINED  pos n=  60  
+  test_ COMBINED  neg n=  59  
+
+Etichetta finale: payoff teorico LORDO (covariance-swap-like), NO costi, NON Sharpe eseguibile.
+Pre-registrazione: regime 'pos' atteso povero nel test ⇒ celle pos del test possono essere inconclusive.
+
+Files emessi nella directory di output:
+  pratica_baseline.report.json
+  pratica_baseline.manifest.json
+  pratica_baseline.log.txt   (questo file)
+  events_df.csv  + events_df.csv.provenance.json
+  execute_11.py

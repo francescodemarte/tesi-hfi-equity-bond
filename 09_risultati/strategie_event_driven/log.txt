@@ -1,0 +1,35 @@
+=== Log di custodia — pacchetto 14 (strategie event-driven) ===
+task_timestamp: 2026-06-24T17:44:51Z
+seed_name: strategie_event_driven_2026-06-24  seed_value: 3308763042
+config_version: strategie-event-driven-v1-2026-06-23  config_hash: 936aecb1136816d1e077ae753fe7a71942c8b39113a2e9a7e1b63dda17ff5483
+β_str usato (PRE-REGISTRATO): {'CPI': 1.163, 'NFP': -0.808, 'FOMC': 0.926}
+regime attivo per strategia: {'CPI': 'neg', 'NFP': 'neg', 'FOMC': 'neg'}
+FOMC subsample end: 2024-01-31
+
+Sorprese per leg:
+  CPI:  surprise_yoy (req08_cpi_surprise.csv) sha256=8021823f4d23eebd6759217b6f397a54a1ee43a99f26bd220fb988e87b16b9f1
+  FOMC: MP1 (jk_surprises_fomc.csv) sha256=9d8a6440eae1eed043d616662ff50576b0345d7887aea820803931520fe40de5 — sottocampione ≤ 2024-01-31
+  NFP:  m_e PC1 money-market (fallback dichiarato) — events CSV sha256=92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af
+
+Conteggi:
+  CPI: clusters=187  emitted=186  in_active_regime(neg)=149  dropped_no_surprise=1  dropped_no_eod=0
+  NFP: clusters=187  emitted=180  in_active_regime(neg)=141  dropped_no_surprise=7  dropped_no_eod=0
+  FOMC: clusters=187  emitted=159  in_active_regime(neg)=126  dropped_no_surprise=28  dropped_no_eod=0
+
+Sharpe per strategia (LORDO):
+  CPI   event_window  : n=149  Sharpe=-0.0924  mean=-3.9542e-04  vol=4.2801e-03
+  CPI   end_of_day    : n=149  Sharpe=-0.0630  mean=-7.2129e-04  vol=1.1444e-02
+  NFP   event_window  : n=141  Sharpe=+0.1927  mean=+9.1758e-04  vol=4.7622e-03
+  NFP   end_of_day    : n=141  Sharpe=+0.0724  mean=+7.8028e-04  vol=1.0776e-02
+  FOMC  event_window  : n=126  Sharpe=-0.0850  mean=-2.3426e-04  vol=2.7573e-03
+  FOMC  end_of_day    : n=126  Sharpe=-0.1930  mean=-1.7333e-03  vol=8.9806e-03
+
+Portafoglio (scheme=equal, pesi={'CPI': 0.3333333333333333, 'NFP': 0.3333333333333333, 'FOMC': 0.3333333333333333}):
+  event_window  : n=416  Sharpe=+0.0240  mean=+3.2808e-05  vol=1.3672e-03
+  end_of_day    : n=416  Sharpe=-0.0492  mean=-1.7296e-04  vol=3.5151e-03
+
+Caveat:
+  - Sharpe LORDO (no costi, no slippage, no leva). NON Sharpe eseguibile.
+  - β_str usato è ILLUSTRATIVO/CONDIZIONALE (vedi beta_str_provenance).
+  - Nessuna selezione orizzonte: entrambi (±15 min e end-of-day) riportati.
+  - FOMC limitato al sotto-campione ≤ 2024-01-31 (limite serie JK).

@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-06-13",
+  "date_min": "1967-01-07",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 3102,
+  "name": "ICSA",
+  "sha256": "bbe468b1b721c75cfd2662cb0dd4b95ede17a87f20fe043eee800bf462462433",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA"
+}

@@ -1,0 +1,124 @@
+{
+  "config_hash": "6ee07068d8b8d06efa631e005834f904c360043ec81dbe5981505a546c81af87",
+  "note": "ESPLORATIVO \u2014 sensitivita q (BY FDR) sopra il pre-registrato 0.10. Riportato per trasparenza, NON sostituisce il verdetto pre-registrato.",
+  "q_grid": [
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3
+  ],
+  "results": [
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": null,
+      "by_m": 12,
+      "n_third_channel_True": 0,
+      "pairs_passed": [],
+      "q": 0.1,
+      "variant": "single_L_TED"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.004028086165006219,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.15,
+      "variant": "single_L_TED"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.005370781553341626,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.2,
+      "variant": "single_L_TED"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.006713476941677033,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.25,
+      "variant": "single_L_TED"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.008056172330012438,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.3,
+      "variant": "single_L_TED"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": null,
+      "by_m": 12,
+      "n_third_channel_True": 0,
+      "pairs_passed": [],
+      "q": 0.1,
+      "variant": "all_active"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.004028086165006219,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.15,
+      "variant": "all_active"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.005370781553341626,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.2,
+      "variant": "all_active"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.006713476941677033,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.25,
+      "variant": "all_active"
+    },
+    {
+      "by_c_m": 3.103210678210678,
+      "by_crit": 0.008056172330012438,
+      "by_m": 12,
+      "n_third_channel_True": 1,
+      "pairs_passed": [
+        "CPI/pos|L"
+      ],
+      "q": 0.3,
+      "variant": "all_active"
+    }
+  ],
+  "task_timestamp": "2026-06-24T12:44:27Z",
+  "variants": [
+    "single_L_TED",
+    "all_active"
+  ]
+}

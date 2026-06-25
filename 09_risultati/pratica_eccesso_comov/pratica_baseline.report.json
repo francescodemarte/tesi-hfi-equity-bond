@@ -1,0 +1,136 @@
+{
+  "calibration_e_gk": {
+    "CPI/neg": 0.09023137079212736,
+    "CPI/pos": 1.2045042338872856,
+    "NFP/neg": -0.17246667209263214,
+    "NFP/pos": -0.43928015459541475
+  },
+  "cells": {
+    "test_metrics": {
+      "COMBINED/neg": {
+        "benchmark_mean": 0.49077049737147216,
+        "diff_mean": 0.503176875555422,
+        "n": 59,
+        "strategy_hit_rate": 0.6271186440677966,
+        "strategy_mean": 0.9939473729268942,
+        "strategy_sharpe": 0.2523620881958554,
+        "verdict": "concluded"
+      },
+      "COMBINED/pos": {
+        "benchmark_mean": 2.2237687422618166,
+        "diff_mean": -0.09901999261339647,
+        "n": 60,
+        "strategy_hit_rate": 0.6666666666666666,
+        "strategy_mean": 2.12474874964842,
+        "strategy_sharpe": 0.2592595243470729,
+        "verdict": "concluded"
+      },
+      "CPI/neg": {
+        "benchmark_mean": 1.4128766830258648,
+        "diff_mean": 0.0,
+        "n": 31,
+        "strategy_hit_rate": 0.5806451612903226,
+        "strategy_mean": 1.4128766830258648,
+        "strategy_sharpe": 0.2676582827447559,
+        "verdict": "concluded"
+      },
+      "CPI/pos": {
+        "benchmark_mean": 4.498466370941625,
+        "diff_mean": 0.0,
+        "n": 29,
+        "strategy_hit_rate": 0.7931034482758621,
+        "strategy_mean": 4.498466370941625,
+        "strategy_sharpe": 0.40144089769363694,
+        "verdict": "concluded"
+      },
+      "NFP/neg": {
+        "benchmark_mean": -0.5301327796030338,
+        "diff_mean": 1.0602655592060677,
+        "n": 28,
+        "strategy_hit_rate": 0.6785714285714286,
+        "strategy_mean": 0.5301327796030338,
+        "strategy_sharpe": 0.3808052013572874,
+        "verdict": "concluded"
+      },
+      "NFP/pos": {
+        "benchmark_mean": 0.09582579930328702,
+        "diff_mean": -0.19165159860657405,
+        "n": 31,
+        "strategy_hit_rate": 0.5483870967741935,
+        "strategy_mean": -0.09582579930328702,
+        "strategy_sharpe": -0.045937908345333865,
+        "verdict": "concluded"
+      },
+      "period": "test"
+    },
+    "training_metrics": {
+      "COMBINED/neg": {
+        "benchmark_mean": 0.005420909425074606,
+        "diff_mean": 0.12394812575579629,
+        "n": 197,
+        "strategy_hit_rate": 0.4873096446700508,
+        "strategy_mean": 0.1293690351808709,
+        "strategy_sharpe": 0.03792642878726032,
+        "verdict": "concluded"
+      },
+      "COMBINED/pos": {
+        "benchmark_mean": 0.38261203964593526,
+        "diff_mean": 0.4392801545954147,
+        "n": 18,
+        "strategy_hit_rate": 0.5555555555555556,
+        "strategy_mean": 0.8218921942413502,
+        "strategy_sharpe": 0.367742427131484,
+        "verdict": "inconclusive"
+      },
+      "CPI/neg": {
+        "benchmark_mean": 0.09023137079212733,
+        "diff_mean": 0.0,
+        "n": 118,
+        "strategy_hit_rate": 0.5084745762711864,
+        "strategy_mean": 0.09023137079212733,
+        "strategy_sharpe": 0.022052558284115925,
+        "verdict": "concluded"
+      },
+      "CPI/pos": {
+        "benchmark_mean": 1.2045042338872856,
+        "diff_mean": 0.0,
+        "n": 9,
+        "strategy_hit_rate": 0.5555555555555556,
+        "strategy_mean": 1.2045042338872856,
+        "strategy_sharpe": 0.45767242513939865,
+        "verdict": "inconclusive"
+      },
+      "NFP/neg": {
+        "benchmark_mean": -0.17246667209263217,
+        "diff_mean": 0.34493334418526433,
+        "n": 119,
+        "strategy_hit_rate": 0.453781512605042,
+        "strategy_mean": 0.17246667209263217,
+        "strategy_sharpe": 0.08334860789130075,
+        "verdict": "concluded"
+      },
+      "NFP/pos": {
+        "benchmark_mean": -0.4392801545954147,
+        "diff_mean": 0.8785603091908294,
+        "n": 9,
+        "strategy_hit_rate": 0.5555555555555556,
+        "strategy_mean": 0.4392801545954147,
+        "strategy_sharpe": 0.2396910526494846,
+        "verdict": "inconclusive"
+      },
+      "period": "training"
+    }
+  },
+  "config_hash": "2d40dd27b063cfbca27d49c10502886bd71aa8ae956c8e963025dfc572cd6b9a",
+  "config_version": "pratica-eccesso-comov-v1-2026-06-22",
+  "intra_event_lookahead_check": "validated",
+  "labeling": "payoff teorico LORDO (covariance-swap-like), no costi, NON Sharpe eseguibile. Verdetto 'inconclusive' per n < 20.",
+  "n_test": 119,
+  "n_total": 374,
+  "n_train": 255,
+  "package": "11_pratica_eccesso_comovimento",
+  "preregistration_note": "Il regime POSITIVO \u00e8 atteso povero nel test (regime quasi solo nel test, training lo ha visto poco) \u2192 celle pos del test possono essere 'inconclusive' per pre-registrazione, NON \u00e8 un fallimento della strategia.",
+  "seed_name": "pratica_baseline_2026-06-23",
+  "split_date": "2021-01-01",
+  "task_timestamp": "2026-06-23T14:12:44Z"
+}

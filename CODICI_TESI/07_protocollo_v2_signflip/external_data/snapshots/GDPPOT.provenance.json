@@ -1,0 +1,9 @@
+{
+  "date_max": "2036-10-01",
+  "date_min": "1949-01-01",
+  "fetched_at": "2026-06-22T21:00:00Z",
+  "n_rows": 352,
+  "name": "GDPPOT",
+  "sha256": "a24ca5f13848ade4d9bc8e7b753970cf7d4bc950f0158b379d7e734d23e13f33",
+  "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=GDPPOT"
+}

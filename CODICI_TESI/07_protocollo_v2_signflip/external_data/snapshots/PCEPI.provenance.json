@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-04-01",
+  "date_min": "1959-01-01",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 808,
+  "name": "PCEPI",
+  "sha256": "e5bdd6b792ecf6c4bb42619d82b05c4aeea32e86dabcb84fe9b5dad58b29b4c9",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI"
+}

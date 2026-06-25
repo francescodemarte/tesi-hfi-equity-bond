@@ -1,0 +1,126 @@
+{
+  "by_type_criterion": {
+    "CPI": {
+      "T10Y2Y": {
+        "best_mapping": "pos\u2194alto",
+        "concordance_best_matching": 0.5935828877005348,
+        "concordance_pos_to_alto_fixed": 0.5935828877005348,
+        "counts_2x2": {
+          "negativo_alto": 61,
+          "negativo_basso": 89,
+          "positivo_alto": 22,
+          "positivo_basso": 15
+        },
+        "n_events": 190,
+        "n_valid_pairs": 187
+      },
+      "VIXCLS": {
+        "best_mapping": "pos\u2194basso",
+        "concordance_best_matching": 0.5133689839572193,
+        "concordance_pos_to_alto_fixed": 0.48663101604278075,
+        "counts_2x2": {
+          "negativo_alto": 71,
+          "negativo_basso": 79,
+          "positivo_alto": 12,
+          "positivo_basso": 25
+        },
+        "n_events": 190,
+        "n_valid_pairs": 187
+      }
+    },
+    "ECB": {
+      "T10Y2Y": {
+        "best_mapping": "pos\u2194alto",
+        "concordance_best_matching": 0.5587188612099644,
+        "concordance_pos_to_alto_fixed": 0.5587188612099644,
+        "counts_2x2": {
+          "negativo_alto": 98,
+          "negativo_basso": 129,
+          "positivo_alto": 28,
+          "positivo_basso": 26
+        },
+        "n_events": 287,
+        "n_valid_pairs": 281
+      },
+      "VIXCLS": {
+        "best_mapping": "pos\u2194alto",
+        "concordance_best_matching": 0.5658362989323843,
+        "concordance_pos_to_alto_fixed": 0.5658362989323843,
+        "counts_2x2": {
+          "negativo_alto": 98,
+          "negativo_basso": 129,
+          "positivo_alto": 30,
+          "positivo_basso": 24
+        },
+        "n_events": 287,
+        "n_valid_pairs": 281
+      }
+    },
+    "FOMC": {
+      "T10Y2Y": {
+        "best_mapping": "pos\u2194alto",
+        "concordance_best_matching": 0.5882352941176471,
+        "concordance_pos_to_alto_fixed": 0.5882352941176471,
+        "counts_2x2": {
+          "negativo_alto": 63,
+          "negativo_basso": 79,
+          "positivo_alto": 31,
+          "positivo_basso": 14
+        },
+        "n_events": 189,
+        "n_valid_pairs": 187
+      },
+      "VIXCLS": {
+        "best_mapping": "pos\u2194basso",
+        "concordance_best_matching": 0.5133689839572193,
+        "concordance_pos_to_alto_fixed": 0.48663101604278075,
+        "counts_2x2": {
+          "negativo_alto": 70,
+          "negativo_basso": 72,
+          "positivo_alto": 19,
+          "positivo_basso": 26
+        },
+        "n_events": 189,
+        "n_valid_pairs": 187
+      }
+    },
+    "NFP": {
+      "T10Y2Y": {
+        "best_mapping": "pos\u2194alto",
+        "concordance_best_matching": 0.6096256684491979,
+        "concordance_pos_to_alto_fixed": 0.6096256684491979,
+        "counts_2x2": {
+          "negativo_alto": 57,
+          "negativo_basso": 88,
+          "positivo_alto": 26,
+          "positivo_basso": 16
+        },
+        "n_events": 189,
+        "n_valid_pairs": 187
+      },
+      "VIXCLS": {
+        "best_mapping": "pos\u2194basso",
+        "concordance_best_matching": 0.5294117647058824,
+        "concordance_pos_to_alto_fixed": 0.47058823529411764,
+        "counts_2x2": {
+          "negativo_alto": 73,
+          "negativo_basso": 72,
+          "positivo_alto": 16,
+          "positivo_basso": 26
+        },
+        "n_events": 189,
+        "n_valid_pairs": 187
+      }
+    }
+  },
+  "config": {
+    "baseline_lag_bdays": 1,
+    "baseline_window_days": 63,
+    "exogenous_criteria": [
+      "T10Y2Y",
+      "VIXCLS"
+    ],
+    "exogenous_lag_bdays": 1,
+    "exogenous_window_days": 252
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "n_both": 26,
+  "n_nsa_above_threshold": 26,
+  "n_only_nsa": 0,
+  "n_only_sa": 0,
+  "n_sa_above_threshold": 26,
+  "nsa_provenance": {
+    "date_max": "2026-05-01",
+    "date_min": "1913-01-01",
+    "fetched_at": "2026-06-22T14:00:00Z",
+    "n_rows": 1360,
+    "name": "CPIAUCNS",
+    "note": "graph/fredgraph.csv endpoint HTTP/2 timeout nel sandbox; uso api.stlouisfed.org JSON.",
+    "sha256": "095ec7cc8d89df7874cc920ed0ff9cfffff43bd91d9e409596e90cce8baea049",
+    "source_url": "https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCNS"
+  },
+  "only_nsa": [],
+  "only_sa": [],
+  "sets_coincide": true,
+  "threshold": 0.04,
+  "years_inflationary_nsa": [
+    "2021",
+    "2022",
+    "2023"
+  ],
+  "years_inflationary_sa": [
+    "2021",
+    "2022",
+    "2023"
+  ]
+}

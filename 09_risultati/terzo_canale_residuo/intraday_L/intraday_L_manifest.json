@@ -1,0 +1,333 @@
+{
+  "config_hash": "6ee07068d8b8d06efa631e005834f904c360043ec81dbe5981505a546c81af87",
+  "config_version": "terzo-canale-residuo-v1-2026-06-23",
+  "external_constants": {
+    "D_bond": 8.970865529245179,
+    "N_horizon": 100,
+    "dp_bar": -3.85,
+    "rho_central": 0.9791636554813196
+  },
+  "note": "Proxy L INTRADAY (\u0394spread bid-ask post-pre ES+TY medio bps). Sostituisce TED daily (discontinued 2022). Soglia q pre-registrata.",
+  "pickle_07_sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+  "proxy_provenance": {
+    "C_corr": {
+      "method": "realized 5-min corr ES~TY on PREVIOUS trading day"
+    },
+    "L_intraday": {
+      "intraday_inputs": [
+        {
+          "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+          "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+        },
+        {
+          "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+          "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+        }
+      ],
+      "method": "\u0394(bid-ask spread bps) = mean(post 5min) \u2212 mean(pre 5min); media ES+TY.",
+      "note": "Pre-window [t-15,t-10], post-window [t+10,t+15]; spread = (Ask-Bid)/PX_LAST \u00d7 10000."
+    },
+    "V_VIX": {
+      "frequency": "daily",
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/07_protocollo_v2_signflip/external_data/snapshots/VIXCLS.csv",
+      "sha256": "7c18cea3e0ee37f693585248ea3189586bd7bd5a7649b2f2367a724e3476271e"
+    }
+  },
+  "q": 0.1,
+  "script_sha256": "3f0c3acc9ce2549fe13c9934b7c92361e9af2191fdde3c62f2e25e237f4dcda0",
+  "seed_name": "terzo_canale_intraday_L_2026-06-24",
+  "summary": {
+    "config_hash": "6ee07068d8b8d06efa631e005834f904c360043ec81dbe5981505a546c81af87",
+    "q": 0.1,
+    "spec": "L intraday \u0394spread ES+TY; q pre-registrato",
+    "task_timestamp": "2026-06-24T13:08:32Z",
+    "variants": {
+      "all_with_intraday_L": {
+        "active_proxies": {
+          "C": true,
+          "L": true,
+          "V": true
+        },
+        "by_crit": null,
+        "diagnostics_per_cell": {
+          "CPI/neg": {
+            "n_after": 134,
+            "n_before": 134
+          },
+          "CPI/pos": {
+            "n_after": 33,
+            "n_before": 33
+          },
+          "FOMC/neg": {
+            "n_after": 113,
+            "n_before": 129
+          },
+          "NFP/neg": {
+            "n_after": 136,
+            "n_before": 141
+          }
+        },
+        "n_third_channel_True": 0,
+        "passing_pairs": [],
+        "verdicts_per_pair": {
+          "CPI/neg|C": {
+            "commonality": false,
+            "lambda_b": -0.0008554701672776312,
+            "lambda_e": 0.0008134990397820773,
+            "p_commonality": 0.3413804264501721,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/neg|L": {
+            "commonality": false,
+            "lambda_b": 0.0005819865100592387,
+            "lambda_e": -0.0005534330537860388,
+            "p_commonality": 0.4038885097861993,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/neg|V": {
+            "commonality": false,
+            "lambda_b": 0.00019284514750025162,
+            "lambda_e": -0.0001833837675688049,
+            "p_commonality": 0.26549493421658465,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/pos|C": {
+            "commonality": false,
+            "lambda_b": 0.002486082232968049,
+            "lambda_e": -0.005569867940386126,
+            "p_commonality": 0.38875390275852606,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/pos|L": {
+            "commonality": false,
+            "lambda_b": -0.000581144017149436,
+            "lambda_e": 0.0013020065816581714,
+            "p_commonality": 0.7768847210019592,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/pos|V": {
+            "commonality": false,
+            "lambda_b": -0.0001038936176405589,
+            "lambda_e": 0.00023276532144957427,
+            "p_commonality": 0.8307247201008692,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "FOMC/neg|C": {
+            "commonality": false,
+            "lambda_b": -0.0018911092758775127,
+            "lambda_e": 0.0016543782834028962,
+            "p_commonality": 0.22565933916608016,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "FOMC/neg|L": {
+            "commonality": false,
+            "lambda_b": -4.791239449642386e-06,
+            "lambda_e": 4.191467197152595e-06,
+            "p_commonality": 0.9106372084002246,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "FOMC/neg|V": {
+            "commonality": false,
+            "lambda_b": 9.921806612115271e-05,
+            "lambda_e": -8.679784717141813e-05,
+            "p_commonality": 0.4815615276490406,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "NFP/neg|C": {
+            "commonality": false,
+            "lambda_b": -0.0002329458961575208,
+            "lambda_e": -0.00032697245206957744,
+            "p_commonality": 0.8039525818566142,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "NFP/neg|L": {
+            "commonality": false,
+            "lambda_b": 0.0019148611537426747,
+            "lambda_e": 0.0026877779653548435,
+            "p_commonality": 0.1583611200443953,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "NFP/neg|V": {
+            "commonality": false,
+            "lambda_b": -5.3446169741768936e-05,
+            "lambda_e": -7.501924465059448e-05,
+            "p_commonality": 0.7822362965434428,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          }
+        }
+      },
+      "single_L_intraday": {
+        "active_proxies": {
+          "C": false,
+          "L": true,
+          "V": false
+        },
+        "by_crit": null,
+        "diagnostics_per_cell": {
+          "CPI/neg": {
+            "n_after": 134,
+            "n_before": 134
+          },
+          "CPI/pos": {
+            "n_after": 33,
+            "n_before": 33
+          },
+          "FOMC/neg": {
+            "n_after": 113,
+            "n_before": 129
+          },
+          "NFP/neg": {
+            "n_after": 141,
+            "n_before": 141
+          }
+        },
+        "n_third_channel_True": 0,
+        "passing_pairs": [],
+        "verdicts_per_pair": {
+          "CPI/neg|C": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/neg|L": {
+            "commonality": false,
+            "lambda_b": 0.0005819865100592387,
+            "lambda_e": -0.0005534330537860388,
+            "p_commonality": 0.4038885097861993,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/neg|V": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/pos|C": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/pos|L": {
+            "commonality": false,
+            "lambda_b": -0.000581144017149436,
+            "lambda_e": 0.0013020065816581714,
+            "p_commonality": 0.7768847210019592,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "CPI/pos|V": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "FOMC/neg|C": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "FOMC/neg|L": {
+            "commonality": false,
+            "lambda_b": -4.791239449642386e-06,
+            "lambda_e": 4.191467197152595e-06,
+            "p_commonality": 0.9106372084002246,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "FOMC/neg|V": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "NFP/neg|C": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "NFP/neg|L": {
+            "commonality": false,
+            "lambda_b": 0.0019085296412383872,
+            "lambda_e": 0.0026788907936854357,
+            "p_commonality": 0.15799892235410384,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          },
+          "NFP/neg|V": {
+            "commonality": false,
+            "lambda_b": null,
+            "lambda_e": null,
+            "p_commonality": null,
+            "passed_by": false,
+            "sign_ok": null,
+            "third_channel": false
+          }
+        }
+      }
+    }
+  },
+  "surprise_provenance": {
+    "FOMC": "MP1 (JK) \u2014 9d8a6440eae1eed043d616662ff50576b0345d7887aea820803931520fe40de5",
+    "NFP_CPI": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato)"
+  },
+  "task": "terzo_canale_residuo_intraday_L_q010_pre_registered",
+  "task_timestamp": "2026-06-24T13:08:32Z",
+  "variants_run": [
+    "single_L_intraday",
+    "all_with_intraday_L"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "config_hash": "fd558d698d8212f5673acba1dadc2af14ddb2ca3081a806b1e867872ce4cc0a8",
+  "config_version": "rate-channel-gate-v1-2026-06-22",
+  "dropped_events_disclosure": {
+    "events_with_intensity_nan": 10,
+    "events_with_returns_nan": 0,
+    "policy": "Nessun evento scartato dall'esecutore. Eventi con intensity_raw=NaN sono filtrati dentro gate.run_gate (criteri a/b/c) e dentro compute_cell_moments (criterio d) \u2014 disclosure conforme al contratto."
+  },
+  "executor": {
+    "namespace_output_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/rate_channel_gate",
+    "package_module_sha256": {
+      "config.py": "c6c62ec3836dd7fbc0814333fb08674fc75ec601e82503cfa974d04dd7cdb4a7",
+      "diagnostics.py": "eef01e18d644863658f5dbe51bdfde4d2aba7c0b8fda1613bbaa718f5e51344d",
+      "gate.py": "8261bdc19bd91b82897108df9f1bb1a325ff89edbd4709d36aad9b44dac5e47c",
+      "manifest.py": "2d91470cbf2745f52dc2e82e93fcc88ba663ec40be0dd7370ff4e7cfc35ad46f",
+      "rate_shock.py": "2ac50389b72b3bf89a2c4872a956276b729631aa11c3e5a1eae7d0e3326e2188"
+    },
+    "package_path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/10_diagnostica_canale_tassi",
+    "script_path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/rate_channel_gate/execute_gate.py",
+    "script_sha256": "dbe96df7f0844f6ddccb74c0cbbba515b5581e2725927e94973671788708beee"
+  },
+  "inputs": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/FFc2_1min.csv",
+      "sha256": "c0fafde91356c973087d5ee396cd6d369114f86cfa692b251bc7fd82f907f886"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/STXE_continuous_1min.csv",
+      "sha256": "49de2232ee7d2537bc49e54c4fb7426500976fd3e474e76ebd583fa105bdd48e"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/FGBLc1_1min.csv",
+      "sha256": "37b9a86f25349d4d7daf7dd7e4c8b175e37f4fc3ca7c5585a3ad34cc1358a3d8"
+    }
+  ],
+  "min_cell": 30,
+  "n_events": {
+    "by_leg_regime": {
+      "CPI|negativo": 150,
+      "CPI|positivo": 37,
+      "ECB|negativo": 227,
+      "ECB|positivo": 54,
+      "FOMC|negativo": 142,
+      "FOMC|positivo": 45,
+      "NFP|negativo": 145,
+      "NFP|positivo": 42
+    },
+    "total_in_events_df": 842,
+    "with_intensity_valid": 832,
+    "with_returns_valid": 842
+  },
+  "partition": {
+    "median_intensity": 0.0,
+    "mode": "median"
+  },
+  "partition_mode": "median",
+  "rate_contract": "FFc2",
+  "seed": {
+    "name": "gate_run_2026-06-22"
+  },
+  "thresholds": {
+    "cosine_high": 0.95,
+    "eta2_low": 0.2,
+    "kappa_low": 0.2,
+    "min_cell": 30,
+    "partition_mode": "median"
+  },
+  "timestamp": "2026-06-22T21:43:30Z",
+  "window_half_min": 15
+}

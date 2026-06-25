@@ -1,0 +1,143 @@
+{
+  "config_hash": "fd558d698d8212f5673acba1dadc2af14ddb2ca3081a806b1e867872ce4cc0a8",
+  "criterion_a": {
+    "by_leg": {
+      "ECB": {
+        "between_var": 4.838685014475964e-07,
+        "eta_squared": 0.001375269437326372,
+        "group_n": {
+          "negativo": 206,
+          "positivo": 53
+        },
+        "n": 259,
+        "total_var": 0.0003518354209835953,
+        "within_var": 0.0003513515524821477
+      }
+    },
+    "overall": {
+      "between_var": 4.838685014475964e-07,
+      "eta_squared": 0.001375269437326372,
+      "group_n": {
+        "negativo": 206,
+        "positivo": 53
+      },
+      "n": 259,
+      "total_var": 0.0003518354209835953,
+      "within_var": 0.0003513515524821477
+    },
+    "threshold_eta2_low": 0.2
+  },
+  "criterion_b": {
+    "by_leg_kappa": {
+      "ECB": 0.1407568238213401
+    },
+    "overall_kappa": 0.1407568238213401,
+    "partition_mode": "movement",
+    "threshold_kappa_low": 0.2
+  },
+  "criterion_c": {
+    "below_by_leg": {
+      "ECB": [
+        [
+          "positivo",
+          "low"
+        ]
+      ]
+    },
+    "below_overall": [
+      [
+        "positivo",
+        "low"
+      ]
+    ],
+    "counts_by_leg": {
+      "ECB": {
+        "negativo|high": 101,
+        "negativo|low": 105,
+        "positivo|high": 37,
+        "positivo|low": 16
+      }
+    },
+    "counts_overall": {
+      "negativo|high": 101,
+      "negativo|low": 105,
+      "positivo|high": 37,
+      "positivo|low": 16
+    },
+    "min_cell": 30
+  },
+  "criterion_d": {
+    "delta_rate_neg": [
+      3.807811372715415e-05,
+      2.7502858371886223e-06,
+      7.671586615173706e-07
+    ],
+    "delta_rate_pos": [
+      7.516777060515687e-06,
+      8.462651674862371e-06,
+      6.199920562324018e-06
+    ],
+    "delta_regime_hi": [
+      -3.562248952105434e-05,
+      5.807656600990437e-06,
+      6.108977759855727e-06
+    ],
+    "delta_regime_lo": [
+      -5.061152854415873e-06,
+      9.529076331668764e-08,
+      6.762158590490792e-07
+    ],
+    "distinctness_at_regime_neg": {
+      "angle_deg": 169.81470090150603,
+      "cosine": -0.984241011821909,
+      "rank_numerical": 2
+    },
+    "distinctness_at_regime_pos": {
+      "angle_deg": 112.49375330887531,
+      "cosine": -0.3825827038223168,
+      "rank_numerical": 2
+    },
+    "threshold_cosine_high": 0.95
+  },
+  "event_moments_raw": {
+    "negativo|high": {
+      "cov_eb": 8.321373127697608e-07,
+      "n": 101,
+      "var_b": 3.8885578499805315e-06,
+      "var_e": 4.562781877860305e-05
+    },
+    "negativo|low": {
+      "cov_eb": 6.497865125239018e-08,
+      "n": 105,
+      "var_b": 1.1382720127919094e-06,
+      "var_e": 7.549705051448901e-06
+    },
+    "positivo|high": {
+      "cov_eb": 6.941115072625487e-06,
+      "n": 37,
+      "var_b": 9.696214450970968e-06,
+      "var_e": 1.0005329257548716e-05
+    },
+    "positivo|low": {
+      "cov_eb": 7.411945103014694e-07,
+      "n": 16,
+      "var_b": 1.233562776108597e-06,
+      "var_e": 2.4885521970330283e-06
+    }
+  },
+  "n_events_total": 281,
+  "n_events_with_intensity": 259,
+  "thresholds_used": {
+    "cosine_high": 0.95,
+    "eta2_low": 0.2,
+    "kappa_low": 0.2,
+    "min_cell": 30,
+    "partition_mode": "movement"
+  },
+  "verdicts": {
+    "a": true,
+    "b": true,
+    "c": false,
+    "d": false
+  }
+}

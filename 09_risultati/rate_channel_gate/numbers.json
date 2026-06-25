@@ -1,0 +1,149 @@
+{
+  "config_hash": "fd558d698d8212f5673acba1dadc2af14ddb2ca3081a806b1e867872ce4cc0a8",
+  "criterion_a": {
+    "by_leg": {
+      "CPI": {
+        "between_var": 7.597922019452309e-06,
+        "eta_squared": 0.06704655886264936,
+        "group_n": {
+          "negativo": 149,
+          "positivo": 37
+        },
+        "n": 186,
+        "total_var": 0.00011332307203144168,
+        "within_var": 0.00010572515001198937
+      },
+      "ECB": {
+        "between_var": 8.37942014422164e-11,
+        "eta_squared": 9.502435215096505e-06,
+        "group_n": {
+          "negativo": 221,
+          "positivo": 54
+        },
+        "n": 275,
+        "total_var": 8.818181818182003e-06,
+        "within_var": 8.81809802398056e-06
+      },
+      "FOMC": {
+        "between_var": 7.677324626841178e-08,
+        "eta_squared": 0.0006412466129730352,
+        "group_n": {
+          "negativo": 142,
+          "positivo": 45
+        },
+        "n": 187,
+        "total_var": 0.00011972499302953846,
+        "within_var": 0.00011964821978327005
+      },
+      "NFP": {
+        "between_var": 2.276014339868268e-06,
+        "eta_squared": 0.022904848394507727,
+        "group_n": {
+          "negativo": 142,
+          "positivo": 42
+        },
+        "n": 184,
+        "total_var": 9.936823421254452e-05,
+        "within_var": 9.709221987267626e-05
+      }
+    },
+    "overall": {
+      "between_var": 8.821885278663592e-07,
+      "eta_squared": 0.010914326308659048,
+      "group_n": {
+        "negativo": 654,
+        "positivo": 178
+      },
+      "n": 832,
+      "total_var": 8.082849118836234e-05,
+      "within_var": 7.994630266049599e-05
+    },
+    "threshold_eta2_low": 0.2
+  },
+  "criterion_b": {
+    "by_leg_kappa": {
+      "CPI": NaN,
+      "ECB": NaN,
+      "FOMC": NaN,
+      "NFP": NaN
+    },
+    "overall_kappa": 0.0,
+    "partition_mode": "median",
+    "threshold_kappa_low": 0.2
+  },
+  "criterion_c": {
+    "below_by_leg": {
+      "CPI": [],
+      "ECB": [],
+      "FOMC": [],
+      "NFP": []
+    },
+    "below_overall": [],
+    "counts_by_leg": {
+      "CPI": {
+        "negativo|high": 149,
+        "positivo|high": 37
+      },
+      "ECB": {
+        "negativo|high": 221,
+        "positivo|high": 54
+      },
+      "FOMC": {
+        "negativo|high": 142,
+        "positivo|high": 45
+      },
+      "NFP": {
+        "negativo|high": 142,
+        "positivo|high": 42
+      }
+    },
+    "counts_overall": {
+      "negativo|high": 654,
+      "positivo|high": 178
+    },
+    "min_cell": 30
+  },
+  "criterion_d": {
+    "missing": [
+      [
+        "positivo",
+        "low"
+      ],
+      [
+        "negativo",
+        "low"
+      ]
+    ],
+    "note": "vettori di cambiamento non calcolabili (celle mancanti)",
+    "status": "missing_cells"
+  },
+  "event_moments_raw": {
+    "negativo|high": {
+      "cov_eb": -2.5442466234590395e-07,
+      "n": 654,
+      "var_b": 3.643117958734538e-06,
+      "var_e": 1.525446083416904e-05
+    },
+    "positivo|high": {
+      "cov_eb": 1.633794974075098e-05,
+      "n": 178,
+      "var_b": 1.262280611011479e-05,
+      "var_e": 3.71242419494246e-05
+    }
+  },
+  "n_events_total": 842,
+  "n_events_with_intensity": 832,
+  "thresholds_used": {
+    "cosine_high": 0.95,
+    "eta2_low": 0.2,
+    "kappa_low": 0.2,
+    "min_cell": 30,
+    "partition_mode": "median"
+  },
+  "verdicts": {
+    "a": true,
+    "b": true,
+    "c": true,
+    "d": null
+  }
+}

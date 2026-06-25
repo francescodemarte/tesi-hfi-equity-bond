@@ -1,0 +1,60 @@
+{
+  "caveats": [
+    "Frequenza GIORNALIERA: evidenza SECONDARIA (decomposition.py docstring). Non \u00e8 la frequenza-evento dello stimatore principale b_H.",
+    "Per gli eventi ECB il canale tasso USA (DFII5) \u00e8 una proxy discutibile; i risultati ECB sono riportati separati per trasparenza, lettura del ricercatore.",
+    "duration_partial equity = 5.0 (Specifica A). Le specifiche B/floor/ceil esistono nel CSV ma per coerenza si usa il valore canonico v2."
+  ],
+  "data_inputs": {
+    "es_intraday": {
+      "n_daily_closes": 4976,
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+    },
+    "fred_yields": {
+      "path": "/home/francesco/TESI/Dati/external_data/fred_yields_snapshot.parquet",
+      "series_used": [
+        "DFII5"
+      ],
+      "sha256": "53969abf30b2c5f5fcef563349a1cc8cdc48967286e6417d56875dbbf48ecd8a"
+    },
+    "pickle_auth": {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "run_label": "v2_signflip_run_authoritative_2026-06-22_post_bug2",
+      "run_timestamp": "2026-06-22T15:00:00Z",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+    },
+    "t10yie": {
+      "path": "/home/francesco/TESI/Dati/external_data/tips_breakeven_10y.csv",
+      "sha256": "fbdced18bdbbdb868bc20263d382a79ab22f13c0ce9d3511c9dfcfd8ea5825c7"
+    },
+    "ty_intraday": {
+      "n_daily_closes": 4979,
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+    }
+  },
+  "decomposition_module": {
+    "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/07_protocollo_v2_signflip/decomposition.py",
+    "sha256": "1d1d5d712b75917fe2f527c3740b8b32fc216336b6f44aeabdfc4ff7f33d5aa1"
+  },
+  "decomposition_module_tests_passed": "11/11 (osservato in tool result prima del run)",
+  "duration_constants": {
+    "D_bond": 8.970865529245179,
+    "D_eq_partial_A": 5.0
+  },
+  "fields_provenance": {
+    "D_bond": "8.9709 (UST 10Y duration costante nel CSV eventi v2)",
+    "D_eq_partial": "5.0 (Specifica A \u2014 floor conservativo, da CLAUDE.md \u00a76.3)",
+    "delta_pi": "\u0394 T10YIE (10Y breakeven inflation) daily, da pp a decimale (\u00f7100)",
+    "delta_r_real": "\u0394 DFII5 (5Y TIPS yield) daily, da pp a decimale (\u00f7100)",
+    "r_b_daily": "log-return chiusura giornaliera TY (UST 10Y future, prezzo)",
+    "r_e_daily": "log-return chiusura giornaliera ES (S&P 500 future, prezzo)"
+  },
+  "script": {
+    "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/decomposition_daily/execute_decomposition.py",
+    "sha256": "ee6f497381b7e09cb3724b83e191ba6ce07d902b9158272880d9b1d5d8f0d4f5"
+  },
+  "seed_name": "decomposition_daily_2026-06-23",
+  "task": "decomposition_daily_campbell_ammer",
+  "task_timestamp": "2026-06-22T22:37:11Z"
+}

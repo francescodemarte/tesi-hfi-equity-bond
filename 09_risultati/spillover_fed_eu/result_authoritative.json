@@ -1,0 +1,23 @@
+{
+  "asset_rows": null,
+  "concordance": null,
+  "gated_reason": "JKNotIdentifiedError: 0 \u2208 CI95 di Cov(m,s) sui FOMC post-filter (n=30). Esito legittimo del gate pre-registrato (review #1): la pipeline RIFIUTA di fabbricare Z su \u03a3(m,s) quasi-diagonale. Niente H1/H2/H4 calcolati.",
+  "h1": null,
+  "h2": null,
+  "h3": null,
+  "h4": null,
+  "hierarchy": null,
+  "jk_feasibility": {
+    "cov_ms": 9.424694570597614e-08,
+    "cov_ms_ci95": [
+      -4.5878779402497016e-08,
+      2.986518021147339e-07
+    ],
+    "eigvals": [
+      8.302275271471622e-09,
+      9.62019519764416e-06
+    ],
+    "feasible": false,
+    "n": 30
+  }
+}

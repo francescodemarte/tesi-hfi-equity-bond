@@ -1,0 +1,142 @@
+{
+  "CPI/neg": {
+    "autocorr_u_b": {
+      "lag": 1,
+      "n": 134,
+      "p_value": 0.8113488987241948,
+      "rho": -0.020660674076027837
+    },
+    "autocorr_u_e": {
+      "lag": 1,
+      "n": 134,
+      "p_value": 0.811348898724195,
+      "rho": -0.020660674076027813
+    },
+    "cross_corr_p_with_z_perp": {
+      "C": 0.29853831982589907,
+      "L": null,
+      "V": 0.08023537640522971
+    },
+    "regime_dependence_u_e": {
+      "f_stat": null,
+      "p_value": null,
+      "reason": "un solo regime"
+    },
+    "summary": {
+      "alpha": 0.05,
+      "checks": {
+        "autocorr": true,
+        "cross_C": true,
+        "cross_L": null,
+        "cross_V": true,
+        "regime": null
+      },
+      "is_white": true
+    }
+  },
+  "CPI/pos": {
+    "autocorr_u_b": {
+      "lag": 1,
+      "n": 33,
+      "p_value": 0.26921155318911216,
+      "rho": 0.19584270511605667
+    },
+    "autocorr_u_e": {
+      "lag": 1,
+      "n": 33,
+      "p_value": 0.26921155318911216,
+      "rho": 0.19584270511605667
+    },
+    "cross_corr_p_with_z_perp": {
+      "C": 0.46118840843970066,
+      "L": null,
+      "V": 0.8461958737194919
+    },
+    "regime_dependence_u_e": {
+      "f_stat": null,
+      "p_value": null,
+      "reason": "un solo regime"
+    },
+    "summary": {
+      "alpha": 0.05,
+      "checks": {
+        "autocorr": true,
+        "cross_C": true,
+        "cross_L": null,
+        "cross_V": true,
+        "regime": null
+      },
+      "is_white": true
+    }
+  },
+  "FOMC/neg": {
+    "autocorr_u_b": {
+      "lag": 1,
+      "n": 113,
+      "p_value": 0.61437861253905,
+      "rho": -0.04753078049450574
+    },
+    "autocorr_u_e": {
+      "lag": 1,
+      "n": 113,
+      "p_value": 0.6143786125390496,
+      "rho": -0.047530780494505764
+    },
+    "cross_corr_p_with_z_perp": {
+      "C": 0.15586813651166476,
+      "L": null,
+      "V": 0.3889357038620891
+    },
+    "regime_dependence_u_e": {
+      "f_stat": null,
+      "p_value": null,
+      "reason": "un solo regime"
+    },
+    "summary": {
+      "alpha": 0.05,
+      "checks": {
+        "autocorr": true,
+        "cross_C": true,
+        "cross_L": null,
+        "cross_V": true,
+        "regime": null
+      },
+      "is_white": true
+    }
+  },
+  "NFP/neg": {
+    "autocorr_u_b": {
+      "lag": 1,
+      "n": 136,
+      "p_value": 0.08261814907603071,
+      "rho": 0.14995703638307967
+    },
+    "autocorr_u_e": {
+      "lag": 1,
+      "n": 136,
+      "p_value": 0.08261814907603071,
+      "rho": 0.1499570363830797
+    },
+    "cross_corr_p_with_z_perp": {
+      "C": 0.7992956233825403,
+      "L": null,
+      "V": 0.629284350751731
+    },
+    "regime_dependence_u_e": {
+      "f_stat": null,
+      "p_value": null,
+      "reason": "un solo regime"
+    },
+    "summary": {
+      "alpha": 0.05,
+      "checks": {
+        "autocorr": true,
+        "cross_C": true,
+        "cross_L": null,
+        "cross_V": true,
+        "regime": null
+      },
+      "is_white": true
+    }
+  }
+}

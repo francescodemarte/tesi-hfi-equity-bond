@@ -1,0 +1,202 @@
+{
+  "code": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/config.py",
+      "sha256": "95aa605f243ebd388fda523efd6729d1d8e001951277fad04cc7b73193225d3a"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/strategy_rule.py",
+      "sha256": "d18380e06645b4fddca0e28b9f793fd4d32bd4af9a1d2728e1ee6b263752a71a"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/payoff.py",
+      "sha256": "5d538a79c7cf6a11450b41029e5a39c5d02a76aa526b812d21f5907324490bf4"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/portfolio.py",
+      "sha256": "edc14ceade52b40ab8dd28cbffe0b02d570ab0ea8ae669639eef910473ce5204"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/metrics.py",
+      "sha256": "59565c1da4c7737ffefcf095a47dda0d1716ecb70889f3f6294d7f9ee4510e63"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/run_strategies.py",
+      "sha256": "f1a06f11e4ed15e1f0c5bc791888b5e20549aa16752278defb8fcdbe21e30f00"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/manifest.py",
+      "sha256": "b25fe7ae49e60503de408561882032fa8f798e727f585612634bff5bf54ef60f"
+    }
+  ],
+  "config_hash": "936aecb1136816d1e077ae753fe7a71942c8b39113a2e9a7e1b63dda17ff5483",
+  "config_snapshot": {
+    "active_regime": {
+      "CPI": "neg",
+      "FOMC": "neg",
+      "NFP": "neg"
+    },
+    "beta_str": {
+      "CPI": 1.163,
+      "FOMC": 0.926,
+      "NFP": -0.808
+    },
+    "beta_str_provenance": {
+      "disclaimer": "I \u03b2_str di config sono valori di pre-registrazione delle strategie, non stime confermate. Risultati di questo pacchetto sono CONDIZIONALI alla conferma di questi \u03b2 nella stima strutturale futura.",
+      "source_authoritative": "07_protocollo_v2_signflip \u2014 NON ANCORA ESEGUITO sui dati reali",
+      "source_immediate": "prompt strategie event-driven 2026-06-23",
+      "status": "illustrative_pending_07_estimation"
+    },
+    "config_version": "strategie-event-driven-v1-2026-06-23",
+    "event_window_min": 15,
+    "fomc_subsample_end": "2024-01-31",
+    "horizons": [
+      "event_window",
+      "end_of_day"
+    ],
+    "include_transaction_costs": false,
+    "master_seed": 20260621,
+    "portfolio_weight_default": "equal",
+    "portfolio_weight_schemes": [
+      "equal",
+      "inverse_vol_on_training"
+    ],
+    "regime_lag_bdays": 1,
+    "regime_window_days": 63,
+    "strategies": [
+      "CPI",
+      "NFP",
+      "FOMC"
+    ]
+  },
+  "config_version": "strategie-event-driven-v1-2026-06-23",
+  "diagnostics": {
+    "CPI": {
+      "active_regime": "neg",
+      "dropped_no_eod": 0,
+      "dropped_no_surprise": 1,
+      "events_emitted": 186,
+      "n_in_active_regime": 149,
+      "total_clusters": 187
+    },
+    "FOMC": {
+      "active_regime": "neg",
+      "dropped_no_eod": 0,
+      "dropped_no_surprise": 28,
+      "events_emitted": 159,
+      "n_in_active_regime": 126,
+      "total_clusters": 187
+    },
+    "NFP": {
+      "active_regime": "neg",
+      "dropped_no_eod": 0,
+      "dropped_no_surprise": 7,
+      "events_emitted": 180,
+      "n_in_active_regime": 141,
+      "total_clusters": 187
+    }
+  },
+  "executor": {
+    "namespace_output_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/strategie_event_driven",
+    "script_path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/strategie_event_driven/execute_14.py",
+    "script_sha256": "e08cda65fac6793d2b74ede562134c91190b4d425abd72e8eae4e48626e51c05",
+    "tests_observed_before_run": "37 passed (osservato in tool result)"
+  },
+  "fomc_subsample_end": "2024-01-31",
+  "inputs": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/calendari/contaminants_build_2026-06-22/contaminants_v2_2026-06-22.csv",
+      "sha256": "0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/external_data/jk_surprises_fomc.csv",
+      "sha256": "9d8a6440eae1eed043d616662ff50576b0345d7887aea820803931520fe40de5",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/bridge/data/req08_cpi_surprise.csv",
+      "sha256": "8021823f4d23eebd6759217b6f397a54a1ee43a99f26bd220fb988e87b16b9f1",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f",
+      "status": "ok"
+    }
+  ],
+  "portfolio_scheme": "equal",
+  "portfolio_weights": {
+    "CPI": 0.3333333333333333,
+    "FOMC": 0.3333333333333333,
+    "NFP": 0.3333333333333333
+  },
+  "replicability_assumption": "Pre-registrazione delle 4 strategie event-driven (spec congelata):\n1) \u03b2_str (CPI=+0.95, NFP=-1.40, FOMC=+0.87) presi dalla stima strutturale\n   pre-esistente \u2014 NON ottimizzati sui rendimenti di strategia.\n2) Tutte le strategie attive SOLO in regime negativo (corr 63gg, lag t-1).\n3) Direzione momentum: equity nel verso della sorpresa, bond nel verso\n   coerente con sign(\u03b2_str). Sizing = |\u03b2_str|.\n4) Due orizzonti riportati ENTRAMBI: event_window (\u00b115 min) + end_of_day.\n   Nessuna selezione del migliore.\n5) Sottocampione FOMC: \u2264 2024-01-31 (limite serie Jaroci\u0144ski-Karadi).\n6) Portafoglio: pesi pre-dichiarati (equal o inverse_vol_on_training);\n   schemi tipo 'maximize_sharpe' SOLLEVANO (anti-overfitting).\n7) Sharpe \u00e8 LORDO di costi di transazione \u2014 l'inclusione di costi\n   (dipendente da assunzioni su liquidit\u00e0/slippage) ridurrebbe le cifre.\n   Dichiarato esplicitamente nel capitolo.\n8) \u26a0\ufe0f PROVENANCE \u03b2_str (REVIEW #1, BLOCKER risolto): i valori in\n   config.BETA_STR (+0.95 CPI, -1.40 NFP, +0.87 FOMC) sono\n   ILLUSTRATIVI / CONDIZIONALI. Origine immediata: prompt di pre-\n   registrazione 2026-06-23. Origine autoritativa: stima del 07_\n   protocollo_v2_signflip \u2014 NON ANCORA ESEGUITO sui dati reali.\n   Il +0.95 (CPI) compare in un appendix che la memoria utente segna\n   come results.md inventato (2026-05); i -1.40 (NFP) e +0.87 (FOMC)\n   non hanno riscontro in documenti del vault.\n   CONSEGUENZA INTERPRETATIVA: lo Sharpe di questo pacchetto va letto\n   come CONDIZIONALE: 'se il 07 confermer\u00e0 \u03b2 di questa magnitudine,\n   allora le strategie danno Sharpe X'. NON \u00e8 performance di trading\n   su findings reali del 07.\n9) Pesi inverse_vol_on_training: l'esecutore DEVE dichiarare lunghezza\n   del training set e \u03c3_training per ciascuna strategia, altrimenti il\n   portafoglio appare arbitrario (REVIEW #4).",
+  "seed": {
+    "name": "strategie_event_driven_2026-06-24",
+    "value": 3308763042
+  },
+  "sharpe_table": {
+    "CPI/end_of_day": {
+      "n": 149,
+      "period": "2010-04-14..2025-12-10",
+      "sharpe": -0.06302915040902911
+    },
+    "CPI/event_window": {
+      "n": 149,
+      "period": "2010-04-14..2025-12-10",
+      "sharpe": -0.09238484321831118
+    },
+    "FOMC/end_of_day": {
+      "n": 126,
+      "period": "2010-04-28..2023-07-26",
+      "sharpe": -0.19301083813116404
+    },
+    "FOMC/event_window": {
+      "n": 126,
+      "period": "2010-04-28..2023-07-26",
+      "sharpe": -0.08496031547764833
+    },
+    "NFP/end_of_day": {
+      "n": 141,
+      "period": "2010-04-02..2025-12-05",
+      "sharpe": 0.07241223763150906
+    },
+    "NFP/event_window": {
+      "n": 141,
+      "period": "2010-04-02..2025-12-05",
+      "sharpe": 0.19267998932422745
+    },
+    "PORTFOLIO/end_of_day": {
+      "n": 416,
+      "period": "2010-04-02..2025-12-10",
+      "sharpe": -0.049205206752255155
+    },
+    "PORTFOLIO/event_window": {
+      "n": 416,
+      "period": "2010-04-02..2025-12-10",
+      "sharpe": 0.023996918523342278
+    }
+  },
+  "surprise_sources_per_leg": {
+    "CPI": "surprise_yoy = cpi_yoy_actual - cpi_yoy_consensus (bridge req08_cpi_surprise.csv)",
+    "FOMC": "MP1 Jaroci\u0144ski-Karadi \u2014 limitato al sotto-campione fino a 2024-01-31",
+    "NFP": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato: consensus NFP non disponibile)"
+  },
+  "timestamp": "2026-06-24T17:44:51Z"
+}

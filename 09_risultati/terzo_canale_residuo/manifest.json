@@ -1,0 +1,342 @@
+{
+  "by": {
+    "c_m": 3.103210678210678,
+    "crit": null,
+    "family_size": 12
+  },
+  "code": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/config.py",
+      "sha256": "d91c75c424648c963d238cc1732484be2aa00cda6701e14c02e6dd2ae38bc026"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/residual.py",
+      "sha256": "44a9f8c017405bffd694d6534ff502e2d04c9eb0de6ba18b2e7b2c8adff6b32c"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/tests_channel.py",
+      "sha256": "7cd056584267c271676a16b26be75b6693ec46cda3142a33b8fa00f25117717f"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/proxies.py",
+      "sha256": "bd69e5b63200455190569376e98cc853a023c3c535574c9bda90fe2005cfa88b"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/pipeline.py",
+      "sha256": "78a046a677f9dc868f5e75858046215e555a10b6778d85e7bfc91a8caa963077"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/multiplicity.py",
+      "sha256": "9077dc6a0e7b9b466b16f1088146cce0c7742f13cebc4a61e72b6a7f46c356ab"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/sensitivity.py",
+      "sha256": "16d3a66d3bfc7b041de339f23dcb5bee4f831e8b7087e5e711fb285ac344571d"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/whitening.py",
+      "sha256": "4d5278e4504fb1231f2122a5de7ba63fdcf70a2856ac9da7d37d06c1386c2e1a"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/manifest.py",
+      "sha256": "b6151c14a24c3b91fbeacf94ed14501b20da05e26cf8bde8d19e0f73cab3085f"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo/synthetic.py",
+      "sha256": "3adf2958b64f26215d50e9f82b6a3a3ec6780dbf7a78ad2844c59ec237cfb813"
+    }
+  ],
+  "config_hash": "6ee07068d8b8d06efa631e005834f904c360043ec81dbe5981505a546c81af87",
+  "config_snapshot": {
+    "b_boot": 10000,
+    "by_family_size": 12,
+    "by_q": 0.1,
+    "candidate_mechanism": {
+      "C": "Expected equity-bond correlation / hedging demand (Campbell-Pflueger-Viceira); proxy: corr realizzata intraday o option-implied. PI\u00d9 DEBOLE dei tre.",
+      "L": "Funding liquidity (Brunnermeier-Pedersen); proxy intraday: \u0394bidAsk Treasury/equity, o Hu-Pan-Wang noise; ripiego daily: \u0394TED, \u0394OIS-Treasury.",
+      "V": "Volatility risk premium / resolution of uncertainty; proxy: \u0394VIX, \u0394MOVE."
+    },
+    "candidates": [
+      "L",
+      "V",
+      "C"
+    ],
+    "config_version": "terzo-canale-residuo-v1-2026-06-23",
+    "expected_sign": {
+      "C": "ambiguous",
+      "L": "antisymmetric_pos_eq",
+      "V": "antisymmetric_neg_eq"
+    },
+    "gate_a_thresholds": {
+      "bias_10pct": 23.108511211606643,
+      "bias_15pct": 17.86619772667455,
+      "bias_20pct": 15.061552535779715,
+      "practical_F10": 10.0
+    },
+    "gate_a_thresholds_source": "MOP-Patnaik K=1, verificata alla fonte via scipy.stats.ncx2",
+    "master_seed": 20260621,
+    "robust_cells": [
+      [
+        "FOMC",
+        "neg"
+      ],
+      [
+        "NFP",
+        "neg"
+      ],
+      [
+        "CPI",
+        "neg"
+      ],
+      [
+        "CPI",
+        "pos"
+      ]
+    ]
+  },
+  "config_version": "terzo-canale-residuo-v1-2026-06-23",
+  "diagnostics_per_cell": {
+    "CPI/neg": {
+      "beta_str_central_from_12": 0.9509379413789273,
+      "n_after_mask": 134,
+      "n_before_mask": 134,
+      "n_clusters_in_pickle": 150,
+      "n_final": 134,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 16,
+        "no_dates": 0,
+        "no_vix": 0
+      }
+    },
+    "CPI/pos": {
+      "beta_str_central_from_12": 2.2404198326683864,
+      "n_after_mask": 33,
+      "n_before_mask": 33,
+      "n_clusters_in_pickle": 37,
+      "n_final": 33,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 4,
+        "no_dates": 0,
+        "no_vix": 0
+      }
+    },
+    "FOMC/neg": {
+      "beta_str_central_from_12": 0.874818977679241,
+      "n_after_mask": 113,
+      "n_before_mask": 129,
+      "n_clusters_in_pickle": 142,
+      "n_final": 113,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 13,
+        "no_dates": 0,
+        "no_vix": 0
+      }
+    },
+    "NFP/neg": {
+      "beta_str_central_from_12": -1.403641177900273,
+      "n_after_mask": 136,
+      "n_before_mask": 141,
+      "n_clusters_in_pickle": 145,
+      "n_final": 136,
+      "n_skipped_raw": {
+        "no_controls": 0,
+        "no_corr": 0,
+        "no_curve": 4,
+        "no_dates": 0,
+        "no_vix": 5
+      }
+    }
+  },
+  "executor": {
+    "namespace_output_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/terzo_canale_residuo",
+    "package_path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/13_terzo_canale_residuo",
+    "script_path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/terzo_canale_residuo/execute_13.py",
+    "script_sha256": "43db6b99dcb0f0825163fd9e9d8ea2ddf34277751d199522762601e1e1bda62e",
+    "spec_revision_applied": "Patologia \u00a72/\u00a73 risolta \u2014 sign rule rivista 'antisymmetric_pos_eq' (L) / 'antisymmetric_neg_eq' (V) / 'ambiguous' (C). Lettura: dichiarazione 'L' non garantisce contributo bond indipendente (vedi xfail rimosso e test_dgp_case3_*_documents_structural_false_positive_for_L).",
+    "tests_observed_before_run": "40 passed, 0 xfailed (osservato in tool result)"
+  },
+  "external_constants": {
+    "D_bond": 8.970865529245179,
+    "N_horizon": 100,
+    "delta_f_curve_units": "decimale (BPS\u00f710000)",
+    "delta_y_bond_proxy": "delta_rate_3 (front-3 FF/FEI) BPS\u00f710000",
+    "dp_bar": -3.85,
+    "rho_central": 0.9791636554813196
+  },
+  "inputs": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/calendari/contaminants_build_2026-06-22/contaminants_v2_2026-06-22.csv",
+      "sha256": "0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/external_data/jk_surprises_fomc.csv",
+      "sha256": "9d8a6440eae1eed043d616662ff50576b0345d7887aea820803931520fe40de5",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/07_protocollo_v2_signflip/external_data/snapshots/VIXCLS.csv",
+      "sha256": "7c18cea3e0ee37f693585248ea3189586bd7bd5a7649b2f2367a724e3476271e",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/decomp_canali/decomp_canali.report.json",
+      "sha256": "707a75675820350159cb95b3f54887195def32367e9c02c55c08eb35ec2f92cb",
+      "status": "ok"
+    }
+  ],
+  "proxy_provenance": {
+    "C": "corr realizzata intraday ES~TY 5-min sul giorno trading PRECEDENTE l'evento.",
+    "L": "proxy_unavailable \u2014 no bid-ask intraday TY/SPY in data_processed, no TED daily nei FRED snapshots; passato z=zeros per soddisfare contract API. Comunalit\u00e0 tecnicamente fallisce per costruzione (\u03bb=0).",
+    "V": "\u0394VIXCLS daily (fallback dichiarato; intraday non disponibile)."
+  },
+  "replicability_assumption": "Assunti del test del residuo:\n1) Le 4 celle robuste sono FISSATE a priori (spec \u00a71): {FOMC/neg, NFP/neg,\n   CPI/neg, CPI/pos}. Su celle non robuste il residuo \u00e8 contaminato dall'\n   errore di stima di \u03b2_str e NON \u00e8 diagnostico.\n2) I 3 candidati (L, V, C) sono fissati a priori con meccanismo e segno\n   atteso CONGELATI. Nessuna sostituzione di proxy post-hoc.\n3) Ortogonalizzazione \u0394Z_perp alla sorpresa (e tasso) PRIMA del test: un\n   carico genuino del terzo canale non deve essere residuo dei primi due.\n4) Comunalit\u00e0: \u03bb_e e \u03bb_b entrambi significativi POST-BY (q=0.10, c(m)).\n5) Segno atteso (\u00a73): L concorde, V entrambi negativi, C ambiguo.\n6) Soglie sensibilit\u00e0 gate_a (\u00a77) CALCOLATE alla fonte via MOP-Patnaik\n   K=1 (scipy.stats.ncx2), non a memoria. Servono solo a dichiarare la\n   robustezza, NON a sostituire il criterio pre-registrato.\n7) PATOLOGIA SPEC \u00a72/\u00a73 (vedi residual.py docstring): coef(\u0169_b,Z) =\n   \u2212coef(\u0169_e,Z)/\u03b2 per costruzione. CONSEGUENZA INTERPRETATIVA: L e V\n   sono INASCOLTABILI sui dati reali finch\u00e9 la spec non \u00e8 risolta \u2014\n   un verdetto 'L third_channel=False ovunque' NON \u00e8 evidenza empirica\n   di non-canale, \u00e8 l'algebra della spec a renderlo impossibile.\n   Solo C (ambiguous) pu\u00f2 tecnicamente passare, con valore informativo\n   nullo (sign rule banalmente True). Risoluzione = del ricercatore.",
+  "replicability_assumption_note": "Vedi spec_revision_applied: la patologia \u00a72/\u00a73 (coef_b=\u2212coef_e/\u03b2 per costruzione) \u00e8 stata accettata come constraint strutturale; la sign rule rivista \u00e8 coerente con quel pattern. Una dichiarazione 'L' sotto questa spec significa attivit\u00e0 residua significativa con \u03bb_e>0; la spec NON consente di distinguere terzo canale genuino da fattore solo-equity. Esito anticipato del DGP \u00a79.3 documentato come falso positivo strutturale (vedi test rinominato).",
+  "seed": {
+    "name": "terzo_canale_run_2026-06-23",
+    "value": 3944104701
+  },
+  "surprise_provenance": {
+    "CPI/neg": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato)",
+    "CPI/pos": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato)",
+    "FOMC/neg": "MP1 Jaroci\u0144ski\u2013Karadi (jk_surprises_fomc.csv)",
+    "NFP/neg": "m_e PC1 money-market dal CSV eventi v2 (fallback dichiarato)"
+  },
+  "third_channel_findings": {
+    "CPI/neg/C": {
+      "commonality": false,
+      "lambda_b": -0.0008554701672776312,
+      "lambda_e": 0.0008134990397820773,
+      "p_commonality": 0.3413804264501721,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/neg/L": {
+      "commonality": false,
+      "lambda_b": NaN,
+      "lambda_e": NaN,
+      "p_commonality": NaN,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/neg/V": {
+      "commonality": false,
+      "lambda_b": 0.00019284514750025162,
+      "lambda_e": -0.0001833837675688049,
+      "p_commonality": 0.26549493421658465,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos/C": {
+      "commonality": false,
+      "lambda_b": 0.002486082232968049,
+      "lambda_e": -0.005569867940386126,
+      "p_commonality": 0.38875390275852606,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos/L": {
+      "commonality": false,
+      "lambda_b": NaN,
+      "lambda_e": NaN,
+      "p_commonality": NaN,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "CPI/pos/V": {
+      "commonality": false,
+      "lambda_b": -0.0001038936176405589,
+      "lambda_e": 0.00023276532144957427,
+      "p_commonality": 0.8307247201008692,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg/C": {
+      "commonality": false,
+      "lambda_b": -0.0018911092758775127,
+      "lambda_e": 0.0016543782834028962,
+      "p_commonality": 0.22565933916608016,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg/L": {
+      "commonality": false,
+      "lambda_b": NaN,
+      "lambda_e": NaN,
+      "p_commonality": NaN,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "FOMC/neg/V": {
+      "commonality": false,
+      "lambda_b": 9.921806612115271e-05,
+      "lambda_e": -8.679784717141813e-05,
+      "p_commonality": 0.4815615276490406,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg/C": {
+      "commonality": false,
+      "lambda_b": -0.0002329458961575208,
+      "lambda_e": -0.00032697245206957744,
+      "p_commonality": 0.8039525818566142,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg/L": {
+      "commonality": false,
+      "lambda_b": NaN,
+      "lambda_e": NaN,
+      "p_commonality": NaN,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    },
+    "NFP/neg/V": {
+      "commonality": false,
+      "lambda_b": -5.3446169741768936e-05,
+      "lambda_e": -7.501924465059448e-05,
+      "p_commonality": 0.7822362965434428,
+      "passed_by": false,
+      "sign_ok": null,
+      "third_channel": false
+    }
+  },
+  "timestamp": "2026-06-24T11:03:31Z"
+}

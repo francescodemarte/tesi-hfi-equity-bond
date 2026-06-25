@@ -1,0 +1,256 @@
+{
+  "cell_counts": {
+    "CPI/neg/neg": 126,
+    "CPI/pos/pos": 33,
+    "ECB_decision/neg/neg": 70,
+    "ECB_decision/pos/pos": 23,
+    "ECB_press/neg/neg": 63,
+    "ECB_press/pos/pos": 20,
+    "FOMC/neg/neg": 117,
+    "FOMC/pos/pos": 40,
+    "NFP/neg/neg": 126,
+    "NFP/pos/pos": 38
+  },
+  "code": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/cell_pipeline.py",
+      "sha256": "1f75832d857de22f9ccd81bf7c97f57869fb400b07806557b4b627b7b229c8f3"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/bond_pb.py",
+      "sha256": "94803dd31408eb3b91e33471e2e469f17be23265f80d33c33fbb8f1d1923577b"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/equity_pb.py",
+      "sha256": "9eff8a699dac92a0e9c0bccb5ba931f2902536f37a2eb16557cd96a255c976ef"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/estimator.py",
+      "sha256": "c54e55fef7fdb4167c9fd1f2c105ed2a5bdaacefda0b2908c066a0561bf19c65"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/gates.py",
+      "sha256": "90a995f7d96cf1efa0afca0011cebb59bef570aa4acddd460f9d022c8885e595"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/netting.py",
+      "sha256": "0bf233c0d9298257baebdd5707bacf8443e1037a9a567558c498389a79011ee5"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/config.py",
+      "sha256": "a9161ac4b05e27470d0fe9d8b3b1466cf92f19e123b92b564eb496c5a57d97ec"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali/manifest.py",
+      "sha256": "443ad0d3c9669226283cc97291eeffecae5b02c9a2b33e6ea56d4ac8bc8c62d4"
+    }
+  ],
+  "config_hash": "907eb0ffa9e573b4243442042aa57235f02fe4bb5b6a9faacba2517bfe125e27",
+  "config_snapshot": {
+    "b_boot": 10000,
+    "band_width_threshold_default": 0.3,
+    "by_q": 0.1,
+    "config_version": "decomp-canali-doppio-cancello-v1-2026-06-22",
+    "grid_points_per_event": 12,
+    "master_seed": 20260621,
+    "mop_cv": 23.1085,
+    "rho_default_delta": 0.25,
+    "rho_offsets": [
+      -0.25,
+      0.0,
+      0.25
+    ],
+    "shrink_floor_default": 0.05,
+    "tail_border_significance_alpha": 0.05,
+    "tail_decay_lambda": {
+      "TD_0.5": 0.5,
+      "TD_0.8": 0.8
+    },
+    "tail_grid": [
+      "T0",
+      "TC",
+      "TD_0.5",
+      "TD_0.8"
+    ]
+  },
+  "config_version": "decomp-canali-doppio-cancello-v1-2026-06-22",
+  "diagnostics_per_cell": {
+    "CPI/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 3,
+        "no_curve_event": 21
+      },
+      "n_clusters": 150,
+      "n_dropped_total": 24,
+      "n_events_emitted": 126
+    },
+    "CPI/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 0,
+        "no_curve_event": 4
+      },
+      "n_clusters": 37,
+      "n_dropped_total": 4,
+      "n_events_emitted": 33
+    },
+    "ECB_decision/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 9,
+        "no_curve_event": 34
+      },
+      "n_clusters": 113,
+      "n_dropped_total": 43,
+      "n_events_emitted": 70
+    },
+    "ECB_decision/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 0,
+        "no_curve_event": 4
+      },
+      "n_clusters": 27,
+      "n_dropped_total": 4,
+      "n_events_emitted": 23
+    },
+    "ECB_press/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 13,
+        "no_curve_event": 32
+      },
+      "n_clusters": 108,
+      "n_dropped_total": 45,
+      "n_events_emitted": 63
+    },
+    "ECB_press/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 4,
+        "no_curve_event": 3
+      },
+      "n_clusters": 27,
+      "n_dropped_total": 7,
+      "n_events_emitted": 20
+    },
+    "FOMC/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 7,
+        "no_curve_event": 18
+      },
+      "n_clusters": 142,
+      "n_dropped_total": 25,
+      "n_events_emitted": 117
+    },
+    "FOMC/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 2,
+        "no_curve_event": 3
+      },
+      "n_clusters": 45,
+      "n_dropped_total": 5,
+      "n_events_emitted": 40
+    },
+    "NFP/neg": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 4,
+        "no_curve_event": 15
+      },
+      "n_clusters": 145,
+      "n_dropped_total": 19,
+      "n_events_emitted": 126
+    },
+    "NFP/pos": {
+      "drop_log": {
+        "no_controls": 0,
+        "no_curve_control": 1,
+        "no_curve_event": 3
+      },
+      "n_clusters": 42,
+      "n_dropped_total": 4,
+      "n_events_emitted": 38
+    }
+  },
+  "executor": {
+    "namespace_output_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/decomp_canali",
+    "package_path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/12_decomposizione_canali",
+    "reuse_of_07_clusters": {
+      "dedup_shared_report": {
+        "CPI": 0,
+        "ECB": 0,
+        "FOMC": 0,
+        "NFP": 0
+      },
+      "pickle_07_authoritative": {
+        "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+        "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+      }
+    },
+    "script_path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/decomp_canali/execute_12.py",
+    "script_sha256": "5ed40769a32041232c81f9d74877214ed19bef5b3a06e55b549c722b1ee32387"
+  },
+  "external_constants": {
+    "D_bond": 8.970865529245179,
+    "N_horizon": 100,
+    "bond_control_treatment": "Bug 1 fix lato bond (2026-06-23): netting simmetrico tramite stessa formula curve-based applicata a delta_f_curve_control (\u0394rate FFc1/2/3 intraday sui control window). L'asimmetria storica (\u0394P^B_b=0 sui controlli) \u00e8 eliminata.",
+    "bond_method": "curve (2026-06-23 fix v2): \u0394P^B_b ricostruito dalla curva osservata (\u0394f_1,2,3 dei FFc1/2/3) come rivalutazione CTD lungo la curva, senza \u03c1-discount perch\u00e9 bond a maturit\u00e0 finita. Formula: \u0394P^B_b = -\u03a3_{n=1..N_b} \u0394f_n con tail extrapolation 'TC' (\u0394f_n=\u0394f_3 oltre il bordo osservato). N_b = round(D_BOND\u00b74) = round(35.88) = 36 trimestri. Sostituisce la formula precedente \u0394P^B_b = -D\u00b7\u0394y_daily (Bug 2 v1 abbandonato perch\u00e9 il proxy daily gonfiava la varianza \u21d2 shrink > 1).",
+    "bond_tail_extrapolation": "TC (constant): \u0394f_n = \u0394f_m per n > m=3, dove m \u00e8 la lunghezza dei \u0394f osservati (3 punti). Hp implicita: oltre il bordo osservato della curva front, la term structure si \u00e8 spostata uniformemente al livello del bordo. Alternative T0 (\u0394f=0 dopo m, pi\u00f9 defensivo) e TD_\u03bb (decadimento) non scelte: T0 sottostima il segnale rate, TD non calibrabile senza pi\u00f9 punti curva.",
+    "delta_f_curve_control_source": "FFc1/2/3 intraday 2026-06-23 (Bug 1 fix lato equity, netting simmetrico): \u0394rate_decimal = -(median_post - median_pre)/100 sulla finestra \u00b115 min con bordi median 5 min \u2014 convenzione coerente con extract_window del 07. Aggregato come media dei control window del cluster. Sostituisce l'assunzione storica \u0394P^B_e=0 sui controlli.",
+    "delta_f_curve_units": "decimale (BPS\u00f710000) sui front 1/2/3 della term-structure money-market",
+    "dp_bar": -3.85,
+    "dp_bar_provenance": "canonico esterno, log(D/P) S&P 500 \u2248 -3.85 (D/P \u2248 2.1% media 2010-2025), pre-registrato",
+    "surprise_per_event": "m_e (PC1 money-market PCA) dal CSV eventi v2"
+  },
+  "gate_a_per_cell": {
+    "CPI/neg/neg": "PASS",
+    "CPI/pos/pos": "PASS",
+    "ECB_decision/neg/neg": "FAIL",
+    "ECB_decision/pos/pos": "FAIL",
+    "ECB_press/neg/neg": "FAIL",
+    "ECB_press/pos/pos": "FAIL",
+    "FOMC/neg/neg": "PASS",
+    "FOMC/pos/pos": "FAIL",
+    "NFP/neg/neg": "PASS",
+    "NFP/pos/pos": "FAIL"
+  },
+  "inputs": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/calendari/contaminants_build_2026-06-22/contaminants_v2_2026-06-22.csv",
+      "sha256": "0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+      "status": "ok"
+    }
+  ],
+  "replicability_assumption": "Assunti dichiarati della decomposizione in canali (chained):\n1) Log-linearizzazione di Campbell\u2013Shiller per il prezzo dell'equity\n   (\u0394P^B_e = \u2212\u03a3 \u03c1^(n\u22121)\u00b7\u0394f_n) \u2014 non esatta, approssima il valore attuale dei dividendi attesi.\n2) \u03c1_a calibrato esternamente come 1/(1+exp(dp_bar)), con dp_bar = media\n   di log(D/P) dell'indice azionario sul campione; banda di \u03c1 (3 valori)\n   per propagare l'incertezza di stima del d/p medio.\n3) Coda della curva discreta dalla griglia {T0, TC, TD(\u03bb=0.5), TD(\u03bb=0.8)}\n   per scadenze n > m osservate. La banda di costruzione cattura la\n   sensibilit\u00e0 a questa scelta.\n4) Bond: \u0394P^B_b = \u2212D\u00b7\u0394y (cash-flow finiti, niente coda) \u2014 letto direttamente\n   dalla curva, asimmetrico vs l'equity per costruzione.\n5) Controlli con \u0394P^B = 0 by construction (non hanno l'annuncio):\n   l'asimmetria \u00e8 voluta \u2014 il bond NETTO di controllo resta col rumore\n   di tasso non legato all'annuncio, mentre l'evento \u00e8 'depurato'.",
+  "seed": {
+    "name": "decomp_canali_2026-06-23",
+    "value": 1800584591
+  },
+  "timestamp": "2026-06-23T22:21:46Z",
+  "verdicts_per_cell": {
+    "CPI/neg/neg": "identified_robust",
+    "CPI/pos/pos": "identified_robust",
+    "ECB_decision/neg/neg": "channel_not_identified",
+    "ECB_decision/pos/pos": "channel_not_identified",
+    "ECB_press/neg/neg": "channel_not_identified",
+    "ECB_press/pos/pos": "channel_not_identified",
+    "FOMC/neg/neg": "identified_robust",
+    "FOMC/pos/pos": "channel_not_identified",
+    "NFP/neg/neg": "identified_robust",
+    "NFP/pos/pos": "channel_not_identified"
+  }
+}

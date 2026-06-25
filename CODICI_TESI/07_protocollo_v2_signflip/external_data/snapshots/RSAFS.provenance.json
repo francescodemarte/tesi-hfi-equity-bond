@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-05-01",
+  "date_min": "1992-01-01",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 413,
+  "name": "RSAFS",
+  "sha256": "f5ef863d488abbe6b5b6673df9847fa2bdf8aa53fe3767da7cf51d15b5b471bb",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RSAFS"
+}

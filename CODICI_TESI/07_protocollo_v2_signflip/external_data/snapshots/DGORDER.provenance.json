@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-04-01",
+  "date_min": "1992-02-01",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 411,
+  "name": "DGORDER",
+  "sha256": "a605e8463653a2b3ea7827f093d2f0bebf4576a20d0a7d80728d7bcf189ebee8",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGORDER"
+}

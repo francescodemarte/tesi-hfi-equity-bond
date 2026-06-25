@@ -1,0 +1,9 @@
+{
+  "date_max": "2026-05-01",
+  "date_min": "1913-01-01",
+  "fetched_at": "2026-06-22T10:00:00Z",
+  "n_rows": 1361,
+  "name": "PPIACO",
+  "sha256": "1a76b6b9b959a2fff46abdc99bfc16cb6dcc99dca56a254dbbd9c55dac981c02",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PPIACO"
+}

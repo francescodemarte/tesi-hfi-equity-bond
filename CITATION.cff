@@ -1,0 +1,76 @@
+cff-version: 1.2.0
+title: "High-Frequency Identification of Equity-Bond Comovement: Companion Code"
+message: "If you use this code, please cite as below."
+type: software
+authors:
+  - given-names: Francesco
+    family-names: De Marte
+    affiliation: "Bocconi University"
+date-released: 2026-06-25
+license: MIT
+repository-code: "https://github.com/<TUO_HANDLE>/tesi-hfi-equity-bond"
+keywords:
+  - high-frequency-identification
+  - equity-bond-comovement
+  - present-value-test
+  - Rigobon-Sack
+  - pre-registration
+  - Jarocinski-Karadi
+  - Altavilla-EA-MPD
+abstract: |
+  Companion code repository for a master thesis on high-frequency
+  identification of equity-bond comovement. Pre-registered pipeline with
+  7 modular packages, 462 unit tests, two-stage gate methodology, and
+  bootstrap inference. Findings: NFP/neg structural channel identified
+  robust to multiple bond-piece specifications; ECB QE factor transmission
+  monotonic along Bund 3M-30Y curve with significance at 30Y; residual
+  third-channel (L, V, C) not identified under pre-registered q=0.10;
+  event-driven concentrated strategy with out-of-sample annualized Sharpe
+  approximately 1.4 gross.
+references:
+  - type: article
+    authors:
+      - family-names: Altavilla
+        given-names: Carlo
+      - family-names: Brugnolini
+        given-names: Luca
+      - family-names: Gurkaynak
+        given-names: Refet
+      - family-names: Motto
+        given-names: Roberto
+      - family-names: Ragusa
+        given-names: Giuseppe
+    title: "Measuring Euro Area Monetary Policy"
+    journal: "Journal of Monetary Economics"
+    year: 2019
+    volume: 108
+    pages: "162-179"
+  - type: article
+    authors:
+      - family-names: Jarocinski
+        given-names: Marek
+      - family-names: Karadi
+        given-names: Peter
+    title: "Deconstructing Monetary Policy Surprises"
+    journal: "American Economic Journal: Macroeconomics"
+    year: 2020
+    volume: 12
+    issue: 2
+  - type: article
+    authors:
+      - family-names: Cieslak
+        given-names: Anna
+      - family-names: Schrimpf
+        given-names: Andreas
+    title: "Non-monetary news in central bank communication"
+    journal: "Journal of International Economics"
+    year: 2019
+  - type: article
+    authors:
+      - family-names: Rigobon
+        given-names: Roberto
+      - family-names: Sack
+        given-names: Brian
+    title: "Measuring the response of equity prices to shifts in monetary policy"
+    journal: "Journal of Monetary Economics"
+    year: 2004

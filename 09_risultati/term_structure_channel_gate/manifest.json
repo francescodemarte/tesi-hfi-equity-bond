@@ -1,0 +1,96 @@
+{
+  "config_hash": "6e8b44e66732888f967e5b54d247d2ef96d11cb17bc314870a519279a78c1847",
+  "config_version": "rate-channel-gate-v1-2026-06-22",
+  "executor": {
+    "namespace_output_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/term_structure_channel_gate",
+    "package_module_sha256": {
+      "config.py": "26e6535b62ff336c91a89673bfcfe138f9709d301450677bc22746fc56ae6448",
+      "diagnostics.py": "66bd00ee35dac1225c20142ca2a540489568919019558cf08cc8a18c9df0e483",
+      "gate.py": "8261bdc19bd91b82897108df9f1bb1a325ff89edbd4709d36aad9b44dac5e47c",
+      "manifest.py": "2d91470cbf2745f52dc2e82e93fcc88ba663ec40be0dd7370ff4e7cfc35ad46f",
+      "rate_shock.py": "2ac50389b72b3bf89a2c4872a956276b729631aa11c3e5a1eae7d0e3326e2188",
+      "term_structure.py": "ae5d6af75f96b1b7c568d4cb261ed01559862e9242ef06349172d53700607830"
+    },
+    "package_path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/10_diagnostica_canale_tassi",
+    "script_path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/term_structure_channel_gate/execute_ts_gate.py",
+    "script_sha256": "5ffa8ac5b3fb096eac401cf62998d90411a90e8f6ad500326a2096564e6fc196",
+    "tests_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/10_diagnostica_canale_tassi/tests",
+    "tests_module_sha256": {
+      "conftest.py": "38fb7f83c0f6414c60f79729a1f957aa64847a3645b191a7a33e3a866b55ccce",
+      "test_config.py": "f11b7235a9b535c9bab783aa4b74b5e2a81f1705411d143a335808d53d23dd5d",
+      "test_diagnostics.py": "fc86233351f3550efe249a5573e7d4bf2de5def2ae8d029abdb069d44b26e102",
+      "test_gate_synthetic.py": "b9331c2928a37b8efc9aa6d378dbfc056f22cfed3dc8a32e12914e1e5ebfcae4",
+      "test_rate_shock.py": "de06043297917575273046e0467760b4d750bf4a3a10881aa66058d25ad98122",
+      "test_term_structure.py": "04419bec268b560e3addae5daae7e7d08f745736d020e944da845242b1dfbfc2"
+    }
+  },
+  "inputs": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/FEIc1_1min.csv",
+      "sha256": "71801acd46e22adf7dc851db9ae56e3fc33faf4bb9b877efdfdf58d7f36612a4"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/FEIc2_1min.csv",
+      "sha256": "48ca19e4d03a224c8c283f21b7f963cd8ce4e68801955549a9b724d297e9adba"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/FEIc3_1min.csv",
+      "sha256": "4225fd1638654112e1e9bd5c6d821ef6d397eb0aaca52cebc54a99ddcbcbe6f5"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/FEIc4_1min.csv",
+      "sha256": "2e6de44d38b488567010af32e5c04275e2314a0cfe09b673687de4103707e926"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+    }
+  ],
+  "legs_in_scope": [
+    "FOMC",
+    "CPI",
+    "NFP"
+  ],
+  "min_cell": 30,
+  "n_events": {
+    "by_leg_regime": {
+      "CPI|negativo": 150,
+      "CPI|positivo": 37,
+      "FOMC|negativo": 142,
+      "FOMC|positivo": 45,
+      "NFP|negativo": 145,
+      "NFP|positivo": 42
+    },
+    "fed_total": 561,
+    "with_all_4_deltas_valid": 205,
+    "with_returns_valid": 205
+  },
+  "partition_mode": "median (on |PC1| and |PC2|)",
+  "pickle_auth": {
+    "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+    "run_label": "v2_signflip_run_authoritative_2026-06-22_post_bug2",
+    "run_timestamp": "2026-06-22T15:00:00Z",
+    "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+  },
+  "pre_registration": "Term-structure (Eurodollar FEIc1..c4) PCA, PC1+PC2 segno fissato. Eventi Fed (FOMC, CPI, NFP) \u2014 ECB fuori (vedi briefing). ESITO: SUCCESS sse almeno uno fra PC1 e PC2 ha |cos|<0.95 in entrambi i regimi, con celle popolate in entrambi; PARTIAL se un fattore distinto in un solo regime; FAIL altrimenti. Soglie congelate prima del run.",
+  "rate_contract": "FEIc1|FEIc2|FEIc3|FEIc4",
+  "seed": {
+    "name": "ts_gate_run_2026-06-23"
+  },
+  "thresholds": {
+    "cosine_high_threshold": 0.95,
+    "long_contract_movement_min_frac": 0.3,
+    "min_cell_events": 30,
+    "pc2_var_explained_min": 0.1
+  },
+  "timestamp": "2026-06-22T22:27:11Z",
+  "window_half_min": 15
+}

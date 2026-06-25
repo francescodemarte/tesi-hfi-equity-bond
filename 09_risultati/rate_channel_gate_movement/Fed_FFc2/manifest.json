@@ -1,0 +1,80 @@
+{
+  "config_hash": "fd558d698d8212f5673acba1dadc2af14ddb2ca3081a806b1e867872ce4cc0a8",
+  "config_version": "rate-channel-gate-v1-2026-06-22",
+  "executor": {
+    "namespace_output_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/rate_channel_gate_movement/Fed_FFc2",
+    "package_module_sha256": {
+      "config.py": "77b634c922f6ee85fe17f55752e3df22f372c14e33f5739cbded71fd1d8932e3",
+      "diagnostics.py": "66bd00ee35dac1225c20142ca2a540489568919019558cf08cc8a18c9df0e483",
+      "gate.py": "8261bdc19bd91b82897108df9f1bb1a325ff89edbd4709d36aad9b44dac5e47c",
+      "manifest.py": "2d91470cbf2745f52dc2e82e93fcc88ba663ec40be0dd7370ff4e7cfc35ad46f",
+      "rate_shock.py": "2ac50389b72b3bf89a2c4872a956276b729631aa11c3e5a1eae7d0e3326e2188"
+    },
+    "package_path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/10_diagnostica_canale_tassi",
+    "preregistration_note": "Run leg-specific con partition_mode='movement'. Pre-registrato dal ricercatore prima del run, motivato dalla massa puntuale in 0 di |\u0394price| sul futures-tasso (non scelta ex-post sui risultati del run 'median' precedente).",
+    "script_path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/rate_channel_gate_movement/execute_legspecific.py",
+    "script_sha256": "805ced10954f0473a87421f2ece9b76b4c9110d0b9963f369e6d10c38fc72b72"
+  },
+  "group": {
+    "legs": [
+      "FOMC",
+      "CPI",
+      "NFP"
+    ],
+    "name": "Fed_FFc2"
+  },
+  "inputs": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+      "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/FFc2_1min.csv",
+      "sha256": "c0fafde91356c973087d5ee396cd6d369114f86cfa692b251bc7fd82f907f886"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"
+    }
+  ],
+  "min_cell": 30,
+  "n_events": {
+    "by_leg_regime": {
+      "CPI|negativo": 150,
+      "CPI|positivo": 37,
+      "FOMC|negativo": 142,
+      "FOMC|positivo": 45,
+      "NFP|negativo": 145,
+      "NFP|positivo": 42
+    },
+    "high": 220,
+    "in_group_total": 561,
+    "low": 337,
+    "with_intensity_valid": 557,
+    "with_returns_valid": 561
+  },
+  "partition_mode": "movement",
+  "pickle_auth": {
+    "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/v2_signflip/result_authoritative.pkl",
+    "run_label": "v2_signflip_run_authoritative_2026-06-22_post_bug2",
+    "run_timestamp": "2026-06-22T15:00:00Z",
+    "sha256": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d"
+  },
+  "rate_contract": "FFc2",
+  "seed": {
+    "name": "gate_run_movement_2026-06-23"
+  },
+  "thresholds": {
+    "cosine_high": 0.95,
+    "eta2_low": 0.2,
+    "kappa_low": 0.2,
+    "min_cell": 30,
+    "partition_mode": "movement"
+  },
+  "timestamp": "2026-06-22T22:06:48Z",
+  "window_half_min": 15
+}

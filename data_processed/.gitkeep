@@ -1,0 +1,24 @@
+# data_processed/ — Refinitiv Tick History intraday CSVs (1-min)
+
+**NOT INCLUDED in the repository** — Refinitiv license forbids redistribution.
+
+Expected files (sha256 nelle entries di `data_manifest.json`):
+
+- `ESc1_1min.csv`      — E-mini S&P 500 future, front month
+- `TYc1_1min.csv`      — UST 10Y note future, front month
+- `FGBLc1_1min.csv`    — Bund 10Y future, front month
+- `STXE_continuous_1min.csv` — Euro Stoxx 50 continuous
+- `FFc1_1min.csv` / `FFc2_1min.csv` / `FFc3_1min.csv` — Fed Funds front 1/2/3
+- `FEIc1_1min.csv` / `FEIc2_1min.csv` / `FEIc3_1min.csv` / `FEIc4_1min.csv` — Euribor 3M front 1-4
+- `SRc1_1min.csv` / `SRc2_1min.csv` — SOFR 3M front 1-2 (discontinuous post-2013)
+
+Schema: `Datetime_UTC, PX_LAST, Bid, Ask, Spread, Volume`
+
+Span atteso: 2010-01-03 → 2025-12-31.
+
+Per riprodurre: usare il proprio accesso WRDS o Refinitiv Tick History,
+estrarre i RIC su quel periodo, salvare i CSV qui, poi:
+
+```bash
+python scripts/verify_data_integrity.py
+```

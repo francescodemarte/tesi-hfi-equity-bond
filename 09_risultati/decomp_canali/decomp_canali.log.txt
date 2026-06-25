@@ -1,0 +1,48 @@
+=== Log di custodia — pacchetto 12 (decomposizione canali) ===
+task_timestamp:       2026-06-23T22:21:46Z
+seed_name:            decomp_canali_2026-06-23
+seed_value:           1800584591
+config_version:       decomp-canali-doppio-cancello-v1-2026-06-22
+config_hash:          907eb0ffa9e573b4243442042aa57235f02fe4bb5b6a9faacba2517bfe125e27
+MOP_CV (soglia gate_a):    23.1085
+SHRINK_FLOOR (gate_a aux): 0.05
+BAND_WIDTH_THRESHOLD (b):  0.3
+D_bond:               8.970865529245179
+dp_bar (canonico):    -3.85
+N_horizon:            100
+B_BOOT:               10000
+
+Riuso cluster 07 (coerenza inter-pacchetto):
+  pickle_07_sha256:   a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d
+  dedup_shared:       {'FOMC': 0, 'CPI': 0, 'NFP': 0, 'ECB': 0}
+
+Inputs (sha256):
+  events_CSV          sha256=92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af
+  contaminants_CSV    sha256=0f69caa304864265285ba20bbbd9f4f757b7dda9d5c454d5ef67594c65a09a6e
+  pickle_07_auth      sha256=a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d
+
+Code modules (sha256):
+  cell_pipeline.py         sha256=1f75832d857de22f9ccd81bf7c97f57869fb400b07806557b4b627b7b229c8f3
+  bond_pb.py               sha256=94803dd31408eb3b91e33471e2e469f17be23265f80d33c33fbb8f1d1923577b
+  equity_pb.py             sha256=9eff8a699dac92a0e9c0bccb5ba931f2902536f37a2eb16557cd96a255c976ef
+  estimator.py             sha256=c54e55fef7fdb4167c9fd1f2c105ed2a5bdaacefda0b2908c066a0561bf19c65
+  gates.py                 sha256=90a995f7d96cf1efa0afca0011cebb59bef570aa4acddd460f9d022c8885e595
+  netting.py               sha256=0bf233c0d9298257baebdd5707bacf8443e1037a9a567558c498389a79011ee5
+  config.py                sha256=a9161ac4b05e27470d0fe9d8b3b1466cf92f19e123b92b564eb496c5a57d97ec
+  manifest.py              sha256=443ad0d3c9669226283cc97291eeffecae5b02c9a2b33e6ea56d4ac8bc8c62d4
+
+Tabella §6 (per cella):
+  cella             n       F_MOP     shrink  gate_a     β_str_C   constr_width    precheck                 verdict
+  CPI/neg/neg     126     33.2297     0.5949    PASS      0.9509         0.0000        PASS       identified_robust
+  CPI/pos/pos      33     23.5450     0.4909    PASS      2.2404         0.0000        PASS       identified_robust
+  ECB_decision/neg/neg   70     10.1103     0.9720    FAIL      0.4933         0.0000        PASS  channel_not_identified
+  ECB_decision/pos/pos   23      5.6467     0.5686    FAIL      0.4909         0.0000        PASS  channel_not_identified
+  ECB_press/neg/neg   63     10.7399     0.5009    FAIL     -1.6786         0.0000        WARN  channel_not_identified
+  ECB_press/pos/pos   20      3.2273     0.5485    FAIL      1.0900         0.0000        PASS  channel_not_identified
+  FOMC/neg/neg    117     39.1832     0.6479    PASS      0.8748         0.0000        PASS       identified_robust
+  FOMC/pos/pos     40     11.4989     0.5506    FAIL      1.7767         0.0000        PASS  channel_not_identified
+  NFP/neg/neg     126     39.0396     0.5346    PASS     -1.4036         0.0000        PASS       identified_robust
+  NFP/pos/pos      38     19.6406     0.4706    FAIL      0.6095         0.0000        WARN  channel_not_identified
+
+Verdetto pre-registrato: per cella ∈ {channel_not_identified, identified_fragile, identified_robust}.
+Caveat: bond_pb usa Δy=delta_rate_3 (proxy long-end via term structure); shrink≈0 ⇒ FAIL atteso (caso 2 §7).

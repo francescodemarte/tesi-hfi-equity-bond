@@ -1,0 +1,75 @@
+{
+  "generated": "2026-06-25",
+  "purpose": "sha256 manifest for external data files (verifiable reproduction)",
+  "note": "Refinitiv Tick History intraday data NOT redistributable; verify via own subscription.",
+  "data_external_public": {
+    "fred_TEDRATE.csv": {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TEDRATE",
+      "sha256_expected": "291d6007c287e3a1a56fff7879dcfa5aaa44620bc0a68cb2ab8ccf032795c99d",
+      "span": "1986-01-02 to 2022-01-21 (discontinued)",
+      "license": "FRED public domain"
+    },
+    "fred_DGS2.csv": {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2",
+      "license": "FRED public domain"
+    },
+    "fred_DGS5.csv": {"url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5", "license": "FRED public domain"},
+    "fred_DGS10.csv": {"url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10", "license": "FRED public domain"},
+    "fred_DGS30.csv": {"url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS30", "license": "FRED public domain"},
+    "fred_VIXCLS.csv": {"url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS", "license": "FRED public domain"},
+    "fred_DFII5.csv": {"url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5", "license": "FRED public domain"},
+    "fred_T10YIE.csv": {"url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE", "license": "FRED public domain"},
+    "fred_CPIAUCSL.csv": {"url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL", "license": "FRED public domain"},
+    "altavilla_TPQE_factors.csv": {
+      "sha256_expected": "5a447263ef99789b706c50beb1a19a17bd4d2900c714e98794d298b4b7e2118a",
+      "source": "Estratto da EA-MPD_ECB_Altavilla2019.xlsx (incluso nel repo); rotazione canonica Target/Path/QE",
+      "license": "Academic replication (Altavilla et al. 2019, JME)"
+    },
+    "altavilla_eampd_*.csv": {
+      "source": "EA-MPD_ECB_Altavilla2019.xlsx — Altavilla et al. 2019 JME replication package",
+      "license": "Academic replication (cite Altavilla et al. 2019)"
+    },
+    "jk_surprises_fomc.csv": {
+      "source": "Jarocinski-Karadi 2020 AEJ:Macro replication package",
+      "url_manual": "https://www.ecb.europa.eu/pub/research/working-papers/html/wp2030.en.html",
+      "license": "Academic replication (cite Jarocinski-Karadi 2020)",
+      "note": "Manual download required"
+    }
+  },
+  "data_processed_refinitiv_proprietary": {
+    "_note": "These intraday CSVs are NOT redistributed; obtain via WRDS or Refinitiv subscription.",
+    "ESc1_1min.csv": {"ric": "ESc1", "schema": "Datetime_UTC,PX_LAST,Bid,Ask,Spread,Volume",
+                       "span": "2010-01-03 23:00 to 2025-12-31 22:00 UTC", "expected_rows": 5713859,
+                       "sha256_expected": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10"},
+    "TYc1_1min.csv": {"ric": "TYc1", "expected_rows": 5439817,
+                       "sha256_expected": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f"},
+    "FGBLc1_1min.csv": {"ric": "FGBLc1", "expected_rows": 4065541,
+                         "sha256_expected": "37b9a86f25349d4d7daf7dd7e4c8b175e37f4fc3ca7c5585a3ad34cc1358a3d8"},
+    "STXE_continuous_1min.csv": {"ric": "STXE continuous", "schema": "Datetime_UTC,Mid_raw,Mid_adjusted,contract_active",
+                                   "sha256_expected": "49de2232ee7d2537bc49e54c4fb7426500976fd3e474e76ebd583fa105bdd48e"},
+    "FFc1_1min.csv": {"ric": "FFc1"},
+    "FFc2_1min.csv": {"ric": "FFc2"},
+    "FFc3_1min.csv": {"ric": "FFc3"},
+    "FEIc1_1min.csv": {"ric": "FEIc1"},
+    "FEIc2_1min.csv": {"ric": "FEIc2"},
+    "FEIc3_1min.csv": {"ric": "FEIc3"},
+    "FEIc4_1min.csv": {"ric": "FEIc4"}
+  },
+  "datasets_in_repo": {
+    "DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv": {
+      "sha256_expected": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+      "description": "Calendario eventi NFP/CPI/FOMC/ECB + regime classifier 63gg lag t-1",
+      "license": "MIT (Francesco De Marte 2026)"
+    },
+    "DATASET_TESI/01_eventi_hfi/EA-MPD_ECB_Altavilla2019.xlsx": {
+      "source": "Altavilla et al. 2019 JME replication package",
+      "license": "Academic replication"
+    },
+    "09_risultati/v2_signflip/result_authoritative.pkl": {
+      "sha256_expected": "a9c13a7b86789b3159c82fa5f5aa4a2a8de596b9054bf9a336ef27931ad21a9d",
+      "description": "Run autoritativo pacchetto 07 (post Bug 2 fix). Riproduce 4 celle robuste del 12 e tutti i downstream.",
+      "config_hash_07": "55ccb29aacfe298200a6bd69f7069842cf8b54080f195a7de1fca8b2cfdd03e1",
+      "label": "v2_signflip_run_authoritative_2026-06-22_post_bug2"
+    }
+  }
+}

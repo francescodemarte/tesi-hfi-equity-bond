@@ -1,0 +1,198 @@
+{
+  "config_hash": "fd558d698d8212f5673acba1dadc2af14ddb2ca3081a806b1e867872ce4cc0a8",
+  "criterion_a": {
+    "by_leg": {
+      "CPI": {
+        "between_var": 7.597922019452309e-06,
+        "eta_squared": 0.06704655886264936,
+        "group_n": {
+          "negativo": 149,
+          "positivo": 37
+        },
+        "n": 186,
+        "total_var": 0.00011332307203144168,
+        "within_var": 0.00010572515001198937
+      },
+      "FOMC": {
+        "between_var": 7.677324626841178e-08,
+        "eta_squared": 0.0006412466129730352,
+        "group_n": {
+          "negativo": 142,
+          "positivo": 45
+        },
+        "n": 187,
+        "total_var": 0.00011972499302953846,
+        "within_var": 0.00011964821978327005
+      },
+      "NFP": {
+        "between_var": 2.276014339868268e-06,
+        "eta_squared": 0.022904848394507727,
+        "group_n": {
+          "negativo": 142,
+          "positivo": 42
+        },
+        "n": 184,
+        "total_var": 9.936823421254452e-05,
+        "within_var": 9.709221987267626e-05
+      }
+    },
+    "overall": {
+      "between_var": 1.6794138161384733e-06,
+      "eta_squared": 0.015105577742377212,
+      "group_n": {
+        "negativo": 433,
+        "positivo": 124
+      },
+      "n": 557,
+      "total_var": 0.00011117839018014141,
+      "within_var": 0.00010949897636400293
+    },
+    "threshold_eta2_low": 0.2
+  },
+  "criterion_b": {
+    "by_leg_kappa": {
+      "CPI": 0.15910748140586276,
+      "FOMC": 0.04652644996813253,
+      "NFP": 0.11011904761904762
+    },
+    "overall_kappa": 0.10586072033156259,
+    "partition_mode": "movement",
+    "threshold_kappa_low": 0.2
+  },
+  "criterion_c": {
+    "below_by_leg": {
+      "CPI": [
+        [
+          "positivo",
+          "high"
+        ],
+        [
+          "positivo",
+          "low"
+        ]
+      ],
+      "FOMC": [
+        [
+          "positivo",
+          "high"
+        ],
+        [
+          "positivo",
+          "low"
+        ]
+      ],
+      "NFP": [
+        [
+          "positivo",
+          "high"
+        ],
+        [
+          "positivo",
+          "low"
+        ]
+      ]
+    },
+    "below_overall": [],
+    "counts_by_leg": {
+      "CPI": {
+        "negativo|high": 43,
+        "negativo|low": 106,
+        "positivo|high": 18,
+        "positivo|low": 19
+      },
+      "FOMC": {
+        "negativo|high": 55,
+        "negativo|low": 87,
+        "positivo|high": 20,
+        "positivo|low": 25
+      },
+      "NFP": {
+        "negativo|high": 60,
+        "negativo|low": 82,
+        "positivo|high": 24,
+        "positivo|low": 18
+      }
+    },
+    "counts_overall": {
+      "negativo|high": 158,
+      "negativo|low": 275,
+      "positivo|high": 62,
+      "positivo|low": 62
+    },
+    "min_cell": 30
+  },
+  "criterion_d": {
+    "delta_rate_neg": [
+      3.943820318484033e-06,
+      2.8480139210093314e-06,
+      7.666313889201231e-07
+    ],
+    "delta_rate_pos": [
+      7.857559066155626e-05,
+      1.772481784589083e-05,
+      3.4393594433191114e-05
+    ],
+    "delta_regime_hi": [
+      7.644805725127718e-05,
+      1.8018767496457477e-05,
+      3.866159383167191e-05
+    ],
+    "delta_regime_lo": [
+      1.8162869082049602e-06,
+      3.1419635715759746e-06,
+      5.034630787400914e-06
+    ],
+    "distinctness_at_regime_neg": {
+      "angle_deg": 49.200279624169454,
+      "cosine": 0.6534169095720983,
+      "rank_numerical": 2
+    },
+    "distinctness_at_regime_pos": {
+      "angle_deg": 3.1266067409580227,
+      "cosine": 0.9985114498013401,
+      "rank_numerical": 2
+    },
+    "threshold_cosine_high": 0.95
+  },
+  "event_moments_raw": {
+    "negativo|high": {
+      "cov_eb": -1.1481483745858678e-07,
+      "n": 158,
+      "var_b": 6.053002831519279e-06,
+      "var_e": 1.2881714554138635e-05
+    },
+    "negativo|low": {
+      "cov_eb": -8.814462263787099e-07,
+      "n": 275,
+      "var_b": 3.2049889105099473e-06,
+      "var_e": 8.937894235654601e-06
+    },
+    "positivo|high": {
+      "cov_eb": 3.854677899421332e-05,
+      "n": 62,
+      "var_b": 2.4071770327976754e-05,
+      "var_e": 8.932977180541581e-05
+    },
+    "positivo|low": {
+      "cov_eb": 4.153184561022205e-06,
+      "n": 62,
+      "var_b": 6.346952482085922e-06,
+      "var_e": 1.0754181143859562e-05
+    }
+  },
+  "n_events_total": 561,
+  "n_events_with_intensity": 557,
+  "thresholds_used": {
+    "cosine_high": 0.95,
+    "eta2_low": 0.2,
+    "kappa_low": 0.2,
+    "min_cell": 30,
+    "partition_mode": "movement"
+  },
+  "verdicts": {
+    "a": true,
+    "b": true,
+    "c": true,
+    "d": false
+  }
+}

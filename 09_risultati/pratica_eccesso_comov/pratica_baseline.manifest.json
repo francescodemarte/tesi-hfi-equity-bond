@@ -1,0 +1,132 @@
+{
+  "calibration_e_gk": {
+    "CPI/neg": 0.09023137079212736,
+    "CPI/pos": 1.2045042338872856,
+    "NFP/neg": -0.17246667209263214,
+    "NFP/pos": -0.43928015459541475
+  },
+  "cell_counts": {
+    "test/COMBINED/neg": 59,
+    "test/COMBINED/pos": 60,
+    "test/CPI/neg": 31,
+    "test/CPI/pos": 29,
+    "test/NFP/neg": 28,
+    "test/NFP/pos": 31,
+    "training/COMBINED/neg": 197,
+    "training/COMBINED/pos": 18,
+    "training/CPI/neg": 118,
+    "training/CPI/pos": 9,
+    "training/NFP/neg": 119,
+    "training/NFP/pos": 9
+  },
+  "code": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/run.py",
+      "sha256": "a231de36de2035593d640d1a29f95ee44125a284811e1bb08fe1ab5840ea56a5"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/calibration.py",
+      "sha256": "2cd008f004153b5654232dd83a9f431f95d3dbdd4b01ec2fafbfe3197e3846cb"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/weighting.py",
+      "sha256": "917552bf5de76fa6ed5a12acff537194e3dc6795903c1688e20a6ba053f44e8b"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/windows.py",
+      "sha256": "d90709f1295675536c68387d1de321d8ac99134eca42b431dcfa24963a0d1316"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/excess.py",
+      "sha256": "31b61079ff8b1b812c1627f66c0ac06d6d642945cdd259c39facbbd52a7224dc"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/payoff.py",
+      "sha256": "db83de286d08bbc0775eda0c7f34ec8cd43ba84500397f09d0c9e3aede483b01"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/metrics.py",
+      "sha256": "12fd820ec1d07d427b0946a9af241232e86e1c2851c18af89186ac5f04dd15a4"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/manifest.py",
+      "sha256": "cd3fd98f77f8fb87f81bbb035947b71046033a080e50693aa0dae23ee49f1bf4"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento/config.py",
+      "sha256": "4423b246490a11f40cf2aa6ad4f12950cdd527db941172aaea2fa4e9881abd6a"
+    }
+  ],
+  "config_hash": "2d40dd27b063cfbca27d49c10502886bd71aa8ae956c8e963025dfc572cd6b9a",
+  "config_snapshot": {
+    "config_version": "pratica-eccesso-comov-v1-2026-06-22",
+    "expectation_window": [
+      -3,
+      -1
+    ],
+    "inv_vol_rolling_events": 20,
+    "legs": [
+      "NFP",
+      "CPI"
+    ],
+    "master_seed": 20260622,
+    "min_abs_e_for_position": 0.0,
+    "min_cell_n_for_verdict": 20,
+    "regime_end_offset_days": 4,
+    "regime_window_days": 63,
+    "split_date": "2021-01-01",
+    "test_end": "2025-12-31",
+    "training_start": "2010-01-01"
+  },
+  "config_version": "pratica-eccesso-comov-v1-2026-06-22",
+  "executor": {
+    "intra_event_lookahead_check": "validated",
+    "namespace_output_dir": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/pratica_eccesso_comov",
+    "package_path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/11_pratica_eccesso_comovimento",
+    "script_path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/pratica_eccesso_comov/execute_11.py",
+    "script_sha256": "7f64643f5783c779f1515b0a79b9be884686dd13fec13169a4d452ed868ded0c"
+  },
+  "inputs": [
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/pratica_eccesso_comov/events_df.csv",
+      "sha256": "f5e28eaad57b8263f4b62aa94fc6e3982410bf53e708bdb5009fce98147b9fdc",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/09_risultati/pratica_eccesso_comov/events_df.csv.provenance.json",
+      "sha256": "27c5d82908adbbfae7077e3eaa669835092c8aed2e0159f6af39d595b5303825",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/tesi-hfi-equity-bond/DATASET_TESI/01_eventi_hfi/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/ESc1_1min.csv",
+      "sha256": "7a3a2bc0d04066670657446d6f0d43bef5e96016b0abff7e840ad69b8c0c0e10",
+      "status": "ok"
+    },
+    {
+      "path": "/home/francesco/TESI/Dati/data_processed/TYc1_1min.csv",
+      "sha256": "13c0dd6f5b6f78a0f76c15a6cff1f65bff69da8435021b027f8facb6013a0d4f",
+      "status": "ok"
+    }
+  ],
+  "n_events_emission_diagnostics": {
+    "events_emitted": 374,
+    "events_input": 379,
+    "off_calendar_dropped": 0,
+    "warmup_skipped": 5,
+    "zero_variance_skipped": 0
+  },
+  "n_test": 119,
+  "n_train": 255,
+  "replicability_assumption": "Assunzione di replicabilit\u00e0 (covariance-swap-like): il payoff di una posizione long sulla covarianza realizzata equity-bond su un evento \u00e8 la covarianza realizzata stessa. La replicazione esatta richiederebbe un portafoglio dinamico di opzioni (fuori scope). I risultati sono payoff teorico LORDO, non Sharpe eseguibile.",
+  "seed": {
+    "name": "pratica_baseline_2026-06-23",
+    "value": 1364631491
+  },
+  "split_date": "2021-01-01",
+  "timestamp": "2026-06-23T14:12:44Z"
+}
