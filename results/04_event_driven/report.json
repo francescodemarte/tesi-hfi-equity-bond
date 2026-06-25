@@ -1,9 +1,24 @@
 {
+  "_metadata_refresh": {
+    "2026-06-25": "Refresh beta_str_provenance to align with authoritative run of pkg 12 (decomposition). Previous status 'illustrative_pending_07_estimation' was obsolete (written before pkg 12 was run on same day, never refreshed)."
+  },
   "beta_str_provenance": {
-    "disclaimer": "I \u03b2_str di config sono valori di pre-registrazione delle strategie, non stime confermate. Risultati di questo pacchetto sono CONDIZIONALI alla conferma di questi \u03b2 nella stima strutturale futura.",
-    "source_authoritative": "07_protocollo_v2_signflip \u2014 NON ANCORA ESEGUITO sui dati reali",
-    "source_immediate": "prompt strategie event-driven 2026-06-23",
-    "status": "illustrative_pending_07_estimation"
+    "bond_proxy": "delta_rate_3 (front money-market FFc3 for US legs, FEIc3 for ECB)",
+    "distinction_from_beta_H": "beta_str (questo file): stimatore strutturale sui rendimenti NETTI dal canale tasso (pacchetto 12). beta_H (Rigobon-Sack, pacchetto 07): stimatore sui rendimenti GREZZI, comovimento totale. I due valori sono diversi per costruzione e misurano cose diverse. Vedi results/01_protocol_v2/beta_H_robust_cells_w15.json per beta_H.",
+    "fix_history": "Versione precedente di questo blocco (2026-06-23) diceva 'illustrative_pending_07_estimation'. Quel commento era stato scritto PRIMA del run autoritativo del 12 (stesso giorno, ore 22:21) e non era stato aggiornato. Il referee lo ha letto come dichiarazione di numeri inventati: errore di refresh, non sostanziale. Refresh applicato il 2026-06-25 a chiusura sessione di scrittura tesi.",
+    "rounding_note": "I valori +0.95 / -1.40 / +0.87 in BETA_STR sopra (2 decimali) coincidono con beta_str_central del run autoritativo del 12 entro errore di arrotondamento. Per il testo della tesi usare i valori a 4 decimali sopra (chiave values_exact_4dec).",
+    "source_authoritative": "results/02_decomposition/baseline/decomp_canali.report.json",
+    "source_config_hash_12_prefix": "907eb0ff",
+    "source_run_timestamp": "2026-06-23T22:21:46Z",
+    "source_seed_name": "decomp_canali_2026-06-23",
+    "status": "from_authoritative_12_run",
+    "values_exact_4dec": {
+      "CPI/neg": 0.9509,
+      "CPI/pos": 2.2404,
+      "FOMC/neg": 0.8748,
+      "NFP/neg": -1.4036
+    },
+    "window_half_min": 15
   },
   "config_hash_14": "936aecb1136816d1e077ae753fe7a71942c8b39113a2e9a7e1b63dda17ff5483",
   "config_version_14": "strategie-event-driven-v1-2026-06-23",

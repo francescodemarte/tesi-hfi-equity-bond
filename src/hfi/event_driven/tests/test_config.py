@@ -89,14 +89,27 @@ def test_beta_str_provenance_dichiarata():
 
 
 def test_manifest_replicability_dichiarata_provenance_beta():
+    """Refresh 2026-06-25: la nota di replicability cita la provenance VERA
+    dei β_str dal run autoritativo del 12, e mantiene la distinzione esplicita
+    da β_H del 07."""
     import manifest
     m = manifest.build_manifest(run_output={"per_strategy": {}, "portfolio": {}},
                                  input_paths=[], code_paths=[],
                                  seed_name="x", timestamp="T")
-    # Punto 8 deve citare la provenance illustrativa dei β
-    assert "PROVENANCE β_str" in m["replicability_assumption"]
-    assert "ILLUSTRATIVI" in m["replicability_assumption"]
-    assert "CONDIZIONALE" in m["replicability_assumption"]
+    note = m["replicability_assumption"]
+    # Punto 8: provenance dei β_str dal run autoritativo del 12
+    assert "PROVENANCE β_str" in note
+    assert "RUN AUTORITATIVO" in note
+    assert "decomp_canali.report.json" in note
+    assert "2026-06-23T22:21:46Z" in note
+    # Valori esatti dichiarati
+    assert "-1.4036" in note
+    assert "+0.9509" in note
+    assert "+0.8748" in note
+    assert "+2.2404" in note
+    # Distinzione esplicita beta_str vs beta_H
+    assert "beta_H" in note
+    assert "beta_H_robust_cells_w15.json" in note
 
 
 def test_seed_for_int_for_manifest():

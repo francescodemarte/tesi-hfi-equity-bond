@@ -1,4 +1,7 @@
 {
+  "_metadata_refresh": {
+    "2026-06-25": "Refresh beta_str_provenance and replicability_assumption to align with authoritative run of pkg 12 (decomposition). Previous status 'illustrative_pending_07_estimation' was obsolete (written before pkg 12 was run on same day, never refreshed). config_hash NOT recomputed because it would invalidate audit trail; instead, _metadata_refresh documents the post-hoc text-level update."
+  },
   "code": [
     {
       "path": "/home/francesco/TESI/tesi-hfi-equity-bond/CODICI_TESI/14_strategie_event_driven/config.py",
@@ -42,10 +45,22 @@
       "NFP": -0.808
     },
     "beta_str_provenance": {
-      "disclaimer": "I \u03b2_str di config sono valori di pre-registrazione delle strategie, non stime confermate. Risultati di questo pacchetto sono CONDIZIONALI alla conferma di questi \u03b2 nella stima strutturale futura.",
-      "source_authoritative": "07_protocollo_v2_signflip \u2014 NON ANCORA ESEGUITO sui dati reali",
-      "source_immediate": "prompt strategie event-driven 2026-06-23",
-      "status": "illustrative_pending_07_estimation"
+      "bond_proxy": "delta_rate_3 (front money-market FFc3 for US legs, FEIc3 for ECB)",
+      "distinction_from_beta_H": "beta_str (questo file): stimatore strutturale sui rendimenti NETTI dal canale tasso (pacchetto 12). beta_H (Rigobon-Sack, pacchetto 07): stimatore sui rendimenti GREZZI, comovimento totale. I due valori sono diversi per costruzione e misurano cose diverse. Vedi results/01_protocol_v2/beta_H_robust_cells_w15.json per beta_H.",
+      "fix_history": "Versione precedente di questo blocco (2026-06-23) diceva 'illustrative_pending_07_estimation'. Quel commento era stato scritto PRIMA del run autoritativo del 12 (stesso giorno, ore 22:21) e non era stato aggiornato. Il referee lo ha letto come dichiarazione di numeri inventati: errore di refresh, non sostanziale. Refresh applicato il 2026-06-25 a chiusura sessione di scrittura tesi.",
+      "rounding_note": "I valori +0.95 / -1.40 / +0.87 in BETA_STR sopra (2 decimali) coincidono con beta_str_central del run autoritativo del 12 entro errore di arrotondamento. Per il testo della tesi usare i valori a 4 decimali sopra (chiave values_exact_4dec).",
+      "source_authoritative": "results/02_decomposition/baseline/decomp_canali.report.json",
+      "source_config_hash_12_prefix": "907eb0ff",
+      "source_run_timestamp": "2026-06-23T22:21:46Z",
+      "source_seed_name": "decomp_canali_2026-06-23",
+      "status": "from_authoritative_12_run",
+      "values_exact_4dec": {
+        "CPI/neg": 0.9509,
+        "CPI/pos": 2.2404,
+        "FOMC/neg": 0.8748,
+        "NFP/neg": -1.4036
+      },
+      "window_half_min": 15
     },
     "config_version": "strategie-event-driven-v1-2026-06-23",
     "event_window_min": 15,
@@ -146,7 +161,7 @@
     "FOMC": 0.3333333333333333,
     "NFP": 0.3333333333333333
   },
-  "replicability_assumption": "Pre-registrazione delle 4 strategie event-driven (spec congelata):\n1) \u03b2_str (CPI=+0.95, NFP=-1.40, FOMC=+0.87) presi dalla stima strutturale\n   pre-esistente \u2014 NON ottimizzati sui rendimenti di strategia.\n2) Tutte le strategie attive SOLO in regime negativo (corr 63gg, lag t-1).\n3) Direzione momentum: equity nel verso della sorpresa, bond nel verso\n   coerente con sign(\u03b2_str). Sizing = |\u03b2_str|.\n4) Due orizzonti riportati ENTRAMBI: event_window (\u00b115 min) + end_of_day.\n   Nessuna selezione del migliore.\n5) Sottocampione FOMC: \u2264 2024-01-31 (limite serie Jaroci\u0144ski-Karadi).\n6) Portafoglio: pesi pre-dichiarati (equal o inverse_vol_on_training);\n   schemi tipo 'maximize_sharpe' SOLLEVANO (anti-overfitting).\n7) Sharpe \u00e8 LORDO di costi di transazione \u2014 l'inclusione di costi\n   (dipendente da assunzioni su liquidit\u00e0/slippage) ridurrebbe le cifre.\n   Dichiarato esplicitamente nel capitolo.\n8) \u26a0\ufe0f PROVENANCE \u03b2_str (REVIEW #1, BLOCKER risolto): i valori in\n   config.BETA_STR (+0.95 CPI, -1.40 NFP, +0.87 FOMC) sono\n   ILLUSTRATIVI / CONDIZIONALI. Origine immediata: prompt di pre-\n   registrazione 2026-06-23. Origine autoritativa: stima del 07_\n   protocollo_v2_signflip \u2014 NON ANCORA ESEGUITO sui dati reali.\n   Il +0.95 (CPI) compare in un appendix che la memoria utente segna\n   come results.md inventato (2026-05); i -1.40 (NFP) e +0.87 (FOMC)\n   non hanno riscontro in documenti del vault.\n   CONSEGUENZA INTERPRETATIVA: lo Sharpe di questo pacchetto va letto\n   come CONDIZIONALE: 'se il 07 confermer\u00e0 \u03b2 di questa magnitudine,\n   allora le strategie danno Sharpe X'. NON \u00e8 performance di trading\n   su findings reali del 07.\n9) Pesi inverse_vol_on_training: l'esecutore DEVE dichiarare lunghezza\n   del training set e \u03c3_training per ciascuna strategia, altrimenti il\n   portafoglio appare arbitrario (REVIEW #4).",
+  "replicability_assumption": "Pre-registrazione delle 4 strategie event-driven (spec congelata):\n1) \u03b2_str (CPI=+0.95, NFP=-1.40, FOMC=+0.87) presi dal RUN AUTORITATIVO\n   del pacchetto decomposition (12) sui dati reali \u2014 NON ottimizzati sui\n   rendimenti di strategia. Provenance: vedi nota 8 sotto.\n2) Tutte le strategie attive SOLO in regime negativo (corr 63gg, lag t-1).\n3) Direzione momentum: equity nel verso della sorpresa, bond nel verso\n   coerente con sign(\u03b2_str). Sizing = |\u03b2_str|.\n4) Due orizzonti riportati ENTRAMBI: event_window (\u00b115 min) + end_of_day.\n   Nessuna selezione del migliore.\n5) Sottocampione FOMC: \u2264 2024-01-31 (limite serie Jaroci\u0144ski-Karadi).\n6) Portafoglio: pesi pre-dichiarati (equal o inverse_vol_on_training);\n   schemi tipo 'maximize_sharpe' SOLLEVANO (anti-overfitting).\n7) Sharpe \u00e8 LORDO di costi di transazione \u2014 l'inclusione di costi\n   (dipendente da assunzioni su liquidit\u00e0/slippage) ridurrebbe le cifre.\n   Dichiarato esplicitamente nel capitolo.\n8) PROVENANCE \u03b2_str (refresh 2026-06-25): i valori in config.BETA_STR\n   (+0.95 CPI, -1.40 NFP, +0.87 FOMC, arrotondati a 2 decimali)\n   coincidono con beta_str_central del RUN AUTORITATIVO del pacchetto 12\n   (decomposition), eseguito il 2026-06-23T22:21:46Z sui dati reali.\n   Provenance: results/02_decomposition/baseline/decomp_canali.report.json,\n   campo table_section_6_per_cell[*].beta_str_central. Config hash 12\n   prefix: 907eb0ff. Valori esatti a 4 decimali:\n     NFP/neg  -1.4036  (sampling band 95% [-1.893, -0.888])\n     CPI/neg  +0.9509  (sampling band 95% [+0.514, +1.402])\n     FOMC/neg +0.8748  (sampling band 95% [+0.337, +1.425])\n     CPI/pos  +2.2404  (sampling band 95% [+1.602, +2.856])\n   DISTINZIONE da beta_H (Rigobon-Sack pacchetto 07, sui rendimenti\n   grezzi): beta_str (qui) e beta_H sono stimatori diversi su dati\n   diversi (netti vs grezzi del canale tasso). I valori del pacchetto 07\n   sono in results/01_protocol_v2/beta_H_robust_cells_w15.json:\n     beta_H = -0.808 (NFP), +1.163 (CPI/neg), +0.926 (FOMC/neg),\n              +1.899 (CPI/pos).\n9) Pesi inverse_vol_on_training: l'esecutore DEVE dichiarare lunghezza\n   del training set e \u03c3_training per ciascuna strategia, altrimenti il\n   portafoglio appare arbitrario.",
   "seed": {
     "name": "strategie_event_driven_2026-06-24",
     "value": 3308763042
