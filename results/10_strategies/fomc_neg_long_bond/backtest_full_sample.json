@@ -1,0 +1,17 @@
+{
+  "task": "fomc_neg_long_bond_full_sample",
+  "n_events": 105,
+  "beta_str_used": 0.874818977679241,
+  "cost_bps_round_trip": 0.3,
+  "events_per_year": 8.0,
+  "pnl_per_event_gross": 0.000841263244185357,
+  "pnl_per_event_net": 0.000811263244185357,
+  "pnl_per_event_bp_bond": 8.11263244185357,
+  "sharpe_annualized_net": 0.5899810493158845,
+  "sharpe_bootstrap_mean": 0.6390479634084993,
+  "ic95_bootstrap": [
+    -0.15251699942417507,
+    1.5307832391774534
+  ],
+  "p_value_one_sided": 0.0
+}

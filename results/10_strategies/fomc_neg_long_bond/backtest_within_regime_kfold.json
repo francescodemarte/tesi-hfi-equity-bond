@@ -1,0 +1,68 @@
+{
+  "folds": [
+    {
+      "fold_id": 0,
+      "n_train": 80,
+      "n_test": 25,
+      "sharpe_test": 0.8683491443646381,
+      "years_test": [
+        2010,
+        2011,
+        2017,
+        2025
+      ]
+    },
+    {
+      "fold_id": 1,
+      "n_train": 87,
+      "n_test": 18,
+      "sharpe_test": 1.6019489144538293,
+      "years_test": [
+        2019,
+        2023,
+        2024
+      ]
+    },
+    {
+      "fold_id": 2,
+      "n_train": 89,
+      "n_test": 16,
+      "sharpe_test": -1.0062706156699308,
+      "years_test": [
+        2012,
+        2013,
+        2022
+      ]
+    },
+    {
+      "fold_id": 3,
+      "n_train": 80,
+      "n_test": 25,
+      "sharpe_test": 0.6733462049475497,
+      "years_test": [
+        2014,
+        2015,
+        2016
+      ]
+    },
+    {
+      "fold_id": 4,
+      "n_train": 84,
+      "n_test": 21,
+      "sharpe_test": 0.9311451302569068,
+      "years_test": [
+        2018,
+        2020,
+        2021
+      ]
+    }
+  ],
+  "sharpe_mean": 0.6137037556705985,
+  "sharpe_std_across_folds": 0.9708393249782341,
+  "ic95_bootstrap_lo": -0.25642271165610325,
+  "ic95_bootstrap_hi": 1.282067615713189,
+  "min_fold_sharpe": -1.0062706156699308,
+  "max_fold_sharpe": 1.6019489144538293,
+  "task": "fomc_neg_long_bond_within_regime_kfold_k5",
+  "n_total": 105
+}

@@ -1,0 +1,12 @@
+{
+  "task": "fomc_neg_long_bond_cross_celle_sister_NFP",
+  "beta_sister_used": 1.403641177900273,
+  "n_events": 105,
+  "sharpe_annualized": 0.598200657107377,
+  "sharpe_bootstrap_mean": 0.6457394854246036,
+  "ic95_bootstrap": [
+    -0.16791336043299196,
+    1.5608760821395955
+  ],
+  "note": "Same FOMC events but bond position sized with |beta_NFP|=1.404 instead of |beta_FOMC|=0.875."
+}

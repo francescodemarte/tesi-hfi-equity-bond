@@ -1,0 +1,39 @@
+{
+  "task": "voltarget_baseline_long_bond_documentation",
+  "metrics": {
+    "strategy": "A_baseline_long_bond",
+    "full": {
+      "n_obs": 4972,
+      "n_nfp_in_period": 110,
+      "sharpe": 0.01185491234266184,
+      "var99_pct": 0.8970768415658757,
+      "var99_nfp_pct": 0.9152546769778275,
+      "maxdd_pct": -24.84831617033108,
+      "pct_loss_gt_1pct_nfp": 0.9090909090909091,
+      "pct_loss_gt_2pct_nfp": 0.0,
+      "count_loss_gt_1pct_nfp": 1
+    },
+    "train": {
+      "n_obs": 3102,
+      "n_nfp_in_period": 91,
+      "sharpe": 0.21918277456300278,
+      "var99_pct": 0.8322783912017147,
+      "var99_nfp_pct": 0.8941133762134633,
+      "maxdd_pct": -12.519994270155868,
+      "pct_loss_gt_1pct_nfp": 1.098901098901099,
+      "pct_loss_gt_2pct_nfp": 0.0,
+      "count_loss_gt_1pct_nfp": 1
+    },
+    "oos": {
+      "n_obs": 1870,
+      "n_nfp_in_period": 19,
+      "sharpe": -0.2807234028346511,
+      "var99_pct": 0.9735271080331143,
+      "var99_nfp_pct": 0.8763117552020638,
+      "maxdd_pct": -24.848316170330854,
+      "pct_loss_gt_1pct_nfp": 0.0,
+      "pct_loss_gt_2pct_nfp": 0.0,
+      "count_loss_gt_1pct_nfp": 0
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "executor": {
+    "script_path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/fomc_neg_long_bond/extract_fomc_backtest.py",
+    "script_sha256": "a638e3e102bf1e17f9f12e30cefdff2d3c7ad180e05c84043d84fe974dac1982"
+  },
+  "inputs": {
+    "decomp_report": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/02_decomposition/baseline/decomp_canali.report.json",
+      "sha256": "707a75675820350159cb95b3f54887195def32367e9c02c55c08eb35ec2f92cb"
+    },
+    "events_csv": {
+      "path": "/home/francesco/TESI/repo-github-tesi/data/events/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af"
+    },
+    "intraday_dir": "/home/francesco/TESI/Dati/data_processed",
+    "intraday_files_status": "PROPRIETARY (Refinitiv), not redistributed"
+  },
+  "master_seed": 20260621,
+  "outputs": {
+    "backtest_cross_celle.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/fomc_neg_long_bond/backtest_cross_celle.json",
+      "sha256": "b4cd873f9909da00ea7b2570d8d323239a74e4b55eac52e3d0eadc168605bfd2"
+    },
+    "backtest_cross_regime.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/fomc_neg_long_bond/backtest_cross_regime.json",
+      "sha256": "52dcab5701c3e59588ccefa3a09863b94e22a8c2f953671076f706cb2991a268"
+    },
+    "backtest_full_sample.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/fomc_neg_long_bond/backtest_full_sample.json",
+      "sha256": "d7a36dc861f1ad3fadc1eb94144df318b2bbc1b49807c9d82fe013f13b3b8aa8"
+    },
+    "backtest_within_regime_kfold.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/fomc_neg_long_bond/backtest_within_regime_kfold.json",
+      "sha256": "fe316d8ce302a00feedf55c02b41ea69ca5b1caa5fde355f85cca43e674321ae"
+    }
+  },
+  "seed_int": 17371991328712689242,
+  "seed_name": "fomc_neg_long_bond_2010_2025",
+  "task": "deposit_fomc_neg_long_bond",
+  "task_timestamp": "2026-06-26T23:35:20Z",
+  "use_case": "Secondo segnale direzionale autoritativo della tesi BSc. Capienza ~8 FOMC/anno \u00d7 |\u03b2_str|=0.875. Capacity-bound, niche, complementare al QE-Steepener.",
+  "validation_vs_fork_P": {
+    "deposit_cross_regime_post_sharpe": 1.0341172922738275,
+    "deposit_kfold_ic95": [
+      -0.25642271165610325,
+      1.282067615713189
+    ],
+    "deposit_kfold_min_fold": -1.0062706156699308,
+    "deposit_kfold_sharpe_mean": 0.6137037556705985,
+    "fork_P_cross_regime_post_sharpe": 1.26,
+    "fork_P_kfold_ic95": [
+      0.034,
+      1.4646
+    ],
+    "fork_P_kfold_min_fold": 0.5191,
+    "fork_P_kfold_sharpe_mean": 0.7218,
+    "scarto_note": "Eventuali differenze possono derivare da: (a) policy di aggregazione close-to-close vs close-event-window, (b) gestione missing days, (c) seed K-fold stratified shuffle. Tutti i numeri qui sono riproducibili dato MASTER_SEED."
+  }
+}

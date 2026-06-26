@@ -1,0 +1,163 @@
+{
+  "task": "voltarget_nfp_overlay_full_backtest",
+  "size_factor": 0.25491467156239855,
+  "r_hat_NFP_neg": 15.3889977502819,
+  "cost_bps_bond": 0.3,
+  "cost_bps_equity": 0.5,
+  "split_oos_date": "2020-01-01",
+  "n_obs_total": 4972,
+  "n_nfp_days_total": 110,
+  "strategies": {
+    "A_baseline_long_bond": {
+      "strategy": "A_baseline_long_bond",
+      "full": {
+        "n_obs": 4972,
+        "n_nfp_in_period": 110,
+        "sharpe": 0.01185491234266184,
+        "var99_pct": 0.8970768415658757,
+        "var99_nfp_pct": 0.9152546769778275,
+        "maxdd_pct": -24.84831617033108,
+        "pct_loss_gt_1pct_nfp": 0.9090909090909091,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 1
+      },
+      "train": {
+        "n_obs": 3102,
+        "n_nfp_in_period": 91,
+        "sharpe": 0.21918277456300278,
+        "var99_pct": 0.8322783912017147,
+        "var99_nfp_pct": 0.8941133762134633,
+        "maxdd_pct": -12.519994270155868,
+        "pct_loss_gt_1pct_nfp": 1.098901098901099,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 1
+      },
+      "oos": {
+        "n_obs": 1870,
+        "n_nfp_in_period": 19,
+        "sharpe": -0.2807234028346511,
+        "var99_pct": 0.9735271080331143,
+        "var99_nfp_pct": 0.8763117552020638,
+        "maxdd_pct": -24.848316170330854,
+        "pct_loss_gt_1pct_nfp": 0.0,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 0
+      }
+    },
+    "B_vol_target_NFP_only_bond": {
+      "strategy": "B_vol_target_NFP_only_bond",
+      "full": {
+        "n_obs": 4972,
+        "n_nfp_in_period": 110,
+        "sharpe": 0.016970035096606582,
+        "var99_pct": 0.8892006817205821,
+        "var99_nfp_pct": 0.23554710136306486,
+        "maxdd_pct": -23.958276784658228,
+        "pct_loss_gt_1pct_nfp": 0.0,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 0
+      },
+      "train": {
+        "n_obs": 3102,
+        "n_nfp_in_period": 91,
+        "sharpe": 0.21140789680126268,
+        "var99_pct": 0.8218488019778071,
+        "var99_nfp_pct": 0.23015787362231513,
+        "maxdd_pct": -12.477729061230907,
+        "pct_loss_gt_1pct_nfp": 0.0,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 0
+      },
+      "oos": {
+        "n_obs": 1870,
+        "n_nfp_in_period": 19,
+        "sharpe": -0.2530598409472263,
+        "var99_pct": 0.9735271080331143,
+        "var99_nfp_pct": 0.2256199792489159,
+        "maxdd_pct": -23.958276784658054,
+        "pct_loss_gt_1pct_nfp": 0.0,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 0
+      }
+    },
+    "C_baseline_60_40": {
+      "strategy": "C_baseline_60_40",
+      "full": {
+        "n_obs": 4972,
+        "n_nfp_in_period": 110,
+        "sharpe": 0.6813998974661223,
+        "var99_pct": 1.6750175651760495,
+        "var99_nfp_pct": 1.6292194457618152,
+        "maxdd_pct": -20.910006437941053,
+        "pct_loss_gt_1pct_nfp": 6.363636363636363,
+        "pct_loss_gt_2pct_nfp": 0.9090909090909091,
+        "count_loss_gt_1pct_nfp": 7
+      },
+      "train": {
+        "n_obs": 3102,
+        "n_nfp_in_period": 91,
+        "sharpe": 0.809298318025976,
+        "var99_pct": 1.4379319008216505,
+        "var99_nfp_pct": 1.3628138828312246,
+        "maxdd_pct": -11.970949025073567,
+        "pct_loss_gt_1pct_nfp": 5.4945054945054945,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 5
+      },
+      "oos": {
+        "n_obs": 1870,
+        "n_nfp_in_period": 19,
+        "sharpe": 0.5703701518388132,
+        "var99_pct": 2.073110638844279,
+        "var99_nfp_pct": 3.101345170115075,
+        "maxdd_pct": -20.910006437941025,
+        "pct_loss_gt_1pct_nfp": 10.526315789473683,
+        "pct_loss_gt_2pct_nfp": 5.263157894736842,
+        "count_loss_gt_1pct_nfp": 2
+      }
+    },
+    "D_60_40_vol_target_NFP_only": {
+      "strategy": "D_60_40_vol_target_NFP_only",
+      "full": {
+        "n_obs": 4972,
+        "n_nfp_in_period": 110,
+        "sharpe": 0.6885401277657022,
+        "var99_pct": 1.6655037295309885,
+        "var99_nfp_pct": 0.418441298298884,
+        "maxdd_pct": -20.317306317116138,
+        "pct_loss_gt_1pct_nfp": 0.0,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 0
+      },
+      "train": {
+        "n_obs": 3102,
+        "n_nfp_in_period": 91,
+        "sharpe": 0.7870190597028314,
+        "var99_pct": 1.4022581352181132,
+        "var99_nfp_pct": 0.35053061172203664,
+        "maxdd_pct": -11.358816955173873,
+        "pct_loss_gt_1pct_nfp": 0.0,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 0
+      },
+      "oos": {
+        "n_obs": 1870,
+        "n_nfp_in_period": 19,
+        "sharpe": 0.6129048566203931,
+        "var99_pct": 2.06270476762066,
+        "var99_nfp_pct": 0.7937077438209533,
+        "maxdd_pct": -20.31730631711613,
+        "pct_loss_gt_1pct_nfp": 0.0,
+        "pct_loss_gt_2pct_nfp": 0.0,
+        "count_loss_gt_1pct_nfp": 0
+      }
+    }
+  },
+  "reductions_summary": {
+    "bond_only_full_var99_nfp_reduction_pct": 74.26431054787484,
+    "bond_only_oos_var99_nfp_reduction_pct": 74.25345741289395,
+    "60_40_full_var99_nfp_reduction_pct": 74.3164556875748,
+    "60_40_oos_var99_nfp_reduction_pct": 74.40762958379436
+  },
+  "filter_ex_post_declared": "Overlay applied SOLO ai giorni NFP/neg perch\u00e9 NFP/neg \u00e8 l'unica cella che passa Check 1 del bridge (var_window=44.8% var_daily). Per CPI/FOMC il bridge non passa \u2192 overlay non giustificato. Filtro ex-post dichiarato."
+}

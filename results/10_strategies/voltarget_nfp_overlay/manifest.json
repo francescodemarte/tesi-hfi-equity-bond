@@ -1,0 +1,49 @@
+{
+  "executor": {
+    "script_path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/voltarget_nfp_overlay/extract_voltarget_backtest.py",
+    "script_sha256": "0ecf5393d30807862644be719ff4f9cf134831edef045bd6fe5dd4d06642f946"
+  },
+  "inputs": {
+    "beta_h_file": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/01_protocol_v2/beta_H_robust_cells_w15.json",
+      "sha256": "3f12ffc749c95dc4e65a728cc6477e39f60f85c8795f77a467c92ba62b928889"
+    },
+    "events_csv": {
+      "path": "/home/francesco/TESI/repo-github-tesi/data/events/events_with_regime_classifier.csv",
+      "sha256": "92215e6f5b41b876d20f3b3a7201483f9e616c752bfb09de121540e3362517af"
+    },
+    "intraday_dir": "/home/francesco/TESI/Dati/data_processed",
+    "intraday_files_status": "PROPRIETARY (Refinitiv), not redistributed"
+  },
+  "master_seed": 20260621,
+  "outputs": {
+    "backtest_baseline_60_40.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/voltarget_nfp_overlay/backtest_baseline_60_40.json",
+      "sha256": "c1aefd5996fccab5179a55c25178ab94909754c2bff0532db1b5403d183baf75"
+    },
+    "backtest_baseline_long_bond.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/voltarget_nfp_overlay/backtest_baseline_long_bond.json",
+      "sha256": "61c230ba8c83ad868d14cf4756f166ef57e69a9c4c43b1b094b36089083d3fdb"
+    },
+    "backtest_combined.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/10_strategies/voltarget_nfp_overlay/backtest_combined.json",
+      "sha256": "1dc08a5d8d8ee8be6ef27dd64cf7faba2de32e66828a97e98414e52bdc77c24b"
+    }
+  },
+  "seed_int": 15601752323731519238,
+  "seed_name": "voltarget_nfp_overlay_2010_2025",
+  "task": "deposit_voltarget_nfp_overlay",
+  "task_timestamp": "2026-06-26T23:39:57Z",
+  "use_case": "Risk-management overlay derivativo del finding intraday r\u0302=15.4 per NFP/neg. NON \u00e8 un finding nativo della tesi: trasferimento cross-orizzonte intraday\u2192daily, giustificato dal CHECK 1 del bridge (passa solo per NFP). Cliente target: risk desk, bond direzionale, ALM.",
+  "validation_vs_fork_Q": {
+    "deposit_60_40_baseline_var99_nfp_full": 1.6292194457618152,
+    "deposit_60_40_overlay_var99_nfp_full": 0.418441298298884,
+    "deposit_baseline_long_bond_var99_nfp_full": 0.9152546769778275,
+    "deposit_vol_target_var99_nfp_full": 0.23554710136306486,
+    "fork_Q_60_40_baseline_var99_nfp_full": 1.662,
+    "fork_Q_60_40_overlay_var99_nfp_full": 0.439,
+    "fork_Q_baseline_long_bond_var99_nfp_full": 0.919,
+    "fork_Q_vol_target_var99_nfp_full": 0.24,
+    "scarto_note": "Eventuali differenze sub-percentuali sono attese da diversa policy di allineamento date e gestione missing data tra Fork Q e deposit."
+  }
+}
