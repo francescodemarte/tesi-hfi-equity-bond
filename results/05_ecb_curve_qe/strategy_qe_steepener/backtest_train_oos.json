@@ -1,0 +1,130 @@
+{
+  "comment": "Split cronologico 2/3 (n=86, fino al 86esimo evento) / 1/3 (n=43). Nessun parametro fittato sul training: segno e taglia sono fissati a priori dal modello autoritativo (step1_ecb_curve_symmetry). La shrinkage misura solo ampiezza media, non flip di segno. 'sign_preserved_oos' verifica che il segno del Sharpe non si inverta.",
+  "master_seed": 20260621,
+  "oos": {
+    "cost_per_leg_bp": 0.2,
+    "cost_total_bp_per_trade": 0.4,
+    "date_first": "2020-07-16",
+    "date_last": "2025-11-09",
+    "events_per_year": 8.6,
+    "gross_continuous": {
+      "bootstrap": {
+        "ic95_hi": 1.5286598937287177,
+        "ic95_lo": 0.44217822095274634,
+        "n_boot": 2000,
+        "p_one_sided_mean_gt0": 0.0005
+      },
+      "pnl_per_event_bp": 0.7527193631367929,
+      "pnl_per_year_bp_slope": 6.473386522976418,
+      "pnl_per_year_eur_100m_notional": 64733.86522976418,
+      "pnl_std_event_bp": 2.450822870209983,
+      "sharpe_ann": 0.900679730782852
+    },
+    "label": "oos_1_third",
+    "n_events": 43,
+    "net_binary": {
+      "bootstrap": {
+        "ic95_hi": 1.2199882935531987,
+        "ic95_lo": -0.4084068825315996,
+        "n_boot": 2000,
+        "p_one_sided_mean_gt0": 0.12
+      },
+      "pnl_per_event_bp": 0.4663992895636447,
+      "pnl_per_year_bp_slope": 4.011033890247344,
+      "pnl_per_year_eur_100m_notional": 40110.338902473435,
+      "pnl_std_event_bp": 2.318630034147806,
+      "sharpe_ann": 0.5898962681164297
+    },
+    "net_continuous": {
+      "bootstrap": {
+        "ic95_hi": 0.9773662978934317,
+        "ic95_lo": -0.0011241495341641676,
+        "n_boot": 2000,
+        "p_one_sided_mean_gt0": 0.027
+      },
+      "pnl_per_event_bp": 0.47680114586942846,
+      "pnl_per_year_bp_slope": 4.100489854477084,
+      "pnl_per_year_eur_100m_notional": 41004.89854477084,
+      "pnl_std_event_bp": 2.408013436674122,
+      "sharpe_ann": 0.5806676215378467
+    }
+  },
+  "seed_name": "qe_steepener_2010_2025",
+  "shrinkage_per_variant": {
+    "gross_continuous": {
+      "oos_sharpe": 0.900679730782852,
+      "shrinkage_oos_to_train": 0.8309975125515899,
+      "sign_preserved_oos": true,
+      "train_sharpe": 1.083853702542745
+    },
+    "net_binary": {
+      "oos_sharpe": 0.5898962681164297,
+      "shrinkage_oos_to_train": 0.4912069253405315,
+      "sign_preserved_oos": true,
+      "train_sharpe": 1.2009119531600279
+    },
+    "net_continuous": {
+      "oos_sharpe": 0.5806676215378467,
+      "shrinkage_oos_to_train": 0.6112437961112177,
+      "sign_preserved_oos": true,
+      "train_sharpe": 0.9499771208020448
+    }
+  },
+  "split": {
+    "n_oos": 43,
+    "n_train": 86,
+    "oos_first_date": "2020-07-16",
+    "oos_last_date": "2025-11-09",
+    "train_first_date": "2011-07-07",
+    "train_last_date": "2020-06-04"
+  },
+  "task_timestamp": "2026-06-26T22:37:02Z",
+  "train": {
+    "cost_per_leg_bp": 0.2,
+    "cost_total_bp_per_trade": 0.4,
+    "date_first": "2011-07-07",
+    "date_last": "2020-06-04",
+    "events_per_year": 8.6,
+    "gross_continuous": {
+      "bootstrap": {
+        "ic95_hi": 1.5347241905070823,
+        "ic95_lo": 0.8590896528037004,
+        "n_boot": 2000,
+        "p_one_sided_mean_gt0": 0.0
+      },
+      "pnl_per_event_bp": 1.6335052055197097,
+      "pnl_per_year_bp_slope": 14.048144767469502,
+      "pnl_per_year_eur_100m_notional": 140481.44767469502,
+      "pnl_std_event_bp": 4.419764027653957,
+      "sharpe_ann": 1.083853702542745
+    },
+    "label": "train_2_thirds",
+    "n_events": 86,
+    "net_binary": {
+      "bootstrap": {
+        "ic95_hi": 1.8156305602726737,
+        "ic95_lo": 0.6377259460991749,
+        "n_boot": 2000,
+        "p_one_sided_mean_gt0": 0.0
+      },
+      "pnl_per_event_bp": 0.9271510380683703,
+      "pnl_per_year_bp_slope": 7.973498927387984,
+      "pnl_per_year_eur_100m_notional": 79734.98927387984,
+      "pnl_std_event_bp": 2.2640632062756527,
+      "sharpe_ann": 1.2009119531600279
+    },
+    "net_continuous": {
+      "bootstrap": {
+        "ic95_hi": 1.3571859642210626,
+        "ic95_lo": 0.6594644339662393,
+        "n_boot": 2000,
+        "p_one_sided_mean_gt0": 0.0
+      },
+      "pnl_per_event_bp": 1.3749121218720126,
+      "pnl_per_year_bp_slope": 11.824244248099308,
+      "pnl_per_year_eur_100m_notional": 118242.44248099308,
+      "pnl_std_event_bp": 4.244348347522159,
+      "sharpe_ann": 0.9499771208020448
+    }
+  }
+}

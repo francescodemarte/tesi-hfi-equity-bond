@@ -1,0 +1,75 @@
+{
+  "executor": {
+    "script_path": "/home/francesco/TESI/repo-github-tesi/results/05_ecb_curve_qe/strategy_qe_steepener/extract_qe_steepener_backtest.py",
+    "script_sha256": "0bf2ff6483086877bd270cc9835534a19b9d9cf2ba250c39a1242898919c7508"
+  },
+  "inputs": {
+    "altavilla_tpqe_csv": {
+      "path": "/home/francesco/TESI/Dati/external_data/altavilla_TPQE_factors.csv",
+      "sha256": "5a447263ef99789b706c50beb1a19a17bd4d2900c714e98794d298b4b7e2118a",
+      "status": "EXTERNAL: fuori repo (built da scripts/extract_altavilla.py)"
+    },
+    "altavilla_xlsx": {
+      "path": "/home/francesco/TESI/repo-github-tesi/data/events/EA-MPD_ECB_Altavilla2019.xlsx",
+      "sha256": "f417fb861a305e3cbb871a7571c4899ba6bca003d9e087024d2f3f0744426cef"
+    },
+    "ecb_curve_results_for_config_hash": {
+      "config_hash_referenced": "n/a",
+      "path": "/home/francesco/TESI/repo-github-tesi/results/05_ecb_curve_qe/results.json",
+      "sha256": "e391dc773b4e1c21471805145ce6faa629a7471f0f9e5483110a7750a3c65dfa"
+    }
+  },
+  "master_seed": 20260621,
+  "notes_for_reader": "Il P&L per evento e' in bp di pendenza (\u0394DE10Y - \u0394DE2Y). La conversione in \u20ac usa DV01 = 10000 \u20ac/bp su \u20ac100m notional 10Y. La gamba 2Y e' size-matched in DV01, quindi il P&L per bp di slope change e' direttamente la DV01 della 10Y.",
+  "outputs": {
+    "backtest_full_sample.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/05_ecb_curve_qe/strategy_qe_steepener/backtest_full_sample.json",
+      "sha256": "5066f2604a710611fe11fa9ab2e47e3b5c09a077117087e297cfa2a78be25bf8"
+    },
+    "backtest_train_oos.json": {
+      "path": "/home/francesco/TESI/repo-github-tesi/results/05_ecb_curve_qe/strategy_qe_steepener/backtest_train_oos.json",
+      "sha256": "8012234b9d760c6140d1f2b1d97e5deb9aeb6651b929c7dd5e8b7739e2ebdd59"
+    }
+  },
+  "references": {
+    "altavilla_2019": "Altavilla, C., Brugnolini, L., G\u00fcrkaynak, R. S., Motto, R., and Ragusa, G. (2019). Measuring Euro Area Monetary Policy. Journal of Monetary Economics, 108, 162-179.",
+    "step1_ecb_curve_symmetry": "results/05_ecb_curve_qe/results.json \u2014 step1, 15 maturities Bund DE3M..DE30Y, beta_QE monotonically increasing from +0.40 (2Y) to plateau ~+1.14 (10Y stable to 30Y). 12/15 BY-rejected at q=0.10."
+  },
+  "seed_int": 2645197535819300378,
+  "seed_name": "qe_steepener_2010_2025",
+  "task": "deposit_qe_steepener_bund_2_10_backtest",
+  "task_timestamp": "2026-06-26T22:37:02Z",
+  "validation_vs_fork_b": {
+    "deposited_authoritative": {
+      "ic95_net_cont": [
+        0.5819907780480027,
+        1.1460686030407656
+      ],
+      "oos_sharpe_net_cont": 0.5806676215378467,
+      "p_one_sided_net_cont": 0.0,
+      "pnl_per_year_eur_100m_gross_continuous": 115232.25352638477,
+      "pnl_per_year_eur_100m_net_binary": 66526.77248341106,
+      "pnl_per_year_eur_100m_net_continuous": 92496.59450225234,
+      "sharpe_gross_continuous": 1.0106415810452098,
+      "sharpe_net_binary": 0.9933399941967299,
+      "sharpe_net_continuous": 0.8415881550301421,
+      "shrinkage_net_cont": 0.6112437961112177,
+      "train_sharpe_net_cont": 0.9499771208020448
+    },
+    "fork_b_baseline_session_only": {
+      "ic95_net_cont": [
+        0.47,
+        1.1
+      ],
+      "oos_sharpe_net_cont": 0.54,
+      "p_one_sided_net_cont": 0.0015,
+      "pnl_per_year_eur_80k_net_unspecified_variant": true,
+      "sharpe_gross_continuous": 1.22,
+      "sharpe_net_binary": 0.82,
+      "sharpe_net_continuous": 0.78,
+      "shrinkage_train_oos": 0.59,
+      "train_sharpe_net_cont": 0.92
+    },
+    "interpretation": "Confronto numerico vs il Fork B della sessione esecutore precedente. Lo scarto fra i due e' atteso in misura modesta (diversa estrazione di z(QE), diversa procedura di bootstrap), ma il segno e l'ordine di grandezza dei Sharpe devono combaciare. Cifre depositate sono ora l'autoritative reference per la tesi."
+  }
+}
